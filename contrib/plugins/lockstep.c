@@ -100,7 +100,7 @@ static void plugin_exit(qemu_plugin_id_t id, void *p)
     plugin_cleanup(id);
 }
 
-static void report_divergance(ExecState *us, ExecState *them)
+static void report_divergence(ExecState *us, ExecState *them)
 {
     DivergeState divrec = { log, 0 };
     g_autoptr(GString) out = g_string_new("");
@@ -202,7 +202,7 @@ static void vcpu_tb_exec(unsigned int cpu_index, void *udata)
      * Compare and report if we have diverged.
      */
     if (us.pc != them.pc) {
-        report_divergance(&us, &them);
+        report_divergence(&us, &them);
     }
 
     /*
