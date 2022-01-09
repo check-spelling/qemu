@@ -949,7 +949,7 @@ static const struct omap_l4_region_s omap_l4_region[125] = {
 };
 
 static const struct omap_l4_agent_info_s omap_l4_agent_info[54] = {
-    { 0,           0, 3, 2 }, /* L4IA initiatior agent */
+    { 0,           0, 3, 2 }, /* L4IA initiator agent */
     { L4TAO(1),    3, 2, 1 }, /* Control and pinout module */
     { L4TAO(2),    5, 2, 1 }, /* 32K timer */
     { L4TAO(3),    7, 3, 2 }, /* PRCM */
