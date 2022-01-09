@@ -1548,7 +1548,7 @@ uint32_t vfp_get_fpscr(CPUARMState *env);
 void vfp_set_fpscr(CPUARMState *env, uint32_t val);
 
 /* FPCR, Floating Point Control Register
- * FPSR, Floating Poiht Status Register
+ * FPSR, Floating Point Status Register
  *
  * For A64 the FPSCR is split into two logically distinct registers,
  * FPCR and FPSR. However since they still use non-overlapping bits
