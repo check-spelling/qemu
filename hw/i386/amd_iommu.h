@@ -233,7 +233,7 @@
 /* MSI data 10:0 bits (section 2.2.5.1 Fig 14) */
 #define AMDVI_IRTE_OFFSET               0x7ff
 
-/* Delivery mode of MSI data (same as IOAPIC deilver mode encoding) */
+/* Delivery mode of MSI data (same as IOAPIC deliver mode encoding) */
 #define AMDVI_IOAPIC_INT_TYPE_FIXED          0x0
 #define AMDVI_IOAPIC_INT_TYPE_ARBITRATED     0x1
 #define AMDVI_IOAPIC_INT_TYPE_SMI            0x2
