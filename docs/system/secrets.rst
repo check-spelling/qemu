@@ -13,7 +13,7 @@ secure manner, using the ``secret`` object type.
 At startup this can be done using the ``-object secret,...`` command line
 argument. At runtime this can be done using the ``object_add`` QMP / HMP
 monitor commands. The examples that follow will illustrate use of ``-object``
-command lines, but they all apply equivalentely in QMP / HMP. When creating
+command lines, but they all apply equivalently in QMP / HMP. When creating
 a ``secret`` object it must be given a unique ID string. This ID is then
 used to identify the object when configuring the thing which need the data.
 
