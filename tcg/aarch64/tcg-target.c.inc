@@ -715,7 +715,7 @@ static inline void tcg_out_insn_3502S(TCGContext *s, AArch64Insn insn,
 }
 
 /* This function is for 3.5.2 (Add/subtract shifted register),
-   and 3.5.10 (Logical shifted register), for the vast majorty of cases
+   and 3.5.10 (Logical shifted register), for the vast majority of cases
    when we don't want to apply a shift.  Thus it can also be used for
    3.5.3 (Add/subtract with carry) and 3.5.8 (Data processing 2 source).  */
 static void tcg_out_insn_3502(TCGContext *s, AArch64Insn insn, TCGType ext,
