@@ -72,7 +72,7 @@ shell.connect()
 
 models = shell.cmd("query-cpu-definitions")
 
-# These QMP props don't correspond to CPUID fatures
+# These QMP props don't correspond to CPUID features
 # so ignore them
 skip = [
     "family",
