@@ -969,7 +969,7 @@ typedef uint64_t FeatureWordArray[FEATURE_WORDS];
 
 /* VMX controls */
 #define VMX_CPU_BASED_VIRTUAL_INTR_PENDING          0x00000004
-#define VMX_CPU_BASED_USE_TSC_OFFSETING             0x00000008
+#define VMX_CPU_BASED_USE_TSC_OFFSETTING            0x00000008
 #define VMX_CPU_BASED_HLT_EXITING                   0x00000080
 #define VMX_CPU_BASED_INVLPG_EXITING                0x00000200
 #define VMX_CPU_BASED_MWAIT_EXITING                 0x00000400
