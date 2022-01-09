@@ -1988,7 +1988,7 @@ struct kvm_stats_header {
  * @size: The number of data items for this stats.
  *        Every data item is of type __u64.
  * @offset: The offset of the stats to the start of stat structure in
- *          struture kvm or kvm_vcpu.
+ *          structure kvm or kvm_vcpu.
  * @unused: Unused field for future usage. Always 0 for now.
  * @name: The name string for the stats. Its size is indicated by the
  *        &kvm_stats_header->name_size.
