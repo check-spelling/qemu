@@ -97,7 +97,7 @@ enum ctu_can_fd_frame_form_w_brs {
 
 enum ctu_can_fd_frame_form_w_esi_rsv {
 	ESI_ERR_ACTIVE       = 0x0,
-	ESI_ERR_PASIVE       = 0x1,
+	ESI_ERR_PASSIVE      = 0x1,
 };
 
 union ctu_can_fd_identifier_w {
