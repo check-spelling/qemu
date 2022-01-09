@@ -104,7 +104,7 @@ struct UPT1_RxStats {
 enum {
     UPT1_IML_NONE        = 0, /* no interrupt moderation */
     UPT1_IML_HIGHEST    = 7, /* least intr generated */
-    UPT1_IML_ADAPTIVE    = 8, /* adpative intr moderation */
+    UPT1_IML_ADAPTIVE    = 8, /* adaptive intr moderation */
 };
 /* values for UPT1_RSSConf.hashFunc */
 enum {
