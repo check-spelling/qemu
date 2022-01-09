@@ -1319,7 +1319,7 @@ static int gdb_handle_vcont(const char *p)
                 goto out;
             }
 
-            /* only use if no previous match occourred */
+            /* only use if no previous match occurred */
             if (newstates[cpu->cpu_index] == 1) {
                 newstates[cpu->cpu_index] = cur_action;
             }

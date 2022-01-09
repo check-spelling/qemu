@@ -32,7 +32,7 @@ Usage:
 QEMU_PATH="/path/to/qemu" QEMU_ARGS="args" {} [Options] input_trace output_trace
 
 By default, will try to use the second-to-last line in the output to identify
-whether the crash occred. Optionally, manually set a string that identifies the
+whether the crash occurred. Optionally, manually set a string that identifies the
 crash by setting CRASH_TOKEN=
 
 Options:
