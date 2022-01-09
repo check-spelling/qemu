@@ -246,7 +246,7 @@ static int vnc_auth_sasl_check_ssf(VncState *vs)
  * Output to client:
  *
  * u32 serverout-length
- * u8-array serverout-strin
+ * u8-array serverout-string
  * u8 continue
  */
 
@@ -367,7 +367,7 @@ static int protocol_client_auth_sasl_step_len(VncState *vs, uint8_t *data, size_
  * Output to client:
  *
  * u32 serverout-length
- * u8-array serverout-strin
+ * u8-array serverout-string
  * u8 continue
  */
 
