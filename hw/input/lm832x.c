@@ -263,7 +263,7 @@ static void lm_kbd_write(LM823KbdState *s, int reg, int byte, uint8_t value)
             qemu_set_irq(s->mux.out[0], s->mux.in[0][(s->config >> 2) & 1]);
         /* TODO: check that this is issued only following the chip reset
          * and not in the middle of operation and that it is followed by
-         * the GPIO ports re-resablishing through WRITE_PORT_SEL and
+         * the GPIO ports reestablishing through WRITE_PORT_SEL and
          * WRITE_PORT_STATE (using a timer perhaps) and otherwise output
          * warnings.  */
         s->status = 0;
