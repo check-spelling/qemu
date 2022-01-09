@@ -49,7 +49,7 @@ static void vfio_disable_interrupts(VFIOPCIDevice *vdev);
 static void vfio_mmap_set_enabled(VFIOPCIDevice *vdev, bool enabled);
 
 /*
- * Disabling BAR mmaping can be slow, but toggling it around INTx can
+ * Disabling BAR mmapping can be slow, but toggling it around INTx can
  * also be a huge overhead.  We try to get the best of both worlds by
  * waiting until an interrupt to disable mmaps (subsequent transitions
  * to the same state are effectively no overhead).  If the interrupt has
