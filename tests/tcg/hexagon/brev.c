@@ -29,7 +29,7 @@ short         hbuf[SIZE] __attribute__((aligned(1 << 16))) = {0};
 unsigned char bbuf[SIZE] __attribute__((aligned(1 << 16))) = {0};
 
 /*
- * We use the C preporcessor to deal with the combinations of types
+ * We use the C preprocessor to deal with the combinations of types
  */
 
 #define BREV_LOAD(SZ, RES, ADDR, INC) \

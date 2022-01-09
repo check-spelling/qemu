@@ -37,7 +37,7 @@ short         hbuf[NHALFS] __attribute__((aligned(1 << 12))) = {0};
 unsigned char bbuf[NBYTES] __attribute__((aligned(1 << 12))) = {0};
 
 /*
- * We use the C preporcessor to deal with the combinations of types
+ * We use the C preprocessor to deal with the combinations of types
  */
 
 #define INIT(BUF, N) \

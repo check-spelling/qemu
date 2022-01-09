@@ -17,7 +17,7 @@
 
 /*
  * This program generates the semantics file that is processed by
- * the do_qemu.py script.  We use the C preporcessor to manipulate the
+ * the do_qemu.py script.  We use the C preprocessor to manipulate the
  * files imported from the Hexagon architecture library.
  */
 
