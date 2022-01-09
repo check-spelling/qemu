@@ -195,7 +195,7 @@ idt_1F: .int 0, 0
 	 *
 	 * This describes various memory areas (segments) through
 	 * segment descriptors. In 32 bit mode each segment each
-	 * segement is associated with segment registers which are
+	 * segment is associated with segment registers which are
 	 * implicitly (or explicitly) referenced depending on the
 	 * instruction. However in 64 bit mode selectors are flat and
 	 * segmented addressing isn't used.
