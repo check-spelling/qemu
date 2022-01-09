@@ -242,7 +242,7 @@ static int parallels_parse_format_extension(BlockDriverState *bs,
         }
 
         if (fh.data_size > remaining) {
-            error_setg(errp, "Feature data_size exceedes Format Extension "
+            error_setg(errp, "Feature data_size exceeds Format Extension "
                        "cluster");
             goto fail;
         }
