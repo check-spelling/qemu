@@ -508,7 +508,7 @@ static void mips_loongson3_virt_init(MachineState *machine)
 
     /*
      * The whole MMIO range among configure registers doesn't generate
-     * exception when accessing invalid memory. Create some unimplememted
+     * exception when accessing invalid memory. Create some unimplemented
      * devices to emulate this feature.
      */
     create_unimplemented_device("mmio fallback 0", 0x10000000, 256 * MiB);

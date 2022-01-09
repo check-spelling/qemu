@@ -84,7 +84,7 @@ static uint64_t aspeed_wdt_read(void *opaque, hwaddr offset, unsigned size)
     case WDT_TIMEOUT_STATUS:
     case WDT_TIMEOUT_CLEAR:
         qemu_log_mask(LOG_UNIMP,
-                      "%s: uninmplemented read at offset 0x%" HWADDR_PRIx "\n",
+                      "%s: unimplemented read at offset 0x%" HWADDR_PRIx "\n",
                       __func__, offset);
         return 0;
     default:
@@ -191,7 +191,7 @@ static void aspeed_wdt_write(void *opaque, hwaddr offset, uint64_t data,
     case WDT_TIMEOUT_STATUS:
     case WDT_TIMEOUT_CLEAR:
         qemu_log_mask(LOG_UNIMP,
-                      "%s: uninmplemented write at offset 0x%" HWADDR_PRIx "\n",
+                      "%s: unimplemented write at offset 0x%" HWADDR_PRIx "\n",
                       __func__, offset);
         break;
     default:
