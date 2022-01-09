@@ -681,7 +681,7 @@ static Aml *initialize_route(Aml *route, const char *link_name,
 }
 
 /*
- * build_prt - Define interrupt rounting rules
+ * build_prt - Define interrupt routing rules
  *
  * Returns an array of 128 routes, one for each device,
  * based on device location.
