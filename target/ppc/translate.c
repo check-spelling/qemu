@@ -1490,7 +1490,7 @@ static inline void gen_set_Rc0(DisasContext *ctx, TCGv reg)
     }
 }
 
-/* cmprb - range comparison: isupper, isaplha, islower*/
+/* cmprb - range comparison: isupper, isalpha, islower*/
 static void gen_cmprb(DisasContext *ctx)
 {
     TCGv_i32 src1 = tcg_temp_new_i32();
