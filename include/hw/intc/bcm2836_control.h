@@ -2,7 +2,7 @@
  * Raspberry Pi emulation (c) 2012 Gregory Estrade
  * Upstreaming code cleanup [including bcm2835_*] (c) 2013 Jan Petrous
  *
- * Rasperry Pi 2 emulation and refactoring Copyright (c) 2015, Microsoft
+ * Raspberry Pi 2 emulation and refactoring Copyright (c) 2015, Microsoft
  * Written by Andrew Baumann
  *
  * ARM Local Timer IRQ Copyright (c) 2019. Zoltán Baldaszti
