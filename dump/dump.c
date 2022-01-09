@@ -1123,7 +1123,7 @@ static uint64_t dump_pfn_to_paddr(DumpState *s, uint64_t pfn)
 /*
  * exam every page and return the page frame number and the address of the page.
  * bufptr can be NULL. note: the blocks here is supposed to reflect guest-phys
- * blocks, so block->target_start and block->target_end should be interal
+ * blocks, so block->target_start and block->target_end should be integral
  * multiples of the target page size.
  */
 static bool get_next_page(GuestPhysBlock **blockptr, uint64_t *pfnptr,
