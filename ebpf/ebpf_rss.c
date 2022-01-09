@@ -109,7 +109,7 @@ static bool ebpf_rss_set_indirections_table(struct EBPFRSSContext *ctx,
     return true;
 }
 
-static bool ebpf_rss_set_toepliz_key(struct EBPFRSSContext *ctx,
+static bool ebpf_rss_set_toeplitz_key(struct EBPFRSSContext *ctx,
                                      uint8_t *toeplitz_key)
 {
     uint32_t map_key = 0;
@@ -147,7 +147,7 @@ bool ebpf_rss_set_all(struct EBPFRSSContext *ctx, struct EBPFRSSConfig *config,
         return false;
     }
 
-    if (!ebpf_rss_set_toepliz_key(ctx, toeplitz_key)) {
+    if (!ebpf_rss_set_toeplitz_key(ctx, toeplitz_key)) {
         return false;
     }
 
