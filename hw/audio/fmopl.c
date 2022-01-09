@@ -208,7 +208,7 @@ static int num_lock = 0;
 
 /* work table */
 static void *cur_chip = NULL;	/* current chip point */
-/* currenct chip state */
+/* current chip state */
 /* static OPLSAMPLE  *bufL,*bufR; */
 static OPL_CH *S_CH;
 static OPL_CH *E_CH;
