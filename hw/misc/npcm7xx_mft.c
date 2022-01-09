@@ -205,7 +205,7 @@ static NPCM7xxMFTCaptureState npcm7xx_mft_compute_cnt(
 
 /*
  * Capture Fan RPM and update CNT and CR registers accordingly.
- * Raise IRQ if certain contidions are met in IEN.
+ * Raise IRQ if certain conditions are met in IEN.
  */
 static void npcm7xx_mft_capture(NPCM7xxMFTState *s)
 {
