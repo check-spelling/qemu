@@ -985,7 +985,7 @@ static void virtio_crypto_instance_init(Object *obj)
 
     /*
      * The default config_size is sizeof(struct virtio_crypto_config).
-     * Can be overriden with virtio_crypto_set_config_size.
+     * Can be overridden with virtio_crypto_set_config_size.
      */
     vcrypto->config_size = sizeof(struct virtio_crypto_config);
 }
