@@ -142,8 +142,8 @@ if __name__ == '__main__':
     denand (open (sys.argv[1], 'rb'),
             open (sys.argv[2], 'wb'))
 
-Style isssues
--------------
+Style issues
+------------
 
 There is currently a mix between my style (space before opening
 parenthesis) and qemu style. This will be resolved before final
