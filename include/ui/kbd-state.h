@@ -49,7 +49,7 @@ void qkbd_state_free(QKbdState *kbd);
  *
  * Update keyboard state, send event to the guest.
  *
- * This function takes care to not send suspious events (keyup event
+ * This function takes care to not send suspicious events (keyup event
  * for a key not pressed for example).
  *
  * @kbd: state tracker state.
