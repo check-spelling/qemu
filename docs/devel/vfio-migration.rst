@@ -128,7 +128,7 @@ Live migration save path
                    (FINISH_MIGRATE, _DEVICE, _STOPPED)
                                   |
                  (FINISH_MIGRATE, _COMPLETED, _STOPPED)
-             Migraton thread schedules cleanup bottom half and exits
+             Migration thread schedules cleanup bottom half and exits
 
 Live migration resume path
 --------------------------
