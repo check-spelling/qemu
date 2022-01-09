@@ -401,7 +401,7 @@ static void coroutine_fn bdrv_co_yield_to_drain(BlockDriverState *bs,
 
     /*
      * Temporarily drop the lock across yield or we would get deadlocks.
-     * bdrv_co_drain_bh_cb() reaquires the lock as needed.
+     * bdrv_co_drain_bh_cb() reacquires the lock as needed.
      *
      * When we yield below, the lock for the current context will be
      * released, so if this is actually the lock that protects bs, don't drop
@@ -417,7 +417,7 @@ static void coroutine_fn bdrv_co_yield_to_drain(BlockDriverState *bs,
      * timer callback), it is a bug in the caller that should be fixed. */
     assert(data.done);
 
-    /* Reaquire the AioContext of bs if we dropped it */
+    /* Reacquire the AioContext of bs if we dropped it */
     if (ctx != co_ctx) {
         aio_context_acquire(ctx);
     }
