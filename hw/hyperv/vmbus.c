@@ -2651,7 +2651,7 @@ static const VMStateDescription vmstate_post_message_input = {
     .fields = (VMStateField[]) {
         /*
          * skip connection_id and message_type as they are validated before
-         * queueing and ignored on dequeueing
+         * queueing and ignored on dequeuing
          */
         VMSTATE_UINT32(payload_size, struct hyperv_post_message_input),
         VMSTATE_UINT8_ARRAY(payload, struct hyperv_post_message_input,
