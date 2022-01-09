@@ -204,7 +204,7 @@ static void xen_accel_class_init(ObjectClass *oc, void *data)
     object_class_property_add_bool(oc, "igd-passthru",
         xen_get_igd_gfx_passthru, xen_set_igd_gfx_passthru);
     object_class_property_set_description(oc, "igd-passthru",
-        "Set on/off to enable/disable igd passthrou");
+        "Set on/off to enable/disable igd passthrough");
 }
 
 #define TYPE_XEN_ACCEL ACCEL_CLASS_NAME("xen")

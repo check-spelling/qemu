@@ -284,7 +284,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VOUT_MODE) {
             pmbus_send8(pmdev, pmdev->pages[index].vout_mode);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -292,7 +292,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VOUT) {
             pmbus_send16(pmdev, pmdev->pages[index].vout_command);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -300,7 +300,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VOUT) {
             pmbus_send16(pmdev, pmdev->pages[index].vout_trim);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -308,7 +308,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VOUT) {
             pmbus_send16(pmdev, pmdev->pages[index].vout_cal_offset);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -316,7 +316,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VOUT) {
             pmbus_send16(pmdev, pmdev->pages[index].vout_max);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -324,7 +324,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VOUT_MARGIN) {
             pmbus_send16(pmdev, pmdev->pages[index].vout_margin_high);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -332,7 +332,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VOUT_MARGIN) {
             pmbus_send16(pmdev, pmdev->pages[index].vout_margin_low);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -340,7 +340,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VOUT) {
             pmbus_send16(pmdev, pmdev->pages[index].vout_transition_rate);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -348,7 +348,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VOUT) {
             pmbus_send16(pmdev, pmdev->pages[index].vout_droop);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -356,7 +356,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VOUT) {
             pmbus_send16(pmdev, pmdev->pages[index].vout_scale_loop);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -364,7 +364,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VOUT) {
             pmbus_send16(pmdev, pmdev->pages[index].vout_scale_monitor);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -374,7 +374,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_POUT) {
             pmbus_send16(pmdev, pmdev->pages[index].pout_max);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -382,7 +382,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VIN) {
             pmbus_send16(pmdev, pmdev->pages[index].vin_on);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -390,7 +390,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VIN) {
             pmbus_send16(pmdev, pmdev->pages[index].vin_off);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -398,7 +398,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_IOUT_GAIN) {
             pmbus_send16(pmdev, pmdev->pages[index].iout_cal_gain);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -406,7 +406,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VOUT) {
             pmbus_send16(pmdev, pmdev->pages[index].vout_ov_fault_limit);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -414,7 +414,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VOUT) {
             pmbus_send8(pmdev, pmdev->pages[index].vout_ov_fault_response);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -422,7 +422,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VOUT) {
             pmbus_send16(pmdev, pmdev->pages[index].vout_ov_warn_limit);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -430,7 +430,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VOUT) {
             pmbus_send16(pmdev, pmdev->pages[index].vout_uv_warn_limit);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -438,7 +438,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VOUT) {
             pmbus_send16(pmdev, pmdev->pages[index].vout_uv_fault_limit);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -446,7 +446,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VOUT) {
             pmbus_send8(pmdev, pmdev->pages[index].vout_uv_fault_response);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -454,7 +454,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_IOUT) {
             pmbus_send16(pmdev, pmdev->pages[index].iout_oc_fault_limit);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -462,7 +462,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_IOUT) {
             pmbus_send8(pmdev, pmdev->pages[index].iout_oc_fault_response);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -470,7 +470,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_IOUT) {
             pmbus_send16(pmdev, pmdev->pages[index].iout_oc_lv_fault_limit);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -478,7 +478,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_IOUT) {
             pmbus_send8(pmdev, pmdev->pages[index].iout_oc_lv_fault_response);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -486,7 +486,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_IOUT) {
             pmbus_send16(pmdev, pmdev->pages[index].iout_oc_warn_limit);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -494,7 +494,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_IOUT) {
             pmbus_send16(pmdev, pmdev->pages[index].iout_uc_fault_limit);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -502,7 +502,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_IOUT) {
             pmbus_send8(pmdev, pmdev->pages[index].iout_uc_fault_response);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -510,7 +510,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_TEMPERATURE) {
             pmbus_send16(pmdev, pmdev->pages[index].ot_fault_limit);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -518,7 +518,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_TEMPERATURE) {
             pmbus_send8(pmdev, pmdev->pages[index].ot_fault_response);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -526,7 +526,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_TEMPERATURE) {
             pmbus_send16(pmdev, pmdev->pages[index].ot_warn_limit);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -534,7 +534,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_TEMPERATURE) {
             pmbus_send16(pmdev, pmdev->pages[index].ut_warn_limit);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -542,7 +542,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_TEMPERATURE) {
             pmbus_send16(pmdev, pmdev->pages[index].ut_fault_limit);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -550,7 +550,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_TEMPERATURE) {
             pmbus_send8(pmdev, pmdev->pages[index].ut_fault_response);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -558,7 +558,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VIN) {
             pmbus_send16(pmdev, pmdev->pages[index].vin_ov_fault_limit);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -566,7 +566,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VIN) {
             pmbus_send8(pmdev, pmdev->pages[index].vin_ov_fault_response);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -574,7 +574,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VIN) {
             pmbus_send16(pmdev, pmdev->pages[index].vin_ov_warn_limit);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -582,7 +582,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VIN) {
             pmbus_send16(pmdev, pmdev->pages[index].vin_uv_warn_limit);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -590,7 +590,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VIN) {
             pmbus_send16(pmdev, pmdev->pages[index].vin_uv_fault_limit);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -598,7 +598,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VIN) {
             pmbus_send8(pmdev, pmdev->pages[index].vin_uv_fault_response);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -606,7 +606,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_IIN) {
             pmbus_send16(pmdev, pmdev->pages[index].iin_oc_fault_limit);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -614,7 +614,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_IIN) {
             pmbus_send8(pmdev, pmdev->pages[index].iin_oc_fault_response);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -622,7 +622,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_IIN) {
             pmbus_send16(pmdev, pmdev->pages[index].iin_oc_warn_limit);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -630,7 +630,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_POUT) {
             pmbus_send16(pmdev, pmdev->pages[index].pout_op_fault_limit);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -638,7 +638,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_POUT) {
             pmbus_send8(pmdev, pmdev->pages[index].pout_op_fault_response);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -646,7 +646,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_POUT) {
             pmbus_send16(pmdev, pmdev->pages[index].pout_op_warn_limit);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -654,7 +654,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_PIN) {
             pmbus_send16(pmdev, pmdev->pages[index].pin_op_warn_limit);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -670,7 +670,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VOUT) {
             pmbus_send8(pmdev, pmdev->pages[index].status_vout);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -678,7 +678,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_IOUT) {
             pmbus_send8(pmdev, pmdev->pages[index].status_iout);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -688,7 +688,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
             pmdev->pages[index].page_flags & PB_HAS_PIN) {
             pmbus_send8(pmdev, pmdev->pages[index].status_input);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -696,7 +696,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_TEMPERATURE) {
             pmbus_send8(pmdev, pmdev->pages[index].status_temperature);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -712,7 +712,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_EIN) {
             pmbus_send(pmdev, pmdev->pages[index].read_ein, 5);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -720,7 +720,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_EOUT) {
             pmbus_send(pmdev, pmdev->pages[index].read_eout, 5);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -728,7 +728,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VIN) {
             pmbus_send16(pmdev, pmdev->pages[index].read_vin);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -736,7 +736,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_IIN) {
             pmbus_send16(pmdev, pmdev->pages[index].read_iin);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -744,7 +744,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VOUT) {
             pmbus_send16(pmdev, pmdev->pages[index].read_vout);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -752,7 +752,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_IOUT) {
             pmbus_send16(pmdev, pmdev->pages[index].read_iout);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -760,7 +760,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_TEMPERATURE) {
             pmbus_send16(pmdev, pmdev->pages[index].read_temperature_1);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -768,7 +768,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_TEMP2) {
             pmbus_send16(pmdev, pmdev->pages[index].read_temperature_2);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -776,7 +776,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_TEMP3) {
             pmbus_send16(pmdev, pmdev->pages[index].read_temperature_3);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -784,7 +784,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_POUT) {
             pmbus_send16(pmdev, pmdev->pages[index].read_pout);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -792,7 +792,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_PIN) {
             pmbus_send16(pmdev, pmdev->pages[index].read_pin);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -804,7 +804,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_MFR_INFO) {
             pmbus_send_string(pmdev, pmdev->pages[index].mfr_id);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -812,7 +812,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_MFR_INFO) {
             pmbus_send_string(pmdev, pmdev->pages[index].mfr_model);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -820,7 +820,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_MFR_INFO) {
             pmbus_send_string(pmdev, pmdev->pages[index].mfr_revision);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -828,7 +828,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_MFR_INFO) {
             pmbus_send_string(pmdev, pmdev->pages[index].mfr_location);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -836,7 +836,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VIN_RATING) {
             pmbus_send16(pmdev, pmdev->pages[index].mfr_vin_min);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -844,7 +844,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VIN_RATING) {
             pmbus_send16(pmdev, pmdev->pages[index].mfr_vin_max);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -852,7 +852,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_IIN_RATING) {
             pmbus_send16(pmdev, pmdev->pages[index].mfr_iin_max);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -860,7 +860,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_PIN_RATING) {
             pmbus_send16(pmdev, pmdev->pages[index].mfr_pin_max);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -868,7 +868,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VOUT_RATING) {
             pmbus_send16(pmdev, pmdev->pages[index].mfr_vout_min);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -876,7 +876,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_VOUT_RATING) {
             pmbus_send16(pmdev, pmdev->pages[index].mfr_vout_max);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -884,7 +884,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_IOUT_RATING) {
             pmbus_send16(pmdev, pmdev->pages[index].mfr_iout_max);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -892,7 +892,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_POUT_RATING) {
             pmbus_send16(pmdev, pmdev->pages[index].mfr_pout_max);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -900,7 +900,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_TEMP_RATING) {
             pmbus_send16(pmdev, pmdev->pages[index].mfr_max_temp_1);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -908,7 +908,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_TEMP_RATING) {
             pmbus_send16(pmdev, pmdev->pages[index].mfr_max_temp_2);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -916,7 +916,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
         if (pmdev->pages[index].page_flags & PB_HAS_TEMP_RATING) {
             pmbus_send16(pmdev, pmdev->pages[index].mfr_max_temp_3);
         } else {
-            goto passthough;
+            goto passthrough;
         }
         break;
 
@@ -936,7 +936,7 @@ static uint8_t pmbus_receive_byte(SMBusDevice *smd)
                       __func__, pmdev->code);
         break;
 
-passthough:
+passthrough:
     default:
         /* Pass through read request if not handled */
         if (pmdc->receive_byte) {
