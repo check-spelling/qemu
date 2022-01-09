@@ -488,7 +488,7 @@ static void designware_pcie_root_realize(PCIDevice *dev, Error **errp)
 
     /*
      * If no inbound iATU windows are configured, HW defaults to
-     * letting inbound TLPs to pass in. We emulate that by exlicitly
+     * letting inbound TLPs to pass in. We emulate that by explicitly
      * configuring first inbound window to cover all of target's
      * address space.
      *
