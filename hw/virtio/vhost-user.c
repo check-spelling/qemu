@@ -392,7 +392,7 @@ static int vhost_user_read(struct vhost_dev *dev, VhostUserMsg *msg)
      * We want to be able to monitor the slave channel fd while waiting
      * for chr I/O. This requires an event loop, but we can't nest the
      * one to which chr is currently attached : its fd handlers might not
-     * be prepared for re-entrancy. So we create a new one and switch chr
+     * be prepared for reentrancy. So we create a new one and switch chr
      * to use it.
      */
     slave_update_read_handler(dev, ctxt);
