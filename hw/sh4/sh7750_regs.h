@@ -535,7 +535,7 @@
 #define SH7750_RCR2_PES_x1     0x60 /*   Generated at 1 sec interval */
 #define SH7750_RCR2_PES_x2     0x70 /*   Generated at 2 sec interval */
 #define SH7750_RCR2_RTCEN      0x08 /* RTC Crystal Oscillator is Operated */
-#define SH7750_RCR2_ADJ        0x04 /* 30-Second Adjastment */
+#define SH7750_RCR2_ADJ        0x04 /* 30-Second Adjustment */
 #define SH7750_RCR2_RESET      0x02 /* Frequency divider circuits are reset */
 #define SH7750_RCR2_START      0x01 /* 0 - sec, min, hr, day-of-week, month, */
                                     /*     year counters are stopped */
