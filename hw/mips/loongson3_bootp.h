@@ -129,7 +129,7 @@ struct irq_source_routing_table {
 } QEMU_PACKED;
 
 struct interface_info {
-    uint16_t vers;               /* version of the specificition */
+    uint16_t vers;               /* version of the specification */
     uint16_t size;
     uint8_t  flag;
     char description[64];
