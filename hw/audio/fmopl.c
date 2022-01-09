@@ -367,7 +367,7 @@ static inline void CALC_FCSLOT(OPL_CH *CH,OPL_SLOT *SLOT)
 	if( SLOT->ksr != ksr )
 	{
 		SLOT->ksr = ksr;
-		/* attack , decay rate recalcration */
+		/* attack , decay rate recalculation */
 		SLOT->evsa = SLOT->AR[ksr];
 		SLOT->evsd = SLOT->DR[ksr];
 		SLOT->evsr = SLOT->RR[ksr];
