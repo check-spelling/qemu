@@ -1015,7 +1015,7 @@ void YM3812UpdateOne(FM_OPL *OPL, int16_t *buffer, int length)
 		/* FM part */
 		for(CH=S_CH ; CH < R_CH ; CH++)
 			OPL_CALC_CH(CH);
-		/* Rythn part */
+		/* Rhythm part */
 		if(rhythm)
 			OPL_CALC_RH(S_CH);
 		/* limit check */
