@@ -428,7 +428,7 @@ typedef enum {
 } mfi_ld_query_type;
 
 /*
- * Other propertities and definitions
+ * Other properties and definitions
  */
 #define MFI_MAX_PD_CHANNELS     2
 #define MFI_MAX_LD_CHANNELS     2
