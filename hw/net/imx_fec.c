@@ -235,7 +235,7 @@ static void imx_eth_update(IMXFECState *s);
 
 /*
  * The MII phy could raise a GPIO to the processor which in turn
- * could be handled as an interrpt by the OS.
+ * could be handled as an interrupt by the OS.
  * For now we don't handle any GPIO/interrupt line, so the OS will
  * have to poll for the PHY status.
  */
