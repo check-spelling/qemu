@@ -310,7 +310,7 @@
 #define SH7750_STBCR_PHZ      0x40 /* State of peripheral module pins in */
                                    /* standby mode: */
                                    /*   0 normal state */
-                                   /*   1 high-impendance state */
+                                   /*   1 high-impedance state */
 
 #define SH7750_STBCR_PPU      0x20 /* Peripheral module pins pull-up controls */
 #define SH7750_STBCR_MSTP4    0x10 /* Stopping the clock supply to DMAC */
@@ -580,14 +580,14 @@
 #define SH7750_BCR1_MEMMPX    0x00020000 /* Area 1 to 6 MPX Interface: */
                                          /*   0 - SRAM/burst ROM interface */
                                          /*   1 - MPX interface */
-#define SH7750_BCR1_HIZMEM    0x00008000 /* High Impendance Control. */
+#define SH7750_BCR1_HIZMEM    0x00008000 /* High Impedance Control. */
                                          /*   Specifies the state of A[25:0], */
                                          /*   BS\, CSn\, RD/WR\, CE2A\, CE2B\ */
                                          /*   in standby mode and when bus is */
                                          /*   released: */
                                          /*   0 - signals go to High-Z mode */
                                          /*   1 - signals driven */
-#define SH7750_BCR1_HIZCNT    0x00004000 /* High Impendance Control. */
+#define SH7750_BCR1_HIZCNT    0x00004000 /* High Impedance Control. */
                                          /*   Specifies the state of the */
                                          /*   RAS\, RAS2\, WEn\, CASn\, DQMn, */
                                          /*   RD\, CASS\, FRAME\, RD2\ */
