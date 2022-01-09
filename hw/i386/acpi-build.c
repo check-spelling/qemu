@@ -2097,7 +2097,7 @@ build_srat(GArray *table_data, BIOSLinker *linker, MachineState *machine)
 }
 
 /*
- * Insert DMAR scope for PCI bridges and endpoint devcie
+ * Insert DMAR scope for PCI bridges and endpoint device
  */
 static void
 insert_scope(PCIBus *bus, PCIDevice *dev, void *opaque)
