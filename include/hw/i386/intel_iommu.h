@@ -262,7 +262,7 @@ struct IntelIOMMUState {
     dma_addr_t intr_root;           /* Interrupt remapping table pointer */
     uint32_t intr_size;             /* Number of IR table entries */
     bool intr_eime;                 /* Extended interrupt mode enabled */
-    OnOffAuto intr_eim;             /* Toggle for EIM cabability */
+    OnOffAuto intr_eim;             /* Toggle for EIM capability */
     bool buggy_eim;                 /* Force buggy EIM unless eim=off */
     uint8_t aw_bits;                /* Host/IOVA address width (in bits) */
     bool dma_drain;                 /* Whether DMA r/w draining enabled */

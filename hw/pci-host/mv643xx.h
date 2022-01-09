@@ -498,7 +498,7 @@
 #define MV64340_PCI_INTERNAL_REG_MEM_MAPPED_BASE_ADDR_HIGH          0x024
 #define MV64340_PCI_SUBSYSTEM_ID_AND_SUBSYSTEM_VENDOR_ID            0x02c
 #define MV64340_PCI_EXPANSION_ROM_BASE_ADDR_REG                     0x030
-#define MV64340_PCI_CAPABILTY_LIST_POINTER                          0x034
+#define MV64340_PCI_CAPABILITY_LIST_POINTER                         0x034
 #define MV64340_PCI_INTERRUPT_PIN_AND_LINE                          0x03C
        /* capability list */
 #define MV64340_PCI_POWER_MANAGEMENT_CAPABILITY                     0x040
