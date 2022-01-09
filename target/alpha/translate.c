@@ -2482,7 +2482,7 @@ static DisasJumpType translate_one(DisasContext *ctx, uint32_t insn)
                 /* Invalid */
                 goto invalid_opc;
             case 0x7:
-                /* Invaliid */
+                /* Invalid */
                 goto invalid_opc;
             case 0x8:
                 /* Longword virtual access (hw_ldl) */
