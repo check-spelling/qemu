@@ -339,7 +339,7 @@ static uint64_t pl181_read(void *opaque, hwaddr offset,
         return s->mask[1];
     case 0x48: /* FifoCnt */
         /* The documentation is somewhat vague about exactly what FifoCnt
-           does.  On real hardware it appears to be when decrememnted
+           does.  On real hardware it appears to be when decremented
            when a word is transferred between the FIFO and the serial
            data engine.  DataCnt is decremented after each byte is
            transferred between the serial engine and the card.
