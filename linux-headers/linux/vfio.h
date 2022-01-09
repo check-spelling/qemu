@@ -370,7 +370,7 @@ struct vfio_region_info_cap_type {
  * On linux systems you can find the EDID blob in sysfs:
  *    /sys/class/drm/${card}/${connector}/edid
  *
- * You can use the edid-decode ulility (comes with xorg-x11-utils) to
+ * You can use the edid-decode utility (comes with xorg-x11-utils) to
  * decode the EDID blob.
  *
  * @edid_offset: location of the edid blob, relative to the
