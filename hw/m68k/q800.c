@@ -1,5 +1,5 @@
 /*
- * QEMU Motorla 680x0 Macintosh hardware System Emulator
+ * QEMU Motorola 680x0 Macintosh hardware System Emulator
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
