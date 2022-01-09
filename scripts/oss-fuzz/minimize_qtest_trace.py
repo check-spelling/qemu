@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-This takes a crashing qtest trace and tries to remove superflous operations
+This takes a crashing qtest trace and tries to remove superfluous operations
 """
 
 import sys
