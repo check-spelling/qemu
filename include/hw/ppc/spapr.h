@@ -332,7 +332,7 @@ struct SpaprMachineState {
 #define H_MR_CONDITION    -43
 #define H_NOT_ENOUGH_RESOURCES -44
 #define H_R_STATE         -45
-#define H_RESCINDEND      -46
+#define H_RESCINDED       -46
 #define H_P2              -55
 #define H_P3              -56
 #define H_P4              -57
