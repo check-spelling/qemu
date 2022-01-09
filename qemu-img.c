@@ -2197,7 +2197,7 @@ static int img_convert(int argc, char **argv)
          skip_create = false, progress = false, tgt_image_opts = false;
     int64_t ret = -EINVAL;
     bool force_share = false;
-    bool explict_min_sparse = false;
+    bool explicit_min_sparse = false;
     bool bitmaps = false;
     bool skip_broken = false;
     int64_t rate_limit = 0;
@@ -2292,7 +2292,7 @@ static int img_convert(int argc, char **argv)
             }
 
             s.min_sparse = sval / BDRV_SECTOR_SIZE;
-            explict_min_sparse = true;
+            explicit_min_sparse = true;
             break;
         }
         case 'p':
@@ -2373,7 +2373,7 @@ static int img_convert(int argc, char **argv)
         goto fail_getopt;
     }
 
-    if (explict_min_sparse && s.copy_range) {
+    if (explicit_min_sparse && s.copy_range) {
         error_report("Cannot enable copy offloading when -S is used");
         goto fail_getopt;
     }

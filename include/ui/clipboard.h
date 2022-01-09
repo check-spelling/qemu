@@ -39,7 +39,7 @@ enum QemuClipboardType {
 /**
  * enum QemuClipboardSelection
  *
- * @QEMU_CLIPBOARD_SELECTION_CLIPBOARD: clipboard (explitcit cut+paste).
+ * @QEMU_CLIPBOARD_SELECTION_CLIPBOARD: clipboard (explicit cut+paste).
  * @QEMU_CLIPBOARD_SELECTION_PRIMARY: primary selection (select + middle mouse button).
  * @QEMU_CLIPBOARD_SELECTION_SECONDARY: secondary selection (dunno).
  * @QEMU_CLIPBOARD_SELECTION__COUNT: selection count.
