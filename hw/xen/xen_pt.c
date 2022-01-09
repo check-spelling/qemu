@@ -544,7 +544,7 @@ static int xen_pt_bar_from_region(XenPCIPassthroughState *s, MemoryRegion *mr)
  * device.  The io_region to check is provided with (addr, size and type)
  * A callback can be provided and will be called for every region that is
  * overlapped.
- * The return value indicates if the region is overlappsed */
+ * The return value indicates if the region is overlapped */
 struct CheckBarArgs {
     XenPCIPassthroughState *s;
     pcibus_t addr;
