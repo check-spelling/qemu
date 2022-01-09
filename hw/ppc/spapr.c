@@ -1849,7 +1849,7 @@ static bool spapr_ov5_cas_needed(void *opaque)
      * Both of these options encode machine topology into the device-tree
      * in such a way that the now-booted OS should still be able to interact
      * appropriately with QEMU regardless of what options were actually
-     * negotiatied on the source side.
+     * negotiated on the source side.
      *
      * As such, we can avoid migrating the CAS-negotiated options if these
      * are the only options available on the current machine/platform.
