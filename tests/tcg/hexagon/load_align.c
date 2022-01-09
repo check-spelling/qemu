@@ -175,7 +175,7 @@ TEST_ap(loadalignh_ap, h, 2,
 
 /*
  ****************************************************************************
- * _rp addressing mode (addr ++ modifer-reg)
+ * _rp addressing mode (addr ++ modifier-reg)
  */
 #define LOAD_pr(SZ, RES, PTR, INC) \
     __asm__( \
@@ -217,7 +217,7 @@ TEST_pr(loadalignh_pr, h, 2,
 
 /*
  ****************************************************************************
- * _pbr addressing mode (addr ++ modifer-reg:brev)
+ * _pbr addressing mode (addr ++ modifier-reg:brev)
  */
 #define LOAD_pbr(SZ, RES, PTR) \
     __asm__( \

@@ -194,7 +194,7 @@ TEST_ap(loadbsw4_ap, long long, S, 4, 0x0000ff000000ff00LL,
 
 /*
  ****************************************************************************
- * _rp addressing mode (addr ++ modifer-reg)
+ * _rp addressing mode (addr ++ modifier-reg)
  */
 #define BxW_LOAD_pr(SZ, RES, PTR, INC) \
     __asm__( \
@@ -241,7 +241,7 @@ TEST_pr(loadbsw4_pr, long long, S, 4, 0x0000ff000000ff00LL,
 
 /*
  ****************************************************************************
- * _pbr addressing mode (addr ++ modifer-reg:brev)
+ * _pbr addressing mode (addr ++ modifier-reg:brev)
  */
 #define BxW_LOAD_pbr(SZ, RES, PTR) \
     __asm__( \
