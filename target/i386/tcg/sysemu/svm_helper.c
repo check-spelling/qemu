@@ -412,7 +412,7 @@ void helper_vmrun(CPUX86State *env, int aflag, int next_eip_addend)
             qemu_log_mask(CPU_LOG_TB_IN_ASM, "NMI");
             cpu_loop_exit(cs);
             break;
-        case SVM_EVTINJ_TYPE_EXEPT:
+        case SVM_EVTINJ_TYPE_EXCEPT:
             if (vector == EXCP02_NMI || vector >= 31)  {
                 cpu_vmexit(env, SVM_EXIT_ERR, 0, GETPC());
             }
@@ -420,7 +420,7 @@ void helper_vmrun(CPUX86State *env, int aflag, int next_eip_addend)
             env->error_code = event_inj_err;
             env->exception_is_int = 0;
             env->exception_next_eip = -1;
-            qemu_log_mask(CPU_LOG_TB_IN_ASM, "EXEPT");
+            qemu_log_mask(CPU_LOG_TB_IN_ASM, "EXCEPT");
             cpu_loop_exit(cs);
             break;
         case SVM_EVTINJ_TYPE_SOFT:

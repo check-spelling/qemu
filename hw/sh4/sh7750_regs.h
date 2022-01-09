@@ -114,7 +114,7 @@
 #define SH7750_TTB            SH7750_P4_REG32(SH7750_TTB_REGOFS)
 #define SH7750_TTB_A7         SH7750_A7_REG32(SH7750_TTB_REGOFS)
 
-/* TLB exeption address register - TEA */
+/* TLB exception address register - TEA */
 #define SH7750_TEA_REGOFS     0x00000c /* offset */
 #define SH7750_TEA            SH7750_P4_REG32(SH7750_TEA_REGOFS)
 #define SH7750_TEA_A7         SH7750_A7_REG32(SH7750_TEA_REGOFS)

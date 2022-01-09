@@ -434,7 +434,7 @@ static void gen_program_exception(DisasContext *s, int code)
 {
     TCGv_i32 tmp;
 
-    /* Remember what pgm exeption this was.  */
+    /* Remember what pgm exception this was.  */
     tmp = tcg_const_i32(code);
     tcg_gen_st_i32(tmp, cpu_env, offsetof(CPUS390XState, int_pgm_code));
     tcg_temp_free_i32(tmp);

@@ -58,7 +58,7 @@ hwaddr tricore_cpu_get_phys_page_debug(CPUState *cs, vaddr addr)
 }
 #endif
 
-/* TODO: Add exeption support*/
+/* TODO: Add exception support*/
 static void raise_mmu_exception(CPUTriCoreState *env, target_ulong address,
                                 int rw, int tlb_error)
 {
