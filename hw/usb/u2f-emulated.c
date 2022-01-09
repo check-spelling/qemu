@@ -238,7 +238,7 @@ static bool u2f_emulated_setup_counter(const char *path,
     return true;
 }
 
-static u2f_emu_rc u2f_emulated_setup_vdev_manualy(U2FEmulatedState *key)
+static u2f_emu_rc u2f_emulated_setup_vdev_manually(U2FEmulatedState *key)
 {
     ssize_t ret;
     char cert_pem[4096], privkey_pem[2048];
@@ -304,7 +304,7 @@ static void u2f_emulated_realize(U2FKeyState *base, Error **errp)
         || key->counter != NULL) {
         if (key->cert != NULL && key->privkey != NULL
             && key->entropy != NULL && key->counter != NULL) {
-            rc = u2f_emulated_setup_vdev_manualy(key);
+            rc = u2f_emulated_setup_vdev_manually(key);
         } else {
             error_setg(errp, "%s: cert, priv, entropy and counter "
                        "parameters must be provided to manually configure "
