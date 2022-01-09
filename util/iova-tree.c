@@ -68,7 +68,7 @@ int iova_tree_insert(IOVATree *tree, const DMAMap *map)
         return IOVA_ERR_INVALID;
     }
 
-    /* We don't allow to insert range that overlaps with existings */
+    /* We don't allow to insert range that overlaps with existing ranges */
     if (iova_tree_find(tree, map)) {
         return IOVA_ERR_OVERLAP;
     }
