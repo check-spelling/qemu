@@ -162,7 +162,7 @@ static const uint32_t KSL_TABLE[8*16]=
 };
 #undef DV
 
-/* sustain lebel table (3db per step) */
+/* sustain level table (3db per step) */
 /* 0 - 15: 0, 3, 6, 9,12,15,18,21,24,27,30,33,36,39,42,93 (dB)*/
 #define SC(db) (db*((3/EG_STEP)*(1<<ENV_BITS)))+EG_DST
 static const int32_t SL_TABLE[16]={
