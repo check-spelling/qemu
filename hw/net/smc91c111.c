@@ -112,7 +112,7 @@ static const VMStateDescription vmstate_smc91c111 = {
 #define CTR_STORE         0x0001
 
 #define RS_ALGNERR      0x8000
-#define RS_BRODCAST     0x4000
+#define RS_BROADCAST    0x4000
 #define RS_BADCRC       0x2000
 #define RS_ODDFRAME     0x1000
 #define RS_TOOLONG      0x0800
