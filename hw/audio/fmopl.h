@@ -13,8 +13,8 @@ typedef struct fm_opl_slot {
 	int32_t TLL;		/* adjusted now TL                     */
 	uint8_t  KSR;		/* key scale rate  :(shift down bit)   */
 	int32_t *AR;		/* attack rate     :&AR_TABLE[AR<<2]   */
-	int32_t *DR;		/* decay rate      :&DR_TALBE[DR<<2]   */
-	int32_t SL;		/* sustin level    :SL_TALBE[SL]       */
+	int32_t *DR;		/* decay rate      :&DR_TABLE[DR<<2]   */
+	int32_t SL;		/* sustin level    :SL_TABLE[SL]       */
 	int32_t *RR;		/* release rate    :&DR_TABLE[RR<<2]   */
 	uint8_t ksl;		/* keyscale level  :(shift down bits)  */
 	uint8_t ksr;		/* key scale rate  :kcode>>KSR         */
