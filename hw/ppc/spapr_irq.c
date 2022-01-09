@@ -564,7 +564,7 @@ int spapr_irq_find(SpaprMachineState *spapr, int num, bool align, Error **errp)
     assert(ics);
 
     /*
-     * MSIMesage::data is used for storing VIRQ so
+     * MSIMessage::data is used for storing VIRQ so
      * it has to be aligned to num to support multiple
      * MSI vectors. MSI-X is not affected by this.
      * The hint is used for the first IRQ, the rest should
