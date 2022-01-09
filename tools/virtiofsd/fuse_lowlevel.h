@@ -1234,7 +1234,7 @@ struct fuse_lowlevel_ops {
  * Possible requests:
  *   all except forget
  *
- * Whereever possible, error codes should be chosen from the list of
+ * Wherever possible, error codes should be chosen from the list of
  * documented error conditions in the corresponding system calls
  * manpage.
  *
