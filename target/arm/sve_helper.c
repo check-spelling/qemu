@@ -6248,7 +6248,7 @@ void sve_ldnfff1_r(CPUARMState *env, void *vg, const target_ulong addr,
      * Per the MemSingleNF pseudocode, a no-fault load from Device memory
      * must not actually hit the bus -- it returns (UNKNOWN, FAULT) instead.
      *
-     * Unfortuately we do not have access to the memory attributes from the
+     * Unfortunately we do not have access to the memory attributes from the
      * PTE to tell Device memory from Normal memory.  So we make a mostly
      * correct check, and indicate (UNKNOWN, FAULT) for any MMIO.
      * This gives the right answer for the common cases of "Normal memory,

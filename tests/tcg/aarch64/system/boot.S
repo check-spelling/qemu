@@ -147,7 +147,7 @@ __start:
 	 * T0SZ[5:0]  = 2^(64 - 25)
 	 *
 	 * The size of T0SZ controls what the initial lookup level. It
-	 * would be nice to start at level 2 but unfortunatly for a
+	 * would be nice to start at level 2 but unfortunately for a
 	 * flat-mapping on the virt machine we need to handle IA's
 	 * with at least 1gb range to see RAM. So we start with a
 	 * level 1 lookup.
