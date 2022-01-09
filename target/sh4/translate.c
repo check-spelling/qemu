@@ -253,7 +253,7 @@ static void gen_jump(DisasContext * ctx)
 {
     if (ctx->delayed_pc == -1) {
 	/* Target is not statically known, it comes necessarily from a
-	   delayed jump as immediate jump are conditinal jumps */
+	   delayed jump as immediate jump are conditional jumps */
 	tcg_gen_mov_i32(cpu_pc, cpu_delayed_pc);
         tcg_gen_discard_i32(cpu_delayed_pc);
         if (use_exit_tb(ctx)) {
