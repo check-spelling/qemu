@@ -214,7 +214,7 @@ static void pnv_phb4_check_mbt(PnvPHB4 *phb, uint32_t index)
         start = base | (phb->regs[PHB_M64_UPPER_BITS >> 3]);
     }
 
-    /* TODO: Figure out how to implemet/decode AOMASK */
+    /* TODO: Figure out how to implement/decode AOMASK */
 
     /* Check if it matches an enabled MMIO region in the PEC stack */
     if (memory_region_is_mapped(&phb->stack->mmbar0) &&
