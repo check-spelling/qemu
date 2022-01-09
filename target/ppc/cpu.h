@@ -2276,7 +2276,7 @@ enum {
 
 /*
  * Hardware interrupt sources:
- *   all those exception can be raised simulteaneously
+ *   all those exception can be raised simultaneously
  */
 /* Input pins definitions */
 enum {

@@ -1664,7 +1664,7 @@ SRST
     directory on host is made directly accessible by guest as a pass-through
     file system by using the 9P network protocol for communication between
     host and guests, if desired even accessible, shared by several guests
-    simultaniously.
+    simultaneously.
 
     Note that ``-virtfs`` is actually just a convenience shortcut for its
     generalized form ``-fsdev -device virtio-9p-pci``.
