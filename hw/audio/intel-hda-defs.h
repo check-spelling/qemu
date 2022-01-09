@@ -575,7 +575,7 @@ enum {
 #define AC_DIPSIZE_PACK_IDX		(0x07<<0) /* packet index */
 
 /* HDMI DIP index */
-#define AC_DIPIDX_PACK_IDX		(0x07<<5) /* packet idnex */
+#define AC_DIPIDX_PACK_IDX		(0x07<<5) /* packet index */
 #define AC_DIPIDX_BYTE_IDX		(0x1f<<0) /* byte index */
 
 /* HDMI DIP xmit (transmit) control */
