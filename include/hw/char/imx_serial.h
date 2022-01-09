@@ -40,7 +40,7 @@ OBJECT_DECLARE_SIMPLE_TYPE(IMXSerialState, IMX_SERIAL)
 #define USR1_AGTIM      (1<<8)    /* Aging timer interrupt */
 #define USR1_DTRD       (1<<7)    /* DTR changed */
 #define USR1_RXDS       (1<<6)    /* Receiver is idle */
-#define USR1_AIRINT     (1<<5)    /* Aysnch IR interrupt */
+#define USR1_AIRINT     (1<<5)    /* Async IR interrupt */
 #define USR1_AWAKE      (1<<4)    /* Falling edge detected on RXd pin */
 
 #define USR2_ADET       (1<<15)   /* Autobaud complete */
