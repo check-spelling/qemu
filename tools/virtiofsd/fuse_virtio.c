@@ -506,7 +506,7 @@ static void fv_queue_worker(gpointer data, gpointer user_data)
                   sizeof(struct fuse_in_header));
     memcpy(&inh, fbuf.mem, sizeof(struct fuse_in_header));
 
-    pbufv = NULL; /* Compiler thinks an unitialised path */
+    pbufv = NULL; /* Compiler thinks an uninitialised path */
     if (inh.opcode == FUSE_WRITE &&
         out_len >= (sizeof(struct fuse_in_header) +
                     sizeof(struct fuse_write_in))) {
