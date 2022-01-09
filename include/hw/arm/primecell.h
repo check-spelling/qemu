@@ -1,7 +1,7 @@
 #ifndef PRIMECELL_H
 #define PRIMECELL_H
 
-/* Declarations for ARM PrimeCell based periperals.  */
+/* Declarations for ARM PrimeCell based peripherals.  */
 /* Also includes some devices that are currently only used by the
    ARM boards.  */
 
