@@ -1549,7 +1549,7 @@ static TCGReg tcg_out_tlb_read(TCGContext *s, TCGReg addrlo, TCGReg addrhi,
     unsigned a_bits = get_alignment_bits(opc);
 
     /*
-     * We don't support inline unaligned acceses, but we can easily
+     * We don't support inline unaligned accesses, but we can easily
      * support overalignment checks.
      */
     if (a_bits < s_bits) {
