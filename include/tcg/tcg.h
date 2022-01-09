@@ -968,7 +968,7 @@ enum {
     /* Instruction operands are 64-bits (otherwise 32-bits).  */
     TCG_OPF_64BIT        = 0x10,
     /* Instruction is optional and not implemented by the host, or insn
-       is generic and should not be implemened by the host.  */
+       is generic and should not be implemented by the host.  */
     TCG_OPF_NOT_PRESENT  = 0x20,
     /* Instruction operands are vectors.  */
     TCG_OPF_VECTOR       = 0x40,
