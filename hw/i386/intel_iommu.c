@@ -3691,7 +3691,7 @@ static void vtd_init(IntelIOMMUState *s)
     vtd_define_long(s, DMAR_IECTL_REG, 0x80000000UL, 0x80000000UL, 0);
     vtd_define_long(s, DMAR_IEDATA_REG, 0, 0xffffffffUL, 0);
     vtd_define_long(s, DMAR_IEADDR_REG, 0, 0xfffffffcUL, 0);
-    /* Treadted as RsvdZ when EIM in ECAP_REG is not supported */
+    /* Treated as RsvdZ when EIM in ECAP_REG is not supported */
     vtd_define_long(s, DMAR_IEUADDR_REG, 0, 0, 0);
 
     /* IOTLB registers */
