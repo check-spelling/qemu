@@ -9,7 +9,7 @@
 
 /*
  * Semihosting interface on ARM AArch64
- * See "Semihosting for AArch32 and AArch64 Relase 2.0" by ARM
+ * See "Semihosting for AArch32 and AArch64 Release 2.0" by ARM
  * w0 - semihosting call number
  * x1 - semihosting parameter
  */
