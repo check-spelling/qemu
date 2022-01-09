@@ -6339,7 +6339,7 @@ static void x86_cpu_realizefn(DeviceState *dev, Error **errp)
     if (cpu->ucode_rev == 0) {
         /*
          * The default is the same as KVM's. Note that this check
-         * needs to happen after the evenual setting of ucode_rev in
+         * needs to happen after the eventual setting of ucode_rev in
          * accel-specific code in cpu_exec_realizefn.
          */
         if (IS_AMD_CPU(env)) {
