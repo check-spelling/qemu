@@ -298,7 +298,7 @@ static inline void OPL_KEYOFF(OPL_SLOT *SLOT)
 {
 	if( SLOT->evm > ENV_MOD_RR)
 	{
-		/* set envelope counter from envleope output */
+		/* set envelope counter from envelope output */
 		SLOT->evm = ENV_MOD_RR;
 		if( !(SLOT->evc&EG_DST) )
 			//SLOT->evc = (ENV_CURVE[SLOT->evc>>ENV_BITS]<<ENV_BITS) + EG_DST;
