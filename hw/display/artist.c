@@ -565,7 +565,7 @@ static void fill_window(ARTISTState *s,
     if (s->reg_100080 == 0x7d) {
         /*
          * Not sure what this register really does, but
-         * 0x7d seems to enable autoincremt of the Y axis
+         * 0x7d seems to enable autoincrement of the Y axis
          * by the current block move height.
          */
         height = artist_get_y(s->blockmove_size);
