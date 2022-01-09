@@ -282,7 +282,7 @@ for target in $target_list; do
   if test $got_cross_cc = yes; then
       # Test for compiler features for optional tests. We only do this
       # for cross compilers because ensuring the docker containers based
-      # compilers is a requirememt for adding a new test that needs a
+      # compilers is a requirement for adding a new test that needs a
       # compiler feature.
 
       case $target in
