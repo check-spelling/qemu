@@ -1848,7 +1848,7 @@ static void vtd_context_global_invalidate(IntelIOMMUState *s)
     /*
      * From VT-d spec 6.5.2.1, a global context entry invalidation
      * should be followed by a IOTLB global invalidation, so we should
-     * be safe even without this. Hoewever, let's replay the region as
+     * be safe even without this. However, let's replay the region as
      * well to be safer, and go back here when we need finer tunes for
      * VT-d emulation codes.
      */
