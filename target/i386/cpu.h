@@ -681,7 +681,7 @@ typedef uint64_t FeatureWordArray[FEATURE_WORDS];
 #define CPUID_EXT2_3DNOWEXT (1U << 30)
 #define CPUID_EXT2_3DNOW   (1U << 31)
 
-/* CPUID[8000_0001].EDX bits that are aliase of CPUID[1].EDX bits on AMD CPUs */
+/* CPUID[8000_0001].EDX bits that are aliases of CPUID[1].EDX bits on AMD CPUs */
 #define CPUID_EXT2_AMD_ALIASES (CPUID_EXT2_FPU | CPUID_EXT2_VME | \
                                 CPUID_EXT2_DE | CPUID_EXT2_PSE | \
                                 CPUID_EXT2_TSC | CPUID_EXT2_MSR | \
