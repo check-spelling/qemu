@@ -139,7 +139,7 @@ static CPUMIPSState *mips_cpu_map_tc(CPUMIPSState *env, int *tc)
  * CP0_TCStatus registers. These fields are wired to the same registers,
  * so changes to either of them should be reflected on both registers.
  *
- * Also, EntryHi shares the bottom 8 bit ASID with TCStauts.
+ * Also, EntryHi shares the bottom 8 bit ASID with TCStatus.
  *
  * These helper call synchronizes the regs for a given cpu.
  */
