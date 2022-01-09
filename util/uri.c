@@ -1421,7 +1421,7 @@ static int normalize_uri_path(char *path)
             }
             (out++)[0] = (cur++)[0];
         }
-        /* nomalize // */
+        /* normalize // */
         while ((cur[0] == '/') && (cur[1] == '/')) {
             cur++;
         }
