@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
     FILE *outfile;
 
     if (argc != 2) {
-        fprintf(stderr, "Usage: gen_semantics ouptputfile\n");
+        fprintf(stderr, "Usage: gen_semantics outputfile\n");
         return 1;
     }
     outfile = fopen(argv[1], "w");
