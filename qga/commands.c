@@ -33,7 +33,7 @@
 #define GUEST_FILE_READ_COUNT_MAX (48 * MiB)
 
 /* Note: in some situations, like with the fsfreeze, logging may be
- * temporarilly disabled. if it is necessary that a command be able
+ * temporarily disabled. if it is necessary that a command be able
  * to log for accounting purposes, check ga_logging_enabled() beforehand,
  * and use the QERR_QGA_LOGGING_DISABLED to generate an error
  */
