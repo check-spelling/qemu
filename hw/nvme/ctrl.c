@@ -520,7 +520,7 @@ static inline void nvme_sg_unmap(NvmeSg *sg)
 }
 
 /*
- * When metadata is transfered as extended LBAs, the DPTR mapped into `sg`
+ * When metadata is transferred as extended LBAs, the DPTR mapped into `sg`
  * holds both data and metadata. This function splits the data and metadata
  * into two separate QSG/IOVs.
  */
