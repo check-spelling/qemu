@@ -216,7 +216,7 @@ typedef uint8_t virtio_net_ctrl_ack;
 #define VIRTIO_NET_ERR    1
 
 /*
- * Control the RX mode, ie. promisucous, allmulti, etc...
+ * Control the RX mode, ie. promiscuous, allmulti, etc...
  * All commands require an "out" sg entry containing a 1 byte
  * state value, zero = disable, non-zero = enable.  Commands
  * 0 and 1 are supported with the VIRTIO_NET_F_CTRL_RX feature.
