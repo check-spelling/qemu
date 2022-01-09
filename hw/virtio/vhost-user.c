@@ -1721,7 +1721,7 @@ static int vhost_user_postcopy_fault_handler(struct PostCopyFD *pcfd,
         trace_vhost_user_postcopy_fault_handler_loop(i,
                 u->postcopy_client_bases[i], dev->mem->regions[i].memory_size);
         if (faultaddr >= u->postcopy_client_bases[i]) {
-            /* Ofset of the fault address in the vhost region */
+            /* Offset of the fault address in the vhost region */
             uint64_t region_offset = faultaddr - u->postcopy_client_bases[i];
             if (region_offset < dev->mem->regions[i].memory_size) {
                 rb_offset = region_offset + u->region_rb_offset[i];
