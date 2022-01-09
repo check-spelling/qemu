@@ -1863,7 +1863,7 @@ static void lsi_reg_writeb(LSIState *s, int offset, uint8_t val)
         s->scntl1 = val & ~LSI_SCNTL1_SST;
         if (val & LSI_SCNTL1_IARB) {
             qemu_log_mask(LOG_UNIMP,
-                      "lsi_scsi: Immediate Arbritration not implemented\n");
+                      "lsi_scsi: Immediate Arbitration not implemented\n");
         }
         if (val & LSI_SCNTL1_RST) {
             if (!(s->sstat0 & LSI_SSTAT0_RST)) {
