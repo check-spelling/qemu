@@ -1988,7 +1988,7 @@ static void handle_sys(DisasContext *s, uint32_t insn, bool isread,
     }
     if (!isread && !(ri->type & ARM_CP_SUPPRESS_TB_END)) {
         /*
-         * A write to any coprocessor regiser that ends a TB
+         * A write to any coprocessor register that ends a TB
          * must rebuild the hflags for the next TB.
          */
         TCGv_i32 tcg_el = tcg_const_i32(s->current_el);
