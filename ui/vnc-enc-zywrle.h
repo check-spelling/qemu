@@ -540,7 +540,7 @@ static inline void wavelet(int *buf, int width, int height, int level)
 
  So, we must transfer each sub images individually in strict meaning.
  But at least ZRLE meaning, following one decompositon image is same as
- avobe individual sub image. I use this format.
+ above individual sub image. I use this format.
  (Strictly saying, transfer order is reverse(Hxy->Hy->Hx->L)
   for simplified procedure for any wavelet level.)
 
