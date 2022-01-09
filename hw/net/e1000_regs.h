@@ -233,7 +233,7 @@
 #define E1000_TDLEN_A  0x00428  /* Alias to TDLEN */
 #define E1000_TDH      0x03810  /* TX Descriptor Head - RW */
 #define E1000_TDH_A    0x00430  /* Alias to TDH */
-#define E1000_TDT      0x03818  /* TX Descripotr Tail - RW */
+#define E1000_TDT      0x03818  /* TX Descriptor Tail - RW */
 #define E1000_TDT_A    0x00438  /* Alias to TDT */
 #define E1000_TIDV     0x03820  /* TX Interrupt Delay Value - RW */
 #define E1000_TIDV_A   0x00440  /* Alias to TIDV */
