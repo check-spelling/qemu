@@ -4250,7 +4250,7 @@ spapr_cpu_index_to_props(MachineState *machine, unsigned cpu_index)
     CPUArchId *core_slot;
     MachineClass *mc = MACHINE_GET_CLASS(machine);
 
-    /* make sure possible_cpu are intialized */
+    /* make sure possible_cpu are initialized */
     mc->possible_cpu_arch_ids(machine);
     /* get CPU core slot containing thread that matches cpu_index */
     core_slot = spapr_find_cpu_slot(machine, cpu_index, NULL);
@@ -4870,7 +4870,7 @@ static void spapr_machine_2_12_class_options(MachineClass *mc)
 
     /* We depend on kvm_enabled() to choose a default value for the
      * hpt-max-page-size capability. Of course we can't do it here
-     * because this is too early and the HW accelerator isn't initialzed
+     * because this is too early and the HW accelerator isn't initialized
      * yet. Postpone this to machine init (see default_caps_with_cpu()).
      */
     smc->default_caps.caps[SPAPR_CAP_HPT_MAXPAGESIZE] = 0;
