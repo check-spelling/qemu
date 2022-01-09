@@ -1285,7 +1285,7 @@ static void ohci_frame_boundary(void *opaque)
         return;
     }
 
-    /* Frame boundary, so do EOF stuf here */
+    /* Frame boundary, so do EOF stuff here */
     ohci->frt = ohci->fit;
 
     /* Increment frame number and take care of endianness. */
