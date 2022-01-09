@@ -2916,7 +2916,7 @@ get_timeout:
                 unlock_user(results, optval_addr, 0);
                 return ret;
             }
-            /* swap host endianess to target endianess. */
+            /* swap host endianness to target endianness. */
             for (i = 0; i < (len / sizeof(uint32_t)); i++) {
                 results[i] = tswap32(results[i]);
             }

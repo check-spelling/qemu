@@ -51,28 +51,28 @@ class LinuxSSH(QemuSystemTest, LinuxSSHMixIn):
         64: {'cpu': 'MIPS 20Kc', 'kernel_release': '3.2.0-4-5kc-malta'}
         }
 
-    def get_url(self, endianess, path=''):
+    def get_url(self, endianness, path=''):
         qkey = {'le': 'el', 'be': ''}
-        return '%s/mips%s/%s' % (self.BASE_URL, qkey[endianess], path)
+        return '%s/mips%s/%s' % (self.BASE_URL, qkey[endianness], path)
 
-    def get_image_info(self, endianess):
-        dinfo = self.IMAGE_INFO[endianess]
-        image_url = self.get_url(endianess, dinfo['image_name'])
+    def get_image_info(self, endianness):
+        dinfo = self.IMAGE_INFO[endianness]
+        image_url = self.get_url(endianness, dinfo['image_name'])
         image_hash = dinfo['image_hash']
         return (image_url, image_hash)
 
-    def get_kernel_info(self, endianess, wordsize):
+    def get_kernel_info(self, endianness, wordsize):
         minfo = self.CPU_INFO[wordsize]
-        kernel_url = self.get_url(endianess,
+        kernel_url = self.get_url(endianness,
                                   'vmlinux-%s' % minfo['kernel_release'])
-        kernel_hash = self.IMAGE_INFO[endianess]['kernel_hash'][wordsize]
+        kernel_hash = self.IMAGE_INFO[endianness]['kernel_hash'][wordsize]
         return kernel_url, kernel_hash
 
     def ssh_disconnect_vm(self):
         self.ssh_session.quit()
 
-    def boot_debian_wheezy_image_and_ssh_login(self, endianess, kernel_path):
-        image_url, image_hash = self.get_image_info(endianess)
+    def boot_debian_wheezy_image_and_ssh_login(self, endianness, kernel_path):
+        image_url, image_hash = self.get_image_info(endianness)
         image_path = self.fetch_asset(image_url, asset_hash=image_hash)
 
         self.vm.set_console()
@@ -163,11 +163,11 @@ class LinuxSSH(QemuSystemTest, LinuxSSHMixIn):
             'md5sum /dev/mtd2ro',
             '0dfbe8aa4c20b52e1b8bf3cb6cbdf193')
 
-    def check_mips_malta(self, uname_m, endianess):
+    def check_mips_malta(self, uname_m, endianness):
         wordsize = 64 if '64' in uname_m else 32
-        kernel_url, kernel_hash = self.get_kernel_info(endianess, wordsize)
+        kernel_url, kernel_hash = self.get_kernel_info(endianness, wordsize)
         kernel_path = self.fetch_asset(kernel_url, asset_hash=kernel_hash)
-        self.boot_debian_wheezy_image_and_ssh_login(endianess, kernel_path)
+        self.boot_debian_wheezy_image_and_ssh_login(endianness, kernel_path)
 
         stdout, _ = self.ssh_command('uname -a')
         self.assertIn(True, [uname_m + " GNU/Linux" in line for line in stdout])
