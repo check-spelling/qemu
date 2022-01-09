@@ -1266,7 +1266,7 @@ static ImageInfoSpecific *qemu_rbd_get_specific_info(BlockDriverState *bs,
 }
 
 /*
- * rbd_diff_iterate2 allows to interrupt the exection by returning a negative
+ * rbd_diff_iterate2 allows to interrupt the execution by returning a negative
  * value in the callback routine. Choose a value that does not conflict with
  * an existing exitcode and return it if we want to prematurely stop the
  * execution because we detected a change in the allocation status.
