@@ -1579,7 +1579,7 @@ bool dump_in_progress(void)
 }
 
 /* calculate total size of memory to be dumped (taking filter into
- * acoount.) */
+ * account.) */
 static int64_t dump_calculate_size(DumpState *s)
 {
     GuestPhysBlock *block;
