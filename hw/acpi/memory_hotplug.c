@@ -21,7 +21,7 @@
 #define MEMORY_SLOT_INSERT_EVENT     "MINS"
 #define MEMORY_SLOT_REMOVE_EVENT     "MRMV"
 #define MEMORY_SLOT_EJECT            "MEJ"
-#define MEMORY_SLOT_SLECTOR          "MSEL"
+#define MEMORY_SLOT_SELECTOR         "MSEL"
 #define MEMORY_SLOT_OST_EVENT        "MOEV"
 #define MEMORY_SLOT_OST_STATUS       "MOSC"
 #define MEMORY_SLOT_LOCK             "MLCK"
@@ -391,7 +391,7 @@ void build_memory_hotplug_aml(Aml *table, uint32_t nr_mem,
         Aml *slot_arg0 = aml_arg(0);
         Aml *slots_nr = aml_name(MEMORY_SLOTS_NUMBER);
         Aml *ctrl_lock = aml_name(MEMORY_SLOT_LOCK);
-        Aml *slot_selector = aml_name(MEMORY_SLOT_SLECTOR);
+        Aml *slot_selector = aml_name(MEMORY_SLOT_SELECTOR);
         char *mmio_path = g_strdup_printf("%s." MEMORY_HOTPLUG_IO_REGION,
                                           mhp_res_path);
 
@@ -437,7 +437,7 @@ void build_memory_hotplug_aml(Aml *table, uint32_t nr_mem,
         field = aml_field(mmio_path, AML_DWORD_ACC,
                           AML_NOLOCK, AML_PRESERVE);
         aml_append(field, /* DIMM selector, write only */
-            aml_named_field(MEMORY_SLOT_SLECTOR, 32));
+            aml_named_field(MEMORY_SLOT_SELECTOR, 32));
         aml_append(field, /* _OST event code, write only */
             aml_named_field(MEMORY_SLOT_OST_EVENT, 32));
         aml_append(field, /* _OST status code, write only */
