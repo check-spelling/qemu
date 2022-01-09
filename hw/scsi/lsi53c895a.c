@@ -1557,7 +1557,7 @@ again:
             uint32_t dest;
             /* ??? The docs imply the destination address is loaded into
                the TEMP register.  However the Linux drivers rely on
-               the value being presrved.  */
+               the value being preserved.  */
             dest = read_dword(s, s->dsp);
             s->dsp += 4;
             lsi_memcpy(s, dest, addr, insn & 0xffffff);
