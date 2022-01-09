@@ -1020,7 +1020,7 @@ static ssize_t rtl8139_do_receive(NetClientState *nc, const uint8_t *buf, size_t
             lduw_be_p(&buf[ETH_ALEN * 2]) == ETH_P_VLAN) {
             dot1q_buf = &buf[ETH_ALEN * 2];
             size -= VLAN_HLEN;
-            /* if too small buffer, use the tailroom added duing expansion */
+            /* if too small buffer, use the tailroom added during expansion */
             if (size < MIN_BUF_SIZE) {
                 size = MIN_BUF_SIZE;
             }
