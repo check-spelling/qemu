@@ -1005,7 +1005,7 @@ static void coroutine_fn pdu_complete(V9fsPDU *pdu, ssize_t len)
      * Sending a reply would confuse clients because they would
      * assume that any EINTR is the actual result of the operation,
      * rather than a consequence of the cancellation. However, if
-     * the operation completed (succesfully or with an error other
+     * the operation completed (successfully or with an error other
      * than caused be cancellation), we do send out that reply, both
      * for efficiency and to avoid confusing the rest of the state machine
      * that assumes passing a non-error here will mean a successful
