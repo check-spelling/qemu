@@ -2242,7 +2242,7 @@ enum {
     PPC2_FP_CVT_S64    = 0x0000000000010000ULL,
     /* Transactional Memory (ISA 2.07, Book II)                              */
     PPC2_TM            = 0x0000000000020000ULL,
-    /* Server PM instructgions (ISA 2.06, Book III)                          */
+    /* Server PM instructions (ISA 2.06, Book III)                           */
     PPC2_PM_ISA206     = 0x0000000000040000ULL,
     /* POWER ISA 3.0                                                         */
     PPC2_ISA300        = 0x0000000000080000ULL,

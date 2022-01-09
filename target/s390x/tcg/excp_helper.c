@@ -599,7 +599,7 @@ void s390x_cpu_debug_excp_handler(CPUState *cs)
         /* FIXME: We currently no way to detect the address space used
            to trigger the watchpoint.  For now just consider it is the
            current default ASC. This turn to be true except when MVCP
-           and MVCS instrutions are not used.  */
+           and MVCS instructions are not used.  */
         env->per_perc_atmid |= env->psw.mask & (PSW_MASK_ASC) >> 46;
 
         /*
