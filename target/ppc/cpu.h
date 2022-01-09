@@ -1148,7 +1148,7 @@ struct CPUPPCState {
     hwaddr mpic_iack;
     bool mpic_proxy;  /* true if the external proxy facility mode is enabled */
     bool has_hv_mode; /* set when the processor has an HV mode, thus HV priv */
-                      /* instructions and SPRs are diallowed if MSR:HV is 0 */
+                      /* instructions and SPRs are disallowed if MSR:HV is 0 */
     /*
      * On P7/P8/P9, set when in PM state so we need to handle resume in a
      * special way (such as routing some resume causes to 0x100, i.e. sreset).
