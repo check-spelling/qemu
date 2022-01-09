@@ -1047,7 +1047,7 @@ static size_t dump_bitmap_get_bufsize(DumpState *s)
 }
 
 /*
- * set dump_bitmap sequencely. the bit before last_pfn is not allowed to be
+ * set dump_bitmap sequentially. the bit before last_pfn is not allowed to be
  * rewritten, so if need to set the first bit, set last_pfn and pfn to 0.
  * set_dump_bitmap will always leave the recently set bit un-sync. And setting
  * (last bit + sizeof(buf) * 8) to 0 will do flushing the content in buf into
