@@ -456,7 +456,7 @@ static uint64_t omap_gp_timer_readfn(void *opaque, hwaddr addr,
 {
     switch (size) {
     case 1:
-        return omap_badwidth_read32(opaque, addr);
+        return omap_bandwidth_read32(opaque, addr);
     case 2:
         return omap_gp_timer_readh(opaque, addr);
     case 4:
@@ -471,7 +471,7 @@ static void omap_gp_timer_writefn(void *opaque, hwaddr addr,
 {
     switch (size) {
     case 1:
-        omap_badwidth_write32(opaque, addr, value);
+        omap_bandwidth_write32(opaque, addr, value);
         break;
     case 2:
         omap_gp_timer_writeh(opaque, addr, value);

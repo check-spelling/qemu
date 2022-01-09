@@ -142,7 +142,7 @@ static uint64_t omap_mcspi_read(void *opaque, hwaddr addr,
     uint32_t ret;
 
     if (size != 4) {
-        return omap_badwidth_read32(opaque, addr);
+        return omap_bandwidth_read32(opaque, addr);
     }
 
     switch (addr) {
@@ -230,7 +230,7 @@ static void omap_mcspi_write(void *opaque, hwaddr addr,
     int ch = 0;
 
     if (size != 4) {
-        omap_badwidth_write32(opaque, addr, value);
+        omap_bandwidth_write32(opaque, addr, value);
         return;
     }
 

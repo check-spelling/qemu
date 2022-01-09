@@ -441,7 +441,7 @@ static uint64_t omap_i2c_readfn(void *opaque, hwaddr addr,
     case 2:
         return omap_i2c_read(opaque, addr);
     default:
-        return omap_badwidth_read16(opaque, addr);
+        return omap_bandwidth_read16(opaque, addr);
     }
 }
 
@@ -457,7 +457,7 @@ static void omap_i2c_writefn(void *opaque, hwaddr addr,
         omap_i2c_write(opaque, addr, value);
         break;
     default:
-        omap_badwidth_write16(opaque, addr, value);
+        omap_bandwidth_write16(opaque, addr, value);
         break;
     }
 }

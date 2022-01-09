@@ -1462,7 +1462,7 @@ static uint64_t omap_dma_read(void *opaque, hwaddr addr,
     uint16_t ret;
 
     if (size != 2) {
-        return omap_badwidth_read16(opaque, addr);
+        return omap_bandwidth_read16(opaque, addr);
     }
 
     switch (addr) {
@@ -1509,7 +1509,7 @@ static void omap_dma_write(void *opaque, hwaddr addr,
     int reg, ch;
 
     if (size != 2) {
-        omap_badwidth_write16(opaque, addr, value);
+        omap_bandwidth_write16(opaque, addr, value);
         return;
     }
 
@@ -1708,7 +1708,7 @@ static uint64_t omap_dma4_read(void *opaque, hwaddr addr,
     struct omap_dma_channel_s *ch;
 
     if (size == 1) {
-        return omap_badwidth_read16(opaque, addr);
+        return omap_bandwidth_read16(opaque, addr);
     }
 
     switch (addr) {
@@ -1864,7 +1864,7 @@ static void omap_dma4_write(void *opaque, hwaddr addr,
     struct omap_dma_channel_s *ch;
 
     if (size == 1) {
-        omap_badwidth_write16(opaque, addr, value);
+        omap_bandwidth_write16(opaque, addr, value);
         return;
     }
 

@@ -58,7 +58,7 @@ static uint64_t omap_l4ta_read(void *opaque, hwaddr addr,
     struct omap_target_agent_s *s = (struct omap_target_agent_s *) opaque;
 
     if (size != 2) {
-        return omap_badwidth_read16(opaque, addr);
+        return omap_bandwidth_read16(opaque, addr);
     }
 
     switch (addr) {
@@ -82,7 +82,7 @@ static void omap_l4ta_write(void *opaque, hwaddr addr,
     struct omap_target_agent_s *s = (struct omap_target_agent_s *) opaque;
 
     if (size != 4) {
-        omap_badwidth_write32(opaque, addr, value);
+        omap_bandwidth_write32(opaque, addr, value);
         return;
     }
 
