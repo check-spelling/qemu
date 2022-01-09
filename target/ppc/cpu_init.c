@@ -400,7 +400,7 @@ static void register_tbl(CPUPPCState *env)
                  0x00000000);
 }
 
-/* Softare table search registers */
+/* Software table search registers */
 static void register_6xx_7xx_soft_tlb(CPUPPCState *env, int nb_tlbs, int nb_ways)
 {
 #if !defined(CONFIG_USER_ONLY)
