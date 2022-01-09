@@ -762,7 +762,7 @@ QemuCocoaView *cocoaView;
      * NSEventTypeFlagsChanged to know the exact key which is down, which has
      * the following two downsides:
      * - It does not work when the application is inactive as described above.
-     * - It malfactions *after* the modifier state is changed while the
+     * - It malfunctions *after* the modifier state is changed while the
      *   application is inactive. It is because -[NSEvent keyCode] does not tell
      *   if the key is up or down, and requires to infer the current state from
      *   the previous state. It is still possible to fix such a malfunction by
