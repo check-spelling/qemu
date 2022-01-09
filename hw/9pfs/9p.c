@@ -613,7 +613,7 @@ static inline uint64_t mirror64bit(uint64_t value)
 }
 
 /**
- * @brief Parameter k for the Exponential Golomb algorihm to be used.
+ * @brief Parameter k for the Exponential Golomb algorithm to be used.
  *
  * The smaller this value, the smaller the minimum bit count for the Exp.
  * Golomb generated affixes will be (at lowest index) however for the
