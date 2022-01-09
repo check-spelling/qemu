@@ -106,7 +106,7 @@ typedef struct QEMU_PACKED VHDXHeader {
     MSGUID      data_write_guid;        /* 128 bit unique identifier. Must be
                                            updated to new, unique value before
                                            the first modification is made to
-                                           visible data.   Visbile data is
+                                           visible data.   Visible data is
                                            defined as:
                                                     - system & user metadata
                                                     - raw block data
