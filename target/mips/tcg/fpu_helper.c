@@ -226,7 +226,7 @@ static inline void update_fcr31(CPUMIPSState *env, uintptr_t pc)
 
 /*
  * Float support.
- * Single precition routines have a "s" suffix, double precision a
+ * Single precision routines have a "s" suffix, double precision a
  * "d" suffix, 32bit integer "w", 64bit integer "l", paired single "ps",
  * paired single lower "pl", paired single upper "pu".
  */
