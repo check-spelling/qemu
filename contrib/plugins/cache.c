@@ -53,7 +53,7 @@ enum EvictionPolicy policy;
  * The tag is compared against all the tags of a set to search for a match. If a
  * match is found, then the access is a hit.
  *
- * The CacheSet also contains bookkeaping information about eviction details.
+ * The CacheSet also contains bookkeeping information about eviction details.
  */
 
 typedef struct {
