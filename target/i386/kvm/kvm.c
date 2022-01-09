@@ -4927,7 +4927,7 @@ int kvm_arch_fixup_msi_route(struct kvm_irq_routing_entry *route,
             }
 
             /*
-             * Handled untranslated compatibilty format interrupt with
+             * Handled untranslated compatibility format interrupt with
              * extended destination ID in the low bits 11-5. */
             dst.address = kvm_swizzle_msi_ext_dest_id(dst.address);
 
