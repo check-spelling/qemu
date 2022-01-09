@@ -1212,7 +1212,7 @@ static uint32_t hv_build_cpuid_leaf(CPUState *cs, uint32_t func, int reg)
 }
 
 /*
- * Expand Hyper-V CPU features. In partucular, check that all the requested
+ * Expand Hyper-V CPU features. In particular, check that all the requested
  * features are supported by the host and the sanity of the configuration
  * (that all the required dependencies are included). Also, this takes care
  * of 'hv_passthrough' mode and fills the environment with all supported
