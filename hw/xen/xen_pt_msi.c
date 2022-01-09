@@ -196,7 +196,7 @@ static int msi_msix_disable(XenPCIPassthroughState *s,
                             uint32_t data,
                             int pirq,
                             bool is_msix,
-                            bool is_binded)
+                            bool is_bound)
 {
     PCIDevice *d = &s->dev;
     uint8_t gvec = msi_vector(data);
@@ -207,7 +207,7 @@ static int msi_msix_disable(XenPCIPassthroughState *s,
         return 0;
     }
 
-    if (is_binded) {
+    if (is_bound) {
         XEN_PT_LOG(d, "Unbind MSI%s with pirq %d, gvec 0x%x\n",
                    is_msix ? "-X" : "", pirq, gvec);
         rc = xc_domain_unbind_msi_irq(xen_xc, xen_domid, gvec, pirq, gflags);
