@@ -12,7 +12,7 @@
 
 /*
  * For most instructions that use the same element size for reads and
- * writes, we can use real gvec vector expansion, which potantially uses
+ * writes, we can use real gvec vector expansion, which potentially uses
  * real host vector instructions. As they only work up to 64 bit elements,
  * 128 bit elements (vector is a single element) have to be handled
  * differently. Operations that are too complicated to encode via TCG ops
