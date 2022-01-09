@@ -1726,7 +1726,7 @@ RISCVException riscv_csrrw(CPURISCVState *env, int csrno,
         !riscv_cpu_virt_enabled(env)) {
         /*
          * We are in S mode without virtualisation, therefore we are in HS Mode.
-         * Add 1 to the effective privledge level to allow us to access the
+         * Add 1 to the effective privilege level to allow us to access the
          * Hypervisor CSRs.
          */
         effective_priv++;
