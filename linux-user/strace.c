@@ -860,7 +860,7 @@ print_syscall_ret_setitimer(void *cpu_env, const struct syscallname *name,
 #endif
 
 #if defined(TARGET_NR_listxattr) || defined(TARGET_NR_llistxattr) \
- || defined(TARGGET_NR_flistxattr)
+ || defined(TARGET_NR_flistxattr)
 static void
 print_syscall_ret_listxattr(void *cpu_env, const struct syscallname *name,
                             abi_long ret, abi_long arg0, abi_long arg1,
