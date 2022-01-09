@@ -262,7 +262,7 @@ static void mpc_i2c_write(void *opaque, hwaddr addr,
             s->address = CYCLE_RESET;
             }
         }
-        /* For restart end the onging transfer */
+        /* For restart end the ongoing transfer */
         if (s->cr & CCR_RSTA) {
             if (s->address != CYCLE_RESET) {
                 s->address = CYCLE_RESET;
