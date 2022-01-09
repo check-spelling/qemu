@@ -131,7 +131,7 @@ handling because qemu helpers can only return a single value.
 For HVX vectors, the generator behaves slightly differently.  The wide vectors
 won't fit in a TCGv or TCGv_i64, so we pass TCGv_ptr variables to pass the
 address to helper functions.  Here's an example for an HVX vector-add-word
-istruction.
+instruction.
     static void generate_V6_vaddw(
                     CPUHexagonState *env,
                     DisasContext *ctx,
