@@ -442,7 +442,7 @@ static bool vhost_section(struct vhost_dev *dev, MemoryRegionSection *section)
          * dirty-tracking other than migration for which it has
          * specific logging support. However for TCG the kernel never
          * gets involved anyway so we can also ignore it's
-         * self-modiying code detection flags. However a vhost-user
+         * self-modifying code detection flags. However a vhost-user
          * client could still confuse a TCG guest if it re-writes
          * executable memory that has already been translated.
          */
