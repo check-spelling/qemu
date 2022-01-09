@@ -456,7 +456,7 @@ static inline void *probe_read(CPUArchState *env, target_ulong addr, int size,
  *
  * If @nonfault is set, do not raise an exception but return TLB_INVALID_MASK.
  * Do not handle watchpoints, but include TLB_WATCHPOINT in the returned flags.
- * Do handle clean pages, so exclude TLB_NOTDIRY from the returned flags.
+ * Do handle clean pages, so exclude TLB_NOTDIRTY from the returned flags.
  * For simplicity, all "mmio-like" flags are folded to TLB_MMIO.
  */
 int probe_access_flags(CPUArchState *env, target_ulong addr,
