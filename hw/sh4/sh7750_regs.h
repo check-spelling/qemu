@@ -598,35 +598,35 @@
 #define SH7750_BCR1_A0BST     0x00003800 /* Area 0 Burst ROM Control */
 #define SH7750_BCR1_A0BST_SRAM    0x0000 /*   Area 0 accessed as SRAM i/f */
 #define SH7750_BCR1_A0BST_ROM4    0x0800 /*   Area 0 accessed as burst ROM */
-                                         /*   interface, 4 cosequtive access */
+                                         /*   interface, 4 consecutive access */
 #define SH7750_BCR1_A0BST_ROM8    0x1000 /*   Area 0 accessed as burst ROM */
-                                         /*   interface, 8 cosequtive access */
+                                         /*   interface, 8 consecutive access */
 #define SH7750_BCR1_A0BST_ROM16   0x1800 /*   Area 0 accessed as burst ROM */
-                                         /*   interface, 16 cosequtive access */
+                                         /*   interface, 16 consecutive access */
 #define SH7750_BCR1_A0BST_ROM32   0x2000 /*   Area 0 accessed as burst ROM */
-                                         /*   interface, 32 cosequtive access */
+                                         /*   interface, 32 consecutive access */
 
 #define SH7750_BCR1_A5BST     0x00000700 /* Area 5 Burst ROM Control */
 #define SH7750_BCR1_A5BST_SRAM    0x0000 /*   Area 5 accessed as SRAM i/f */
 #define SH7750_BCR1_A5BST_ROM4    0x0100 /*   Area 5 accessed as burst ROM */
-                                         /*   interface, 4 cosequtive access */
+                                         /*   interface, 4 consecutive access */
 #define SH7750_BCR1_A5BST_ROM8    0x0200 /*   Area 5 accessed as burst ROM */
-                                         /*   interface, 8 cosequtive access */
+                                         /*   interface, 8 consecutive access */
 #define SH7750_BCR1_A5BST_ROM16   0x0300 /*   Area 5 accessed as burst ROM */
-                                         /*   interface, 16 cosequtive access */
+                                         /*   interface, 16 consecutive access */
 #define SH7750_BCR1_A5BST_ROM32   0x0400 /*   Area 5 accessed as burst ROM */
-                                         /*   interface, 32 cosequtive access */
+                                         /*   interface, 32 consecutive access */
 
 #define SH7750_BCR1_A6BST     0x000000E0 /* Area 6 Burst ROM Control */
 #define SH7750_BCR1_A6BST_SRAM    0x0000 /*   Area 6 accessed as SRAM i/f */
 #define SH7750_BCR1_A6BST_ROM4    0x0020 /*   Area 6 accessed as burst ROM */
-                                         /*   interface, 4 cosequtive access */
+                                         /*   interface, 4 consecutive access */
 #define SH7750_BCR1_A6BST_ROM8    0x0040 /*   Area 6 accessed as burst ROM */
-                                         /*   interface, 8 cosequtive access */
+                                         /*   interface, 8 consecutive access */
 #define SH7750_BCR1_A6BST_ROM16   0x0060 /*   Area 6 accessed as burst ROM */
-                                         /*   interface, 16 cosequtive access */
+                                         /*   interface, 16 consecutive access */
 #define SH7750_BCR1_A6BST_ROM32   0x0080 /*   Area 6 accessed as burst ROM */
-                                         /*   interface, 32 cosequtive access */
+                                         /*   interface, 32 consecutive access */
 
 #define SH7750_BCR1_DRAMTP        0x001C /* Area 2 and 3 Memory Type */
 #define SH7750_BCR1_DRAMTP_2SRAM_3SRAM   0x0000 /* Area 2 and 3 are SRAM or */
