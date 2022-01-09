@@ -37,7 +37,7 @@ static ssize_t __readlink(V9fsState *s, V9fsPath *path, V9fsString *buf)
             break;
         } else if (len == maxlen) {
             /*
-             * We dodn't have space to put the NULL or we have more
+             * We don't have space to put the NULL or we have more
              * to read. Increase the size and try again
              */
             maxlen *= 2;
