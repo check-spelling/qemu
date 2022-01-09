@@ -161,7 +161,7 @@ class TypeInfoVar(TypeDefinition):
 
     #def extract_identifiers(self) -> Optional[TypeIdentifiers]:
     #    """Try to extract identifiers from names being used"""
-    #    DBG("extracting idenfiers from %s", self.name)
+    #    DBG("extracting identifiers from %s", self.name)
         #uppercase = None
         #if typename and re.fullmatch(RE_IDENTIFIER, typename) and typename.startswith("TYPE_"):
         #    uppercase = typename[len('TYPE_'):]

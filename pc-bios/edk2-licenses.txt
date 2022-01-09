@@ -448,7 +448,7 @@ Contributions.txt: TianoCore Contribution Agreement 1.0
 
     === Definitions for sample patch email ===
 
-    * "CodeModule" is a short idenfier for the affected code.  For
+    * "CodeModule" is a short identifier for the affected code.  For
       example MdePkg, or MdeModulePkg UsbBusDxe.
     * "Brief-single-line-summary" is a short summary of the change.
     * The entire first line should be less than ~70 characters.
