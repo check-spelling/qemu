@@ -3,7 +3,7 @@
 # Copyright (c) 2020 ISP RAS
 #
 # Author:
-#  Pavel Dovgalyuk <Pavel.Dovgaluk@ispras.ru>
+#  Pavel Dovgalyuk <Pavel.Dovgalyuk@ispras.ru>
 #
 # This work is licensed under the terms of the GNU GPL, version 2 or
 # later.  See the COPYING file in the top-level directory.
