@@ -2722,7 +2722,7 @@ AddressSpace *pci_device_iommu_address_space(PCIDevice *dev)
          * depends on the format of the bridge devices.  Proper PCIe-to-PCI
          * bridges, with a PCIe capability indicating such, follow the
          * guidelines of chapter 2.3 of the PCIe-to-PCI/X bridge specification,
-         * where the bridge uses the seconary bus as the bridge portion of the
+         * where the bridge uses the secondary bus as the bridge portion of the
          * requester ID and devfn of 00.0.  For other bridges, typically those
          * found on the root complex such as the dmi-to-pci-bridge, we follow
          * the convention of typical bare-metal hardware, which uses the
