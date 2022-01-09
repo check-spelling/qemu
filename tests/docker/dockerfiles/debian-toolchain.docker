@@ -8,7 +8,7 @@ FROM qemu/debian10
 
 # Install build utilities for building gcc and glibc.
 # ??? The build-dep isn't working, missing a number of
-# minimal build dependiencies, e.g. libmpc.
+# minimal build dependencies, e.g. libmpc.
 
 RUN apt update && \
     DEBIAN_FRONTEND=noninteractive apt install -yy eatmydata && \
