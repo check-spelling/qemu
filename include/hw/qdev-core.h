@@ -690,8 +690,8 @@ BusState *qbus_new(const char *typename, DeviceState *parent, const char *name);
 bool qbus_realize(BusState *bus, Error **errp);
 void qbus_unrealize(BusState *bus);
 
-/* Returns > 0 if either devfn or busfn skip walk somewhere in cursion,
- *         < 0 if either devfn or busfn terminate walk somewhere in cursion,
+/* Returns > 0 if either devfn or busfn skip walk somewhere in recursion,
+ *         < 0 if either devfn or busfn terminate walk somewhere in recursion,
  *           0 otherwise. */
 int qbus_walk_children(BusState *bus,
                        qdev_walkerfn *pre_devfn, qbus_walkerfn *pre_busfn,
