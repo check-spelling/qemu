@@ -1134,7 +1134,7 @@ static int raw_reopen_prepare(BDRVReopenState *state,
      * As part of reopen prepare we also want to create new fd by
      * raw_reconfigure_getfd(). But it wants updated "perm", when in
      * bdrv_reopen_multiple() .bdrv_reopen_prepare() callback called prior to
-     * permission update. Happily, permission update is always a part (a seprate
+     * permission update. Happily, permission update is always a part (a separate
      * stage) of bdrv_reopen_multiple() so we can rely on this fact and
      * reconfigure fd in raw_check_perm().
      */

@@ -2,7 +2,7 @@
 # Latest Ubuntu Release
 #
 # Useful for testing against relatively bleeding edge libraries and
-# compilers. We also have seperate recipe for the most recent LTS
+# compilers. We also have separate recipe for the most recent LTS
 # release.
 #
 # When updating use the full tag not :latest otherwise the build
