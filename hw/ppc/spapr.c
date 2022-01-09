@@ -2768,7 +2768,7 @@ static void spapr_machine_init(MachineState *machine)
         spapr_ovec_set(spapr->ov5, OV5_HPT_RESIZE);
     }
 
-    /* advertise support for ibm,dyamic-memory-v2 */
+    /* advertise support for ibm,dynamic-memory-v2 */
     spapr_ovec_set(spapr->ov5, OV5_DRMEM_V2);
 
     /* advertise XIVE on POWER9 machines */
