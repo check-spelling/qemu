@@ -765,7 +765,7 @@ QemuCocoaView *cocoaView;
      * - It malfactions *after* the modifier state is changed while the
      *   application is inactive. It is because -[NSEvent keyCode] does not tell
      *   if the key is up or down, and requires to infer the current state from
-     *   the previous state. It is still possible to fix such a malfanction by
+     *   the previous state. It is still possible to fix such a malfunction by
      *   completely leaving your hands from the keyboard, which hopefully makes
      *   this implementation usable enough.
      */
