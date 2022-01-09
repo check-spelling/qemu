@@ -1922,7 +1922,7 @@ static uint32_t omap_sysctl_read(void *opaque, hwaddr addr)
     case 0x2b4:	/* CONTROL_SEC_TEST */
     case 0x2f0:	/* CONTROL_SEC_STATUS */
     case 0x2f4:	/* CONTROL_SEC_ERR_STATUS */
-        /* Secure mode is not present on general-pusrpose device.  Outside
+        /* Secure mode is not present on general-purpose device.  Outside
          * secure mode these values cannot be read or written.  */
         return 0;
 
