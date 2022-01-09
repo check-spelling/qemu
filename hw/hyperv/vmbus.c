@@ -38,7 +38,7 @@ struct VMBusGpadl {
     uint32_t num_gfns;
     /*
      * Due to limited message size, GPADL may not fit fully in a single
-     * GPADL_HEADER message, and is further popluated using GPADL_BODY
+     * GPADL_HEADER message, and is further populated using GPADL_BODY
      * messages.  @seen_gfns is the number of pages seen so far; once it
      * reaches @num_gfns, the GPADL is ready to use.
      */

@@ -42,7 +42,7 @@ void openrisc_cpu_do_interrupt(CPUState *cs)
         env->eear = env->pc;
     }
 
-    /* During exceptions esr is populared with the pre-exception sr.  */
+    /* During exceptions esr is populated with the pre-exception sr.  */
     env->esr = cpu_get_sr(env);
     /* In parallel sr is updated to disable mmu, interrupts, timers and
        set the delay slot exception flag.  */
