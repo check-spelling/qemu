@@ -1109,7 +1109,7 @@ cris_opcodes[] =
    cris_scc_op},
 
   /* The insn "swapn" is the same as "not" and will be disassembled as
-     such, but the swap* family of mnmonics are generally v8-and-higher
+     such, but the swap* family of mnemonics are generally v8-and-higher
      only, so count it in.  */
   {"swapn",   0x8770, 0x7880,		  "r",	     0, SIZE_NONE,
    cris_ver_v8p,
