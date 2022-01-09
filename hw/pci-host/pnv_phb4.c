@@ -398,7 +398,7 @@ static void pnv_phb4_ioda_write(PnvPHB4 *phb, uint64_t val)
     case IODA3_TBL_MBT:
         *tptr = val;
 
-        /* Copy accross the valid bit to the other half */
+        /* Copy across the valid bit to the other half */
         phb->ioda_MBT[idx ^ 1] &= 0x7fffffffffffffffull;
         phb->ioda_MBT[idx ^ 1] |= 0x8000000000000000ull & val;
 
