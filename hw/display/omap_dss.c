@@ -322,7 +322,7 @@ static uint64_t omap_disc_read(void *opaque, hwaddr addr,
         return ((s->dispc.l[0].ny - 1) << 16) | (s->dispc.l[0].nx - 1);
     case 0x0a0:	/* DISPC_GFX_ATTRIBUTES */
         return s->dispc.l[0].attr;
-    case 0x0a4:	/* DISPC_GFX_FIFO_TRESHOLD */
+    case 0x0a4:	/* DISPC_GFX_FIFO_THRESHOLD */
         return s->dispc.l[0].tresh;
     case 0x0a8:	/* DISPC_GFX_FIFO_SIZE_STATUS */
         return 256;
@@ -340,7 +340,7 @@ static uint64_t omap_disc_read(void *opaque, hwaddr addr,
     case 0x0c4:	/* DISPC_VID1_POSITION */
     case 0x0c8:	/* DISPC_VID1_SIZE */
     case 0x0cc:	/* DISPC_VID1_ATTRIBUTES */
-    case 0x0d0:	/* DISPC_VID1_FIFO_TRESHOLD */
+    case 0x0d0:	/* DISPC_VID1_FIFO_THRESHOLD */
     case 0x0d4:	/* DISPC_VID1_FIFO_SIZE_STATUS */
     case 0x0d8:	/* DISPC_VID1_ROW_INC */
     case 0x0dc:	/* DISPC_VID1_PIXEL_INC */
@@ -354,7 +354,7 @@ static uint64_t omap_disc_read(void *opaque, hwaddr addr,
     case 0x154:	/* DISPC_VID2_POSITION */
     case 0x158:	/* DISPC_VID2_SIZE */
     case 0x15c:	/* DISPC_VID2_ATTRIBUTES */
-    case 0x160:	/* DISPC_VID2_FIFO_TRESHOLD */
+    case 0x160:	/* DISPC_VID2_FIFO_THRESHOLD */
     case 0x164:	/* DISPC_VID2_FIFO_SIZE_STATUS */
     case 0x168:	/* DISPC_VID2_ROW_INC */
     case 0x16c:	/* DISPC_VID2_PIXEL_INC */
@@ -533,7 +533,7 @@ static void omap_disc_write(void *opaque, hwaddr addr,
         s->dispc.l[0].bpp = (value >> 1) & 0xf;
         s->dispc.invalidate = 1;
         break;
-    case 0x0a4:	/* DISPC_GFX_FIFO_TRESHOLD */
+    case 0x0a4:	/* DISPC_GFX_FIFO_THRESHOLD */
         s->dispc.l[0].tresh = value & 0x01ff01ff;
         break;
     case 0x0ac:	/* DISPC_GFX_ROW_INC */
@@ -557,7 +557,7 @@ static void omap_disc_write(void *opaque, hwaddr addr,
     case 0x0c4:	/* DISPC_VID1_POSITION */
     case 0x0c8:	/* DISPC_VID1_SIZE */
     case 0x0cc:	/* DISPC_VID1_ATTRIBUTES */
-    case 0x0d0:	/* DISPC_VID1_FIFO_TRESHOLD */
+    case 0x0d0:	/* DISPC_VID1_FIFO_THRESHOLD */
     case 0x0d8:	/* DISPC_VID1_ROW_INC */
     case 0x0dc:	/* DISPC_VID1_PIXEL_INC */
     case 0x0e0:	/* DISPC_VID1_FIR */
@@ -570,7 +570,7 @@ static void omap_disc_write(void *opaque, hwaddr addr,
     case 0x154:	/* DISPC_VID2_POSITION */
     case 0x158:	/* DISPC_VID2_SIZE */
     case 0x15c:	/* DISPC_VID2_ATTRIBUTES */
-    case 0x160:	/* DISPC_VID2_FIFO_TRESHOLD */
+    case 0x160:	/* DISPC_VID2_FIFO_THRESHOLD */
     case 0x168:	/* DISPC_VID2_ROW_INC */
     case 0x16c:	/* DISPC_VID2_PIXEL_INC */
     case 0x170:	/* DISPC_VID2_FIR */
