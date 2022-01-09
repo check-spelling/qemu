@@ -683,7 +683,7 @@ enum {
 	AC_JACK_LOC_OTHER    = 0x30,
 };
 enum {
-	/* external on primary chasis */
+	/* external on primary chassis */
 	AC_JACK_LOC_REAR_PANEL = 0x07,
 	AC_JACK_LOC_DRIVE_BAY,
 	/* internal */
