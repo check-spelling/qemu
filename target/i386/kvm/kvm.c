@@ -3559,7 +3559,7 @@ static int kvm_get_msrs(X86CPU *cpu)
      * apparently always <= 52.   We know our 'n' but don't know what
      * the destinations 'n' is; it might be smaller, in which case
      * it masks (c) on loading. It might be larger, in which case
-     * we fill 'd' so that d..c is consistent irrespetive of the 'n'
+     * we fill 'd' so that d..c is consistent irrespective of the 'n'
      * we're migrating to.
      */
 
