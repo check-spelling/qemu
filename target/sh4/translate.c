@@ -1993,7 +1993,7 @@ static void decode_gusa(DisasContext *ctx, CPUSH4State *env)
             goto fail;
         }
         if (op_src < 0) {
-            /* Unconstrainted input.  */
+            /* Unconstrained input.  */
             op_src = B7_4;
         } else if (op_src == B7_4) {
             /* Constrained input matched load.  All operations are
