@@ -857,7 +857,7 @@ static void *build_fdt(MachineState *machine, int *fdt_size)
     qemu_fdt_setprop_cell(fdt, "/rtas", "read-pci-config",
                           RTAS_READ_PCI_CONFIG);
     /* Pegasos2 firmware misspells check-exception and guests use that */
-    qemu_fdt_setprop_cell(fdt, "/rtas", "check-execption",
+    qemu_fdt_setprop_cell(fdt, "/rtas", "check-exception",
                           RTAS_CHECK_EXCEPTION);
     qemu_fdt_setprop_cell(fdt, "/rtas", "event-scan", RTAS_EVENT_SCAN);
     qemu_fdt_setprop_cell(fdt, "/rtas", "set-time-of-day",

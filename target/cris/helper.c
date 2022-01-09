@@ -227,7 +227,7 @@ void cris_cpu_do_interrupt(CPUState *cs)
        undefined.  */
     env->pc = cpu_ldl_code(env, env->pregs[PR_EBP] + ex_vec * 4);
 
-    /* Clear the excption_index to avoid spurios hw_aborts for recursive
+    /* Clear the exception_index to avoid spurios hw_aborts for recursive
        bus faults.  */
     cs->exception_index = -1;
 

@@ -173,7 +173,7 @@
 
 
 /*
- * Exeption-related registers
+ * Exception-related registers
  */
 
 /* Immediate data for TRAPA instruction - TRA */
@@ -184,19 +184,19 @@
 #define SH7750_TRA_IMM      0x000003fd /* Immediate data operand */
 #define SH7750_TRA_IMM_S    2
 
-/* Exeption event register - EXPEVT */
+/* Exception event register - EXPEVT */
 #define SH7750_EXPEVT_REGOFS  0x000024
 #define SH7750_EXPEVT         SH7750_P4_REG32(SH7750_EXPEVT_REGOFS)
 #define SH7750_EXPEVT_A7      SH7750_A7_REG32(SH7750_EXPEVT_REGOFS)
 
-#define SH7750_EXPEVT_EX      0x00000fff /* Exeption code */
+#define SH7750_EXPEVT_EX      0x00000fff /* Exception code */
 #define SH7750_EXPEVT_EX_S    0
 
 /* Interrupt event register */
 #define SH7750_INTEVT_REGOFS  0x000028
 #define SH7750_INTEVT         SH7750_P4_REG32(SH7750_INTEVT_REGOFS)
 #define SH7750_INTEVT_A7      SH7750_A7_REG32(SH7750_INTEVT_REGOFS)
-#define SH7750_INTEVT_EX    0x00000fff /* Exeption code */
+#define SH7750_INTEVT_EX    0x00000fff /* Exception code */
 #define SH7750_INTEVT_EX_S  0
 
 /*
