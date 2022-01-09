@@ -68,7 +68,7 @@ enum {
 /* Interrupt */
 #define NR_IRQS  32
 
-/* Unit presece register */
+/* Unit presence register */
 enum {
     UPR_UP = (1 << 0),
     UPR_DCP = (1 << 1),
