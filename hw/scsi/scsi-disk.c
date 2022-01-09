@@ -6,7 +6,7 @@
  *
  * Written by Paul Brook
  * Modifications:
- *  2009-Dec-12 Artyom Tarasenko : implemented stamdard inquiry for the case
+ *  2009-Dec-12 Artyom Tarasenko : implemented standard inquiry for the case
  *                                 when the allocation length of CDB is smaller
  *                                 than 36.
  *  2009-Oct-13 Artyom Tarasenko : implemented the block descriptor in the
