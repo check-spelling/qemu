@@ -78,7 +78,7 @@ bool qemu_chr_fe_backend_open(CharBackend *be);
  *             is not supported and will not be attempted
  * @opaque: an opaque pointer for the callbacks
  * @context: a main loop context or NULL for the default
- * @set_open: whether to call qemu_chr_fe_set_open() implicitely when
+ * @set_open: whether to call qemu_chr_fe_set_open() implicitly when
  * any of the handler is non-NULL
  * @sync_state: whether to issue event callback with updated state
  *
