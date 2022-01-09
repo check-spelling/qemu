@@ -89,7 +89,7 @@ for target in $target_list; do
   container_cross_ld=
 
   # suppress clang
-  supress_clang=
+  suppress_clang=
 
   case $target in
     aarch64-*)
@@ -128,7 +128,7 @@ for target in $target_list; do
       container_hosts=x86_64
       container_image=fedora-i386-cross
       container_cross_cc=gcc
-      supress_clang=yes
+      suppress_clang=yes
       ;;
     m68k-*)
       container_hosts=x86_64
@@ -206,7 +206,7 @@ for target in $target_list; do
       container_hosts="aarch64 ppc64el x86_64"
       container_image=debian-amd64-cross
       container_cross_cc=x86_64-linux-gnu-gcc
-      supress_clang=yes
+      suppress_clang=yes
       ;;
     xtensa*-softmmu)
       container_hosts=x86_64
@@ -242,7 +242,7 @@ for target in $target_list; do
       eval "target_compiler=\"\${cross_cc_$arch}\""
 
       if has $target_compiler; then
-          if test "$supress_clang" = yes &&
+          if test "$suppress_clang" = yes &&
                   $target_compiler --version | grep -qi "clang"; then
               got_cross_cc=no
           else
