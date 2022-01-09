@@ -2488,7 +2488,7 @@ static void spapr_set_vsmt_mode(SpaprMachineState *spapr, Error **errp)
         return;
     }
 
-    /* Detemine the VSMT mode to use: */
+    /* Determine the VSMT mode to use: */
     if (vsmt_user) {
         if (spapr->vsmt < smp_threads) {
             error_setg(errp, "Cannot support VSMT mode %d"
