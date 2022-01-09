@@ -141,7 +141,7 @@ __start:
 	 * TCR_EL1 - Translation Control Registers
 	 *
 	 * IPS[34:32] = 40-bit PA, 1TB
-	 * TG0[14:15] = b00 => 4kb granuale
+	 * TG0[14:15] = b00 => 4kb granule
 	 * ORGN0[11:10] = Outer: Normal, WB Read-Alloc No Write-Alloc Cacheable
 	 * IRGN0[9:8] = Inner: Normal, WB Read-Alloc No Write-Alloc Cacheable
 	 * T0SZ[5:0]  = 2^(64 - 25)
@@ -225,7 +225,7 @@ __sys_outc:
 	.align	12
 
 	/* Translation table
-	 * @4k granuale: 9 bit lookup, 512 entries
+	 * @4k granule: 9 bit lookup, 512 entries
 	*/
 ttb:
 	.space	4096, 0
