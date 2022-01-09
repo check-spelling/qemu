@@ -3471,7 +3471,7 @@ nios2_disassemble (bfd_vma address, unsigned long opcode,
 
 
 /* print_insn_nios2 is the main disassemble function for Nios II.
-   The function diassembler(abfd) (source in disassemble.c) returns a
+   The function disassembler(abfd) (source in disassemble.c) returns a
    pointer to this either print_insn_big_nios2 or
    print_insn_little_nios2, which in turn call this function when the
    bfd machine type is Nios II. print_insn_nios2 reads the

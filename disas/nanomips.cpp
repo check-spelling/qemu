@@ -799,7 +799,7 @@ int NMD::Disassemble(const uint16 * data, std::string & dis,
  *
  * inputs:
  *      pointer to a word stream,
- *      disassember table and size
+ *      disassembler table and size
  * returns:
  *      instruction size    - negative is error
  *      disassembly string  - on error will contain error string
