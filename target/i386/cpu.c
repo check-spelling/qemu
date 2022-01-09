@@ -6887,7 +6887,7 @@ static Property x86_cpu_properties[] = {
     DEFINE_PROP_BOOL("x-migrate-smi-count", X86CPU, migrate_smi_count,
                      true),
     /*
-     * lecacy_cache defaults to true unless the CPU model provides its
+     * legacy_cache defaults to true unless the CPU model provides its
      * own cache information (see x86_cpu_load_def()).
      */
     DEFINE_PROP_BOOL("legacy-cache", X86CPU, legacy_cache, true),
