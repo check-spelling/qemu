@@ -58,7 +58,7 @@ static const MemoryRegionOps static_ops = {
     .endianness = DEVICE_NATIVE_ENDIAN,
 };
 
-/* Palm Tunsgten|E support */
+/* Palm Tungsten|E support */
 
 /* Shared GPIOs */
 #define PALMTE_USBDETECT_GPIO   0
