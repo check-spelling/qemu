@@ -1942,7 +1942,7 @@ struct kvm_dirty_gfn {
  * @id_offset: The offset of the vm/vcpu stats' id string in the file pointed
  *             by vm/vcpu stats fd.
  * @desc_offset: The offset of the vm/vcpu stats' descriptor block in the file
- *               pointd by vm/vcpu stats fd.
+ *               pointed by vm/vcpu stats fd.
  * @data_offset: The offset of the vm/vcpu stats' data block in the file
  *               pointed by vm/vcpu stats fd.
  *
