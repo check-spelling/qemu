@@ -403,7 +403,7 @@ static void encode_topo_cpuid8000001e(X86CPU *cpu, X86CPUTopoInfo *topo_info,
      *
      * NOTE: Hardware reserves 3 bits for number of nodes per processor.
      * But users can create more nodes than the actual hardware can
-     * support. To genaralize we can use all the upper 8 bits for nodes.
+     * support. To generalize we can use all the upper 8 bits for nodes.
      * NodeId is combination of node and socket_id which is already decoded
      * in apic_id. Just use it by shifting.
      */
