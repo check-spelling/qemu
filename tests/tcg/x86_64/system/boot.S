@@ -121,7 +121,7 @@ _start:
 	// Setup stack ASAP
 	movq $stack_end,%rsp
 
-        /* don't worry about stack frame, assume everthing is garbage when we return */
+        /* don't worry about stack frame, assume everything is garbage when we return */
 	call main
 
 _exit:	/* output any non-zero result in eax to isa-debug-exit device */

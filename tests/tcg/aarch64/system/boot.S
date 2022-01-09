@@ -188,7 +188,7 @@ __start:
 	msr	cpacr_el1, x0
 
 	/* Setup some stack space and enter the test code.
-	 * Assume everthing except the return value is garbage when we
+	 * Assume everything except the return value is garbage when we
 	 * return, we won't need it.
 	 */
 	adrp	x0, stack_end
