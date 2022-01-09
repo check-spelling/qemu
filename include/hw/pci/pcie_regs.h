@@ -105,7 +105,7 @@ typedef enum PCIExpLinkWidth {
 #define PCI_ERR_UNC_SDN                 0x00000020      /* surprise down */
 #define PCI_ERR_UNC_ACSV                0x00200000      /* ACS Violation */
 #define PCI_ERR_UNC_INTN                0x00400000      /* Internal Error */
-#define PCI_ERR_UNC_MCBTLP              0x00800000      /* MC Blcoked TLP */
+#define PCI_ERR_UNC_MCBTLP              0x00800000      /* MC Blocked TLP */
 #define PCI_ERR_UNC_ATOP_EBLOCKED       0x01000000      /* atomic op egress blocked */
 #define PCI_ERR_UNC_TLP_PRF_BLOCKED     0x02000000      /* TLP Prefix Blocked */
 #define PCI_ERR_COR_ADV_NONFATAL        0x00002000      /* Advisory Non-Fatal */
