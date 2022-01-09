@@ -366,7 +366,7 @@
 #define E1000_FWSM      0x05B54 /* FW Semaphore */
 #define E1000_PBACLR    0x05B68 /* MSI-X PBA Clear */
 #define E1000_FFLT_DBG  0x05F04 /* Debug Register */
-#define E1000_HICR      0x08F00 /* Host Inteface Control */
+#define E1000_HICR      0x08F00 /* Host Interface Control */
 
 #define E1000_TSYNCRXCTL 0x0B620 /* Rx Time Sync Control register - RW */
 #define E1000_TSYNCTXCTL 0x0B614 /* Tx Time Sync Control register - RW */
