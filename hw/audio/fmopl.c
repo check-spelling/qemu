@@ -454,7 +454,7 @@ static inline void OPL_CALC_CH( OPL_CH *CH )
 		/* PG */
 		if(SLOT->vib) SLOT->Cnt += (SLOT->Incr*vib/VIB_RATE);
 		else          SLOT->Cnt += SLOT->Incr;
-		/* connectoion */
+		/* connection */
 		if(CH->FB)
 		{
 			int feedback1 = (CH->op1_out[0]+CH->op1_out[1])>>CH->FB;
@@ -478,7 +478,7 @@ static inline void OPL_CALC_CH( OPL_CH *CH )
 		/* PG */
 		if(SLOT->vib) SLOT->Cnt += (SLOT->Incr*vib/VIB_RATE);
 		else          SLOT->Cnt += SLOT->Incr;
-		/* connectoion */
+		/* connection */
 		outd[0] += OP_OUT(SLOT,env_out, feedback2);
 	}
 }
@@ -504,7 +504,7 @@ static inline void OPL_CALC_RH( OPL_CH *CH )
 		/* PG */
 		if(SLOT->vib) SLOT->Cnt += (SLOT->Incr*vib/VIB_RATE);
 		else          SLOT->Cnt += SLOT->Incr;
-		/* connectoion */
+		/* connection */
 		if(CH[6].FB)
 		{
 			int feedback1 = (CH[6].op1_out[0]+CH[6].op1_out[1])>>CH[6].FB;
@@ -529,7 +529,7 @@ static inline void OPL_CALC_RH( OPL_CH *CH )
 		/* PG */
 		if(SLOT->vib) SLOT->Cnt += (SLOT->Incr*vib/VIB_RATE);
 		else          SLOT->Cnt += SLOT->Incr;
-		/* connectoion */
+		/* connection */
 		outd[0] += OP_OUT(SLOT,env_out, feedback2)*2;
 	}
 
