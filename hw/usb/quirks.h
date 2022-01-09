@@ -97,7 +97,7 @@ static const struct usb_device_id usbredir_raw_serial_ids[] = {
     { USB_DEVICE(0x10C4, 0x81E8) }, /* Zephyr Bioharness */
     { USB_DEVICE(0x10C4, 0x81F2) }, /* C1007 HF band RFID controller */
     { USB_DEVICE(0x10C4, 0x8218) }, /* Lipowsky Industrie Elektronik GmbH, HARP-1 */
-    { USB_DEVICE(0x10C4, 0x822B) }, /* Modem EDGE(GSM) Comander 2 */
+    { USB_DEVICE(0x10C4, 0x822B) }, /* Modem EDGE(GSM) Commander 2 */
     { USB_DEVICE(0x10C4, 0x826B) }, /* Cygnal Integrated Products, Inc., Fasttrax GPS demonstration module */
     { USB_DEVICE(0x10C4, 0x8293) }, /* Telegesis ETRX2USB */
     { USB_DEVICE(0x10C4, 0x82F9) }, /* Procyon AVS */
