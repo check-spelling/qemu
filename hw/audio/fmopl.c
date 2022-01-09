@@ -1075,7 +1075,7 @@ FM_OPL *OPLCreate(int clock, int rate)
 	char *ptr;
 	FM_OPL *OPL;
 	int state_size;
-	int max_ch = 9; /* normaly 9 channels */
+	int max_ch = 9; /* normally 9 channels */
 
 	if( OPL_LockTable() ==-1) return NULL;
 	/* allocate OPL state space */
