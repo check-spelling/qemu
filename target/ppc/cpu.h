@@ -2173,7 +2173,7 @@ enum {
     PPC_RFDI           = 0x0800000000000000ULL,
     /* DCR accesses                                                          */
     PPC_DCR            = 0x1000000000000000ULL,
-    /* DCR extended accesse                                                  */
+    /* DCR extended access                                                   */
     PPC_DCRX           = 0x2000000000000000ULL,
     /* user-mode DCR access, implemented in PowerPC 460                      */
     PPC_DCRUX          = 0x4000000000000000ULL,
