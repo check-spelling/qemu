@@ -490,7 +490,7 @@ static TCGv_i64 get_address(DisasContext *s, int x2, int b2, int d2)
 
     /*
      * Note that d2 is limited to 20 bits, signed.  If we crop negative
-     * displacements early we create larger immedate addends.
+     * displacements early we create larger immediate addends.
      */
     if (b2 && x2) {
         tcg_gen_add_i64(tmp, regs[b2], regs[x2]);
