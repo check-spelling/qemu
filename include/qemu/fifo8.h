@@ -60,7 +60,7 @@ void fifo8_push_all(Fifo8 *fifo, const uint8_t *data, uint32_t num);
  * @fifo: fifo to pop from
  *
  * Pop a data byte from the FIFO. Behaviour is undefined if the FIFO is empty.
- * Clients are responsible for checking for emptyness using fifo8_is_empty().
+ * Clients are responsible for checking for emptiness using fifo8_is_empty().
  *
  * Returns: The popped data byte.
  */
