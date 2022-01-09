@@ -880,7 +880,7 @@ Table ID 60: acl policy
 	OF_DPA_NEW_VLAN_PCP	1	VLAN priority
 	OF_DPA_IP_DSCP_ACTION	1	write the DSCP
 	OF_DPA_NEW_IP_DSCP	1	new DSCP
-	OF_DPA_TUNNEL_LPORT	4	restrct to valid tunnel
+	OF_DPA_TUNNEL_LPORT	4	restrict to valid tunnel
 					logical port, set to 0
 					otherwise.
 	OF_DPA_OUT_PPORT	2	data for OUTPUT action,
