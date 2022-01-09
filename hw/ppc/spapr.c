@@ -1857,14 +1857,14 @@ static bool spapr_ov5_cas_needed(void *opaque)
      * earlier, this allows us to maintain old->new/new->old migration
      * compatibility.
      *
-     * For QEMU 2.8+, there are additional CAS-negotiatable options available
+     * For QEMU 2.8+, there are additional CAS-negotiable options available
      * via default pseries-2.8 machines and explicit command-line parameters.
      * Some of these options, like OV5_HP_EVT, *do* require QEMU to be aware
      * of the actual CAS-negotiated values to continue working properly. For
      * example, availability of memory unplug depends on knowing whether
      * OV5_HP_EVT was negotiated via CAS.
      *
-     * Thus, for any cases where the set of available CAS-negotiatable
+     * Thus, for any cases where the set of available CAS-negotiable
      * options extends beyond OV5_FORM1_AFFINITY and OV5_DRCONF_MEMORY, we
      * include the CAS-negotiated options in the migration stream, unless
      * if they affect boot time behaviour only.
