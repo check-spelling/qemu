@@ -115,7 +115,7 @@
  * Read a blob from the fw_cfg device using DMA
  * Requires _ADDR, _SIZE and _DATA values for the parameter.
  *
- * Clobbers:	%eax, %edx, %es, %ecx, %edi and adresses %esp-20 to %esp
+ * Clobbers:	%eax, %edx, %es, %ecx, %edi and addresses %esp-20 to %esp
  */
 #ifdef USE_FW_CFG_DMA
 #define read_fw_blob_dma(var) \
