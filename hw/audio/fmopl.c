@@ -355,7 +355,7 @@ static void set_algorithm( OPL_CH *CH)
 	CH->connect2 = carrier;
 }
 
-/* ---------- frequency counter for operater update ---------- */
+/* ---------- frequency counter for operator update ---------- */
 static inline void CALC_FCSLOT(OPL_CH *CH,OPL_SLOT *SLOT)
 {
 	int ksr;
