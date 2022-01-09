@@ -291,7 +291,7 @@ static void xlnx_csu_dma_src_notify(void *opaque)
     size_t rlen = 0;
 
     ptimer_transaction_begin(s->src_timer);
-    /* Stop the backpreassure timer */
+    /* Stop the backpressure timer */
     ptimer_stop(s->src_timer);
 
     while (s->regs[R_SIZE] && !xlnx_csu_dma_is_paused(s) &&
