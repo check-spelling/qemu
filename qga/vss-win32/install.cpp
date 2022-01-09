@@ -397,7 +397,7 @@ STDAPI DllRegisterServer(void)
         goto out;
     }
 
-    /* Add this module to registery */
+    /* Add this module to registry */
 
     sprintf(key, "CLSID\\%s", g_szClsid);
     if (!CreateRegistryKey(key, NULL, g_szClsid)) {
