@@ -323,7 +323,7 @@ bool cryptodev_backend_is_used(CryptoDevBackend *backend);
  * @ready: ture or false
  *
  * Set the cryptodev backend is ready or not, which is called
- * by the children of the cryptodev banckend interface.
+ * by the children of the cryptodev backend interface.
  */
 void cryptodev_backend_set_ready(CryptoDevBackend *backend, bool ready);
 
