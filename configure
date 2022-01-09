@@ -2313,7 +2313,7 @@ if test "$rdma" = "yes" ; then
     esac
 else
     if test "$pvrdma" = "yes" ; then
-        error_exit "PVRDMA requires rdma suppport"
+        error_exit "PVRDMA requires rdma support"
     fi
     pvrdma="no"
 fi
