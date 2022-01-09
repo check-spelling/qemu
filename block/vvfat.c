@@ -1559,7 +1559,7 @@ vvfat_co_preadv(BlockDriverState *bs, int64_t offset, int64_t bytes,
     return ret;
 }
 
-/* LATER TODO: statify all functions */
+/* LATER TODO: staticify all functions */
 
 /*
  * Idea of the write support (use snapshot):
