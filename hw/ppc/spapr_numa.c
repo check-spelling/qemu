@@ -137,7 +137,7 @@ unsigned int spapr_numa_initial_nvgpu_numa_id(MachineState *machine)
  *  - distances between 61 and 120 inclusive -> rounded to 80,
  *    numa_level = 0x1
  *  - everything above 120 returns numa_level = 0 to indicate that
- *    there is no match. This will be calculated as disntace = 160
+ *    there is no match. This will be calculated as distance = 160
  *    by the kernel (as of v5.9)
  */
 static uint8_t spapr_numa_get_numa_level(uint8_t distance)
