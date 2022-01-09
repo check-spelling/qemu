@@ -97,7 +97,7 @@ unsigned long reserved_va;
 static const char *interp_prefix = CONFIG_QEMU_INTERP_PREFIX;
 const char *qemu_uname_release;
 enum BSDType bsd_type;
-char qemu_proc_pathname[PATH_MAX];  /* full path to exeutable */
+char qemu_proc_pathname[PATH_MAX];  /* full path to executable */
 
 unsigned long target_maxtsiz = TARGET_MAXTSIZ;   /* max text size */
 unsigned long target_dfldsiz = TARGET_DFLDSIZ;   /* initial data size limit */
