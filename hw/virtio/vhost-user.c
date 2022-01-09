@@ -43,7 +43,7 @@
 /*
  * Set maximum number of RAM slots supported to
  * the maximum number supported by the target
- * hardware plaform.
+ * hardware platform.
  */
 #if defined(TARGET_X86) || defined(TARGET_X86_64) || \
     defined(TARGET_ARM) || defined(TARGET_ARM_64)
