@@ -97,7 +97,7 @@ struct PnvLpcClass {
 };
 
 /*
- * Old compilers error on typdef forward declarations. Keep them happy.
+ * Old compilers error on typedef forward declarations. Keep them happy.
  */
 struct PnvChip;
 
