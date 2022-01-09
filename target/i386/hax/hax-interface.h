@@ -344,7 +344,7 @@ struct hax_capabilityinfo {
      */
     uint16_t wstatus;
     /* valid when not working
-     * bit 0: VT not enabeld
+     * bit 0: VT not enabled
      * bit 1: NX not enabled*/
     uint16_t winfo;
     uint32_t pad;
