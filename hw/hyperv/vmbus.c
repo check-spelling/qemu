@@ -422,7 +422,7 @@ static inline void gpadl_iter_start_io(GpadlIter *iter)
 }
 
 /*
- * End the eariler started series of i/o on the GPADL and release the cached
+ * End the earlier started series of i/o on the GPADL and release the cached
  * mapping if any.
  */
 static inline void gpadl_iter_end_io(GpadlIter *iter)
