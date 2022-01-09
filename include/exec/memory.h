@@ -2100,7 +2100,7 @@ void memory_region_add_coalescing(MemoryRegion *mr,
  * memory_region_clear_coalescing: Disable MMIO coalescing for the region.
  *
  * Disables any coalescing caused by memory_region_set_coalescing() or
- * memory_region_add_coalescing().  Roughly equivalent to uncacheble memory
+ * memory_region_add_coalescing().  Roughly equivalent to uncacheable memory
  * hardware.
  *
  * @mr: the memory region to be updated.
