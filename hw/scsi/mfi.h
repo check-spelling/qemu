@@ -1180,7 +1180,7 @@ struct mfi_ld_progress {
 #define MFI_LD_PROGRESS_CC      (1<<0)
 #define MFI_LD_PROGRESS_BGI     (1<<1)
 #define MFI_LD_PROGRESS_FGI     (1<<2)
-#define MFI_LD_PORGRESS_RECON   (1<<3)
+#define MFI_LD_PROGRESS_RECON   (1<<3)
     struct mfi_progress cc;
     struct mfi_progress bgi;
     struct mfi_progress fgi;
