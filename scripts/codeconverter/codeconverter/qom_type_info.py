@@ -83,7 +83,7 @@ class TypeDefinition(FileMatch):
 
     @property
     def initializers(self) -> Optional[TypeInfoInitializers]:
-        if getattr(self, '_inititalizers', None):
+        if getattr(self, '_initializers', None):
             self._initializers: TypeInfoInitializers
             return self._initializers
         fields = self.group('fields')
