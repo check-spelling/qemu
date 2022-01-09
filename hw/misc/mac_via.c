@@ -266,7 +266,7 @@
 #define VIA1ACR_vShiftOut          0x10        /* Shift out if 1 */
 
 /*
- * Apple Macintosh Family Hardware Refenece
+ * Apple Macintosh Family Hardware Reference
  * Table 19-10 ADB transaction states
  */
 
