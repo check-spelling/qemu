@@ -184,7 +184,7 @@
 #undef TARGET_EILSEQ
 #define TARGET_EILSEQ          122 /* Illegal byte sequence */
 #undef TARGET_ELIBMAX
-#define TARGET_ELIBMAX         123 /* Atmpt to link in too many shared libs */
+#define TARGET_ELIBMAX         123 /* Attempt to link in too many shared libs */
 #undef TARGET_ELIBSCN
 #define TARGET_ELIBSCN         124 /* .lib section in a.out corrupted */
 #undef TARGET_ENOMEDIUM
