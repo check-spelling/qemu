@@ -163,9 +163,9 @@ __start:
 	 * SCTLR_EL1 - System Control Register
 	 *
 	 * WXN[19] = 0 = no effect, Write does not imply XN (execute never)
-	 * I[12] = Instruction cachability control
+	 * I[12] = Instruction cacheability control
 	 * SA[3] = SP alignment check
-	 * C[2] = Data cachability control
+	 * C[2] = Data cacheability control
 	 * M[0] = 1, enable stage 1 address translation for EL0/1
 	 */
 	mrs	x0, sctlr_el1
