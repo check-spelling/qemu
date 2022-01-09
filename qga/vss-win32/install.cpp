@@ -316,7 +316,7 @@ STDAPI COMRegister(void)
                                    _bstr_t(dllPath), _bstr_t(tlbPath),
                                    _bstr_t("")));
 
-    /* Setup roles of the applicaion */
+    /* Setup roles of the application */
 
     chk(getNameByStringSID(administratorsGroupSID, buffer, &bufferLen));
     chk(pApps->GetCollection(_bstr_t(L"Roles"), key,
