@@ -355,7 +355,7 @@ typedef struct VuVirtq {
     struct vhost_vring_addr vra;
 } VuVirtq;
 
-enum VuWatchCondtion {
+enum VuWatchCondition {
     VU_WATCH_IN = POLLIN,
     VU_WATCH_OUT = POLLOUT,
     VU_WATCH_PRI = POLLPRI,
