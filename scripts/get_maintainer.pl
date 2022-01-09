@@ -754,7 +754,7 @@ Default options:
 
 Notes:
   Using "-f directory" may give unexpected results:
-      Used with "--git", git signators for _all_ files in and below
+      Used with "--git", git signatures for _all_ files in and below
           directory are examined as git recurses directories.
           Any specified X: (exclude) pattern matches are _not_ ignored.
       Used with "--nogit", directory is used as a pattern match,
