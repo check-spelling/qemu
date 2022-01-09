@@ -1714,7 +1714,7 @@ int kvm_arch_init_vcpu(CPUState *cs)
                 }
 
                 c->function = i;
-                c->flags = KVM_CPUID_FLAG_SIGNIFCANT_INDEX;
+                c->flags = KVM_CPUID_FLAG_SIGNIFICANT_INDEX;
                 c->index = j;
                 cpu_x86_cpuid(env, i, j, &c->eax, &c->ebx, &c->ecx, &c->edx);
 
@@ -1742,7 +1742,7 @@ int kvm_arch_init_vcpu(CPUState *cs)
         case 0x12:
             for (j = 0; ; j++) {
                 c->function = i;
-                c->flags = KVM_CPUID_FLAG_SIGNIFCANT_INDEX;
+                c->flags = KVM_CPUID_FLAG_SIGNIFICANT_INDEX;
                 c->index = j;
                 cpu_x86_cpuid(env, i, j, &c->eax, &c->ebx, &c->ecx, &c->edx);
 
@@ -1763,7 +1763,7 @@ int kvm_arch_init_vcpu(CPUState *cs)
 
             c->function = i;
             c->index = 0;
-            c->flags = KVM_CPUID_FLAG_SIGNIFCANT_INDEX;
+            c->flags = KVM_CPUID_FLAG_SIGNIFICANT_INDEX;
             cpu_x86_cpuid(env, i, 0, &c->eax, &c->ebx, &c->ecx, &c->edx);
             times = c->eax;
 
@@ -1776,7 +1776,7 @@ int kvm_arch_init_vcpu(CPUState *cs)
                 c = &cpuid_data.entries[cpuid_i++];
                 c->function = i;
                 c->index = j;
-                c->flags = KVM_CPUID_FLAG_SIGNIFCANT_INDEX;
+                c->flags = KVM_CPUID_FLAG_SIGNIFICANT_INDEX;
                 cpu_x86_cpuid(env, i, j, &c->eax, &c->ebx, &c->ecx, &c->edx);
             }
             break;
@@ -1837,7 +1837,7 @@ int kvm_arch_init_vcpu(CPUState *cs)
             /* Query for all AMD cache information leaves */
             for (j = 0; ; j++) {
                 c->function = i;
-                c->flags = KVM_CPUID_FLAG_SIGNIFCANT_INDEX;
+                c->flags = KVM_CPUID_FLAG_SIGNIFICANT_INDEX;
                 c->index = j;
                 cpu_x86_cpuid(env, i, j, &c->eax, &c->ebx, &c->ecx, &c->edx);
 
