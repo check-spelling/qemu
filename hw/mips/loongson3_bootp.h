@@ -156,7 +156,7 @@ struct board_devices {
 
 struct loongson_special_attribute {
     uint16_t vers;               /* version of this special */
-    char special_name[64];       /* special_atribute_name */
+    char special_name[64];       /* special_attribute_name */
     uint32_t loongson_special_type; /* type of special device */
     /* for each device's resource */
     struct resource_loongson resource[MAX_RESOURCE_NUMBER];
