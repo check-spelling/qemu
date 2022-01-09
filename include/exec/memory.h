@@ -2933,7 +2933,7 @@ static inline MemOp devend_memop(enum device_endian end)
  * This *must* be set if:
  * - Discarding parts of a RAM blocks does not result in the change being
  *   reflected in the VM and the pages getting freed.
- * - All memory in RAM blocks is pinned or duplicated, invaldiating any previous
+ * - All memory in RAM blocks is pinned or duplicated, invalidating any previous
  *   discards blindly.
  * - Discarding parts of a RAM blocks will result in integrity issues (e.g.,
  *   encrypted VMs).
