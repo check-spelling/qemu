@@ -2150,7 +2150,7 @@ static inline void clrsetpsw(DisasContext *ctx, int cb, int val)
             tcg_gen_movi_i32(cpu_psw_o, val << 31);
             break;
         default:
-            qemu_log_mask(LOG_GUEST_ERROR, "Invalid distination %d", cb);
+            qemu_log_mask(LOG_GUEST_ERROR, "Invalid destination %d", cb);
             break;
         }
     } else if (is_privileged(ctx, 0)) {
@@ -2163,7 +2163,7 @@ static inline void clrsetpsw(DisasContext *ctx, int cb, int val)
             tcg_gen_movi_i32(cpu_psw_u, val);
             break;
         default:
-            qemu_log_mask(LOG_GUEST_ERROR, "Invalid distination %d", cb);
+            qemu_log_mask(LOG_GUEST_ERROR, "Invalid destination %d", cb);
             break;
         }
     }

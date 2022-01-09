@@ -256,7 +256,7 @@ struct tcp_hdr {
 #define IP6_ESP               (50)
 #define IP6_AUTHENTICATION    (51)
 #define IP6_NONE              (59)
-#define IP6_DESTINATON        (60)
+#define IP6_DESTINATION       (60)
 #define IP6_MOBILITY          (135)
 
 static inline int is_multicast_ether_addr(const uint8_t *addr)
