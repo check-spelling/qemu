@@ -477,7 +477,7 @@ virtio_crypto_sym_op_helper(VirtIODevice *vdev,
     op_info->len_to_hash = len_to_hash;
     op_info->cipher_start_src_offset = cipher_start_src_offset;
     op_info->len_to_cipher = len_to_cipher;
-    /* Handle the initilization vector */
+    /* Handle the initialization vector */
     if (op_info->iv_len > 0) {
         DPRINTF("iv_len=%" PRIu32 "\n", op_info->iv_len);
         op_info->iv = op_info->data + curr_size;
