@@ -471,7 +471,7 @@ typedef struct TCGTempSet {
 } TCGTempSet;
 
 /* While we limit helpers to 6 arguments, for 32-bit hosts, with padding,
-   this imples a max of 6*2 (64-bit in) + 2 (64-bit out) = 14 operands.
+   this implies a max of 6*2 (64-bit in) + 2 (64-bit out) = 14 operands.
    There are never more than 2 outputs, which means that we can store all
    dead + sync data within 16 bits.  */
 #define DEAD_ARG  4
