@@ -102,7 +102,7 @@ def generate_certificate(privkey_pem: str, pubkey_pem: str) -> str:
     # Public key
     cert.set_pubkey(pubkey)
 
-    # Subject name and issueer
+    # Subject name and issuer
     cert.get_subject().CN = "U2F emulated"
     cert.set_issuer(cert.get_subject())
 
