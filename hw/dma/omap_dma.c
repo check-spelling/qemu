@@ -422,7 +422,7 @@ static void omap_dma_transfer_generic(struct soc_dma_ch_s *dma)
 
         if (ch->fs && ch->bs) {
             a->pck_element ++;
-            /* Check if a full packet has beed transferred.  */
+            /* Check if a full packet has been transferred.  */
             if (a->pck_element == a->pck_elements) {
                 a->pck_element = 0;
 
