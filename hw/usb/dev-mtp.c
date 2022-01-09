@@ -1121,7 +1121,7 @@ static MTPData *usb_mtp_get_object_prop_value(MTPState *s, MTPControl *c,
         break;
     case PROP_PERSISTENT_UNIQUE_OBJECT_IDENTIFIER:
         /* Should be persistent between sessions,
-         * but using our objedt ID is "good enough"
+         * but using our object ID is "good enough"
          * for now */
         usb_mtp_add_u64(d, 0x0000000000000000);
         usb_mtp_add_u64(d, o->handle);
