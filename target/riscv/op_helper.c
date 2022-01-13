@@ -97,7 +97,7 @@ target_ulong helper_sret(CPURISCVState *env, target_ulong cpu_pc_deb)
     mstatus = env->mstatus;
 
     if (riscv_has_ext(env, RVH) && !riscv_cpu_virt_enabled(env)) {
-        /* We support Hypervisor extensions and virtulisation is disabled */
+        /* We support Hypervisor extensions and virtualization is disabled */
         target_ulong hstatus = env->hstatus;
 
         prev_priv = get_field(mstatus, MSTATUS_SPP);
