@@ -1557,7 +1557,7 @@ again:
             uint32_t dest;
             /* ??? The docs imply the destination address is loaded into
                the TEMP register.  However the Linux drivers rely on
-               the value being presrved.  */
+               the value being preserved.  */
             dest = read_dword(s, s->dsp);
             s->dsp += 4;
             lsi_memcpy(s, dest, addr, insn & 0xffffff);
@@ -1863,7 +1863,7 @@ static void lsi_reg_writeb(LSIState *s, int offset, uint8_t val)
         s->scntl1 = val & ~LSI_SCNTL1_SST;
         if (val & LSI_SCNTL1_IARB) {
             qemu_log_mask(LOG_UNIMP,
-                      "lsi_scsi: Immediate Arbritration not implemented\n");
+                      "lsi_scsi: Immediate Arbitration not implemented\n");
         }
         if (val & LSI_SCNTL1_RST) {
             if (!(s->sstat0 & LSI_SSTAT0_RST)) {

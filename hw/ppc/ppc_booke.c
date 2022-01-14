@@ -312,7 +312,7 @@ static void ppc_booke_timer_reset_handle(void *opaque)
  * CPU states are defined "typedef enum RunState".
  * Regarding timer, When CPU state changes to running after debug halt
  * or similar cases which takes time then in between final watchdog
- * expiry happenes. This will cause exit to QEMU and configured watchdog
+ * expiry happens. This will cause exit to QEMU and configured watchdog
  * action will be taken. To avoid this we always clear the watchdog state when
  * state changes to running.
  */

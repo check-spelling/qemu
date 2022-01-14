@@ -174,7 +174,7 @@ static void  mpc_i2c_data_send(MPCI2CState *s)
     }
 }
 
-static void  mpc_i2c_data_recive(MPCI2CState *s)
+static void  mpc_i2c_data_receive(MPCI2CState *s)
 {
     int ret;
     /* get the next byte */
@@ -214,7 +214,7 @@ static uint64_t mpc_i2c_read(void *opaque, hwaddr addr, unsigned size)
             if (mpc_i2c_direction_is_tx(s)) {
                 DPRINTF("MTX is set not in recv mode\n");
             } else {
-                mpc_i2c_data_recive(s);
+                mpc_i2c_data_receive(s);
             }
         }
         break;
@@ -262,7 +262,7 @@ static void mpc_i2c_write(void *opaque, hwaddr addr,
             s->address = CYCLE_RESET;
             }
         }
-        /* For restart end the onging transfer */
+        /* For restart end the ongoing transfer */
         if (s->cr & CCR_RSTA) {
             if (s->address != CYCLE_RESET) {
                 s->address = CYCLE_RESET;

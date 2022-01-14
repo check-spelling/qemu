@@ -382,7 +382,7 @@ static bool nvme_process_completion(NVMeQueuePair *q)
     }
 
     /*
-     * Support re-entrancy when a request cb() function invokes aio_poll().
+     * Support reentrancy when a request cb() function invokes aio_poll().
      * Pending completions must be visible to aio_poll() so that a cb()
      * function can wait for the completion of another request.
      *

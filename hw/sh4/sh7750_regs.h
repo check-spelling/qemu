@@ -114,7 +114,7 @@
 #define SH7750_TTB            SH7750_P4_REG32(SH7750_TTB_REGOFS)
 #define SH7750_TTB_A7         SH7750_A7_REG32(SH7750_TTB_REGOFS)
 
-/* TLB exeption address register - TEA */
+/* TLB exception address register - TEA */
 #define SH7750_TEA_REGOFS     0x00000c /* offset */
 #define SH7750_TEA            SH7750_P4_REG32(SH7750_TEA_REGOFS)
 #define SH7750_TEA_A7         SH7750_A7_REG32(SH7750_TEA_REGOFS)
@@ -173,7 +173,7 @@
 
 
 /*
- * Exeption-related registers
+ * Exception-related registers
  */
 
 /* Immediate data for TRAPA instruction - TRA */
@@ -184,19 +184,19 @@
 #define SH7750_TRA_IMM      0x000003fd /* Immediate data operand */
 #define SH7750_TRA_IMM_S    2
 
-/* Exeption event register - EXPEVT */
+/* Exception event register - EXPEVT */
 #define SH7750_EXPEVT_REGOFS  0x000024
 #define SH7750_EXPEVT         SH7750_P4_REG32(SH7750_EXPEVT_REGOFS)
 #define SH7750_EXPEVT_A7      SH7750_A7_REG32(SH7750_EXPEVT_REGOFS)
 
-#define SH7750_EXPEVT_EX      0x00000fff /* Exeption code */
+#define SH7750_EXPEVT_EX      0x00000fff /* Exception code */
 #define SH7750_EXPEVT_EX_S    0
 
 /* Interrupt event register */
 #define SH7750_INTEVT_REGOFS  0x000028
 #define SH7750_INTEVT         SH7750_P4_REG32(SH7750_INTEVT_REGOFS)
 #define SH7750_INTEVT_A7      SH7750_A7_REG32(SH7750_INTEVT_REGOFS)
-#define SH7750_INTEVT_EX    0x00000fff /* Exeption code */
+#define SH7750_INTEVT_EX    0x00000fff /* Exception code */
 #define SH7750_INTEVT_EX_S  0
 
 /*
@@ -310,7 +310,7 @@
 #define SH7750_STBCR_PHZ      0x40 /* State of peripheral module pins in */
                                    /* standby mode: */
                                    /*   0 normal state */
-                                   /*   1 high-impendance state */
+                                   /*   1 high-impedance state */
 
 #define SH7750_STBCR_PPU      0x20 /* Peripheral module pins pull-up controls */
 #define SH7750_STBCR_MSTP4    0x10 /* Stopping the clock supply to DMAC */
@@ -535,7 +535,7 @@
 #define SH7750_RCR2_PES_x1     0x60 /*   Generated at 1 sec interval */
 #define SH7750_RCR2_PES_x2     0x70 /*   Generated at 2 sec interval */
 #define SH7750_RCR2_RTCEN      0x08 /* RTC Crystal Oscillator is Operated */
-#define SH7750_RCR2_ADJ        0x04 /* 30-Second Adjastment */
+#define SH7750_RCR2_ADJ        0x04 /* 30-Second Adjustment */
 #define SH7750_RCR2_RESET      0x02 /* Frequency divider circuits are reset */
 #define SH7750_RCR2_START      0x01 /* 0 - sec, min, hr, day-of-week, month, */
                                     /*     year counters are stopped */
@@ -580,14 +580,14 @@
 #define SH7750_BCR1_MEMMPX    0x00020000 /* Area 1 to 6 MPX Interface: */
                                          /*   0 - SRAM/burst ROM interface */
                                          /*   1 - MPX interface */
-#define SH7750_BCR1_HIZMEM    0x00008000 /* High Impendance Control. */
+#define SH7750_BCR1_HIZMEM    0x00008000 /* High Impedance Control. */
                                          /*   Specifies the state of A[25:0], */
                                          /*   BS\, CSn\, RD/WR\, CE2A\, CE2B\ */
                                          /*   in standby mode and when bus is */
                                          /*   released: */
                                          /*   0 - signals go to High-Z mode */
                                          /*   1 - signals driven */
-#define SH7750_BCR1_HIZCNT    0x00004000 /* High Impendance Control. */
+#define SH7750_BCR1_HIZCNT    0x00004000 /* High Impedance Control. */
                                          /*   Specifies the state of the */
                                          /*   RAS\, RAS2\, WEn\, CASn\, DQMn, */
                                          /*   RD\, CASS\, FRAME\, RD2\ */
@@ -598,35 +598,35 @@
 #define SH7750_BCR1_A0BST     0x00003800 /* Area 0 Burst ROM Control */
 #define SH7750_BCR1_A0BST_SRAM    0x0000 /*   Area 0 accessed as SRAM i/f */
 #define SH7750_BCR1_A0BST_ROM4    0x0800 /*   Area 0 accessed as burst ROM */
-                                         /*   interface, 4 cosequtive access */
+                                         /*   interface, 4 consecutive access */
 #define SH7750_BCR1_A0BST_ROM8    0x1000 /*   Area 0 accessed as burst ROM */
-                                         /*   interface, 8 cosequtive access */
+                                         /*   interface, 8 consecutive access */
 #define SH7750_BCR1_A0BST_ROM16   0x1800 /*   Area 0 accessed as burst ROM */
-                                         /*   interface, 16 cosequtive access */
+                                         /*   interface, 16 consecutive access */
 #define SH7750_BCR1_A0BST_ROM32   0x2000 /*   Area 0 accessed as burst ROM */
-                                         /*   interface, 32 cosequtive access */
+                                         /*   interface, 32 consecutive access */
 
 #define SH7750_BCR1_A5BST     0x00000700 /* Area 5 Burst ROM Control */
 #define SH7750_BCR1_A5BST_SRAM    0x0000 /*   Area 5 accessed as SRAM i/f */
 #define SH7750_BCR1_A5BST_ROM4    0x0100 /*   Area 5 accessed as burst ROM */
-                                         /*   interface, 4 cosequtive access */
+                                         /*   interface, 4 consecutive access */
 #define SH7750_BCR1_A5BST_ROM8    0x0200 /*   Area 5 accessed as burst ROM */
-                                         /*   interface, 8 cosequtive access */
+                                         /*   interface, 8 consecutive access */
 #define SH7750_BCR1_A5BST_ROM16   0x0300 /*   Area 5 accessed as burst ROM */
-                                         /*   interface, 16 cosequtive access */
+                                         /*   interface, 16 consecutive access */
 #define SH7750_BCR1_A5BST_ROM32   0x0400 /*   Area 5 accessed as burst ROM */
-                                         /*   interface, 32 cosequtive access */
+                                         /*   interface, 32 consecutive access */
 
 #define SH7750_BCR1_A6BST     0x000000E0 /* Area 6 Burst ROM Control */
 #define SH7750_BCR1_A6BST_SRAM    0x0000 /*   Area 6 accessed as SRAM i/f */
 #define SH7750_BCR1_A6BST_ROM4    0x0020 /*   Area 6 accessed as burst ROM */
-                                         /*   interface, 4 cosequtive access */
+                                         /*   interface, 4 consecutive access */
 #define SH7750_BCR1_A6BST_ROM8    0x0040 /*   Area 6 accessed as burst ROM */
-                                         /*   interface, 8 cosequtive access */
+                                         /*   interface, 8 consecutive access */
 #define SH7750_BCR1_A6BST_ROM16   0x0060 /*   Area 6 accessed as burst ROM */
-                                         /*   interface, 16 cosequtive access */
+                                         /*   interface, 16 consecutive access */
 #define SH7750_BCR1_A6BST_ROM32   0x0080 /*   Area 6 accessed as burst ROM */
-                                         /*   interface, 32 cosequtive access */
+                                         /*   interface, 32 consecutive access */
 
 #define SH7750_BCR1_DRAMTP        0x001C /* Area 2 and 3 Memory Type */
 #define SH7750_BCR1_DRAMTP_2SRAM_3SRAM   0x0000 /* Area 2 and 3 are SRAM or */
@@ -1275,15 +1275,15 @@
 /*
  * User Break Controller registers
  */
-#define SH7750_BARA           0x200000 /* Break address regiser A */
-#define SH7750_BAMRA          0x200004 /* Break address mask regiser A */
-#define SH7750_BBRA           0x200008 /* Break bus cycle regiser A */
-#define SH7750_BARB           0x20000c /* Break address regiser B */
-#define SH7750_BAMRB          0x200010 /* Break address mask regiser B */
-#define SH7750_BBRB           0x200014 /* Break bus cycle regiser B */
-#define SH7750_BASRB          0x000018 /* Break ASID regiser B */
-#define SH7750_BDRB           0x200018 /* Break data regiser B */
-#define SH7750_BDMRB          0x20001c /* Break data mask regiser B */
+#define SH7750_BARA           0x200000 /* Break address register A */
+#define SH7750_BAMRA          0x200004 /* Break address mask register A */
+#define SH7750_BBRA           0x200008 /* Break bus cycle register A */
+#define SH7750_BARB           0x20000c /* Break address register B */
+#define SH7750_BAMRB          0x200010 /* Break address mask register B */
+#define SH7750_BBRB           0x200014 /* Break bus cycle register B */
+#define SH7750_BASRB          0x000018 /* Break ASID register B */
+#define SH7750_BDRB           0x200018 /* Break data register B */
+#define SH7750_BDMRB          0x20001c /* Break data mask register B */
 #define SH7750_BRCR           0x200020 /* Break control register */
 
 #define SH7750_BRCR_UDBE        0x0001 /* User break debug enable bit */

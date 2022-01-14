@@ -118,7 +118,7 @@ static void arm_timer_write(void *opaque, hwaddr offset,
         if (s->control & TIMER_CTRL_ENABLE) {
             /* Pause the timer if it is running.  This may cause some
                inaccuracy dure to rounding, but avoids a whole lot of other
-               messyness.  */
+               messiness.  */
             ptimer_stop(s->timer);
         }
         s->control = value;

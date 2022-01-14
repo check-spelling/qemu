@@ -3,7 +3,7 @@
 # Copyright (c) 2020 ISP RAS
 #
 # Author:
-#  Pavel Dovgalyuk <Pavel.Dovgaluk@ispras.ru>
+#  Pavel Dovgalyuk <Pavel.Dovgalyuk@ispras.ru>
 #
 # This work is licensed under the terms of the GNU GPL, version 2 or
 # later.  See the COPYING file in the top-level directory.
@@ -83,7 +83,7 @@ class ReplayLinux(LinuxTest):
         else:
             vm.event_wait('SHUTDOWN', self.timeout)
             vm.shutdown(True)
-            logger.info('successfully fihished the replay')
+            logger.info('successfully finished the replay')
         elapsed = time.time() - start_time
         logger.info('elapsed time %.2f sec' % elapsed)
         return elapsed

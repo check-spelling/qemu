@@ -489,7 +489,7 @@ out1:
 }
 
 
-void requester_thaw(int *num_vols, void *mountpints, ErrorSet *errset)
+void requester_thaw(int *num_vols, void *mountpoints, ErrorSet *errset)
 {
     COMPointer<IVssAsync> pAsync;
 

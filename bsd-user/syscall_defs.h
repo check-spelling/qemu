@@ -34,7 +34,7 @@
  */
 
 /*
- * time_t seems to be very inconsistly defined for the different *BSD's...
+ * time_t seems to be very inconsistently defined for the different *BSD's...
  *
  * FreeBSD uses a 64bits time_t except on i386
  * so we have to add a special case here.

@@ -1173,7 +1173,7 @@ target_ulong do_client_architecture_support(PowerPCCPU *cpu,
 
         if (spapr->htab_shift < maxshift) {
             /* Guest doesn't know about HPT resizing, so we
-             * pre-emptively resize for the maximum permitted RAM.  At
+             * preemptively resize for the maximum permitted RAM.  At
              * the point this is called, nothing should have been
              * entered into the existing HPT */
             spapr_reallocate_hpt(spapr, maxshift, &error_fatal);
@@ -1532,7 +1532,7 @@ static void hypercall_register_types(void)
     spapr_register_hypercall(H_GET_CPU_CHARACTERISTICS,
                              h_get_cpu_characteristics);
 
-    /* "debugger" hcalls (also used by SLOF). Note: We do -not- differenciate
+    /* "debugger" hcalls (also used by SLOF). Note: We do -not- differentiate
      * here between the "CI" and the "CACHE" variants, they will use whatever
      * mapping attributes qemu is using. When using KVM, the kernel will
      * enforce the attributes more strongly

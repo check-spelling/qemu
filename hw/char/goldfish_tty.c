@@ -70,7 +70,7 @@ static void goldfish_tty_cmd(GoldfishTTYState *s, uint32_t cmd)
 {
     uint32_t to_copy;
     uint8_t *buf;
-    uint8_t data_out[GOLFISH_TTY_BUFFER_SIZE];
+    uint8_t data_out[GOLDFISH_TTY_BUFFER_SIZE];
     int len;
     uint64_t ptr;
 
@@ -95,7 +95,7 @@ static void goldfish_tty_cmd(GoldfishTTYState *s, uint32_t cmd)
         len = s->data_len;
         ptr = s->data_ptr;
         while (len) {
-            to_copy = MIN(GOLFISH_TTY_BUFFER_SIZE, len);
+            to_copy = MIN(GOLDFISH_TTY_BUFFER_SIZE, len);
 
             address_space_rw(&address_space_memory, ptr,
                              MEMTXATTRS_UNSPECIFIED, data_out, to_copy, 0);
@@ -208,7 +208,7 @@ static void goldfish_tty_realize(DeviceState *dev, Error **errp)
 
     trace_goldfish_tty_realize(s);
 
-    fifo8_create(&s->rx_fifo, GOLFISH_TTY_BUFFER_SIZE);
+    fifo8_create(&s->rx_fifo, GOLDFISH_TTY_BUFFER_SIZE);
     memory_region_init_io(&s->iomem, OBJECT(s), &goldfish_tty_ops, s,
                           "goldfish_tty", 0x24);
 

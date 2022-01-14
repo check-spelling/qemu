@@ -2542,7 +2542,7 @@ print_insn_hppa (bfd_vma memaddr, disassemble_info *info)
 		  break;
 		case 'z':
 		  /* 17 bit displacement.  This is an offset from a register
-		     so it gets disasssembled as just a number, not any sort
+		     so it gets disassembled as just a number, not any sort
 		     of address.  */
 		  fput_const (extract_17 (insn), info);
 		  break;

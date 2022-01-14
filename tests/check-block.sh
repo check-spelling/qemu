@@ -24,7 +24,7 @@ fi
 # Disable tests with any sanitizer except for specific ones
 SANITIZE_FLAGS=$( grep "CFLAGS.*-fsanitize" config-host.mak 2>/dev/null )
 ALLOWED_SANITIZE_FLAGS="safe-stack cfi-icall"
-#Remove all occurrencies of allowed Sanitize flags
+#Remove all occurrences of allowed Sanitize flags
 for j in ${ALLOWED_SANITIZE_FLAGS}; do
     TMP_FLAGS=${SANITIZE_FLAGS}
     SANITIZE_FLAGS=""

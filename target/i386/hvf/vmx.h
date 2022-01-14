@@ -184,7 +184,7 @@ static inline void macvm_set_rip(CPUState *cpu, uint64_t rip)
     wreg(cpu->hvf->fd, HV_X86_RIP, rip);
     env->eip = rip;
 
-    /* after moving forward in rip, we need to clean INTERRUPTABILITY */
+    /* after moving forward in rip, we need to clean INTERRUPTIBILITY */
    val = rvmcs(cpu->hvf->fd, VMCS_GUEST_INTERRUPTIBILITY);
    if (val & (VMCS_INTERRUPTIBILITY_STI_BLOCKING |
                VMCS_INTERRUPTIBILITY_MOVSS_BLOCKING)) {

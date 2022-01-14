@@ -8276,7 +8276,7 @@ static void *decMalloc(size_t n) {
   uByte *b, *b0;		   /* .. */
 
   alloc=malloc(size);		   /* -> allocated storage */
-  if (alloc==NULL) return NULL;	   /* out of strorage */
+  if (alloc==NULL) return NULL;	   /* out of storage */
   b0=(uByte *)alloc;		   /* as bytes */
   decAllocBytes+=n;		   /* account for storage */
   j=(uInt *)alloc;		   /* -> first four bytes */

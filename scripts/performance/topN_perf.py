@@ -4,7 +4,7 @@
 #  Syntax:
 #  topN_perf.py [-h] [-n] <number of displayed top functions>  -- \
 #           <qemu executable> [<qemu executable options>] \
-#           <target executable> [<target execurable options>]
+#           <target executable> [<target executable options>]
 #
 #  [-h] - Print the script arguments help message.
 #  [-n] - Specify the number of top functions to print.
@@ -60,7 +60,7 @@ check_perf_presence = subprocess.run(["which", "perf"],
 if check_perf_presence.returncode:
     sys.exit("Please install perf before running the script!")
 
-# Insure user has previllage to run perf
+# Insure user has privilege to run perf
 check_perf_executability = subprocess.run(["perf", "stat", "ls", "/"],
                                           stdout=subprocess.DEVNULL,
                                           stderr=subprocess.DEVNULL)

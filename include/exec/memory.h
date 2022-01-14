@@ -558,7 +558,7 @@ typedef void (*ReplayRamDiscard)(MemoryRegionSection *section, void *opaque);
  * A #RamDiscardManager coordinates which parts of specific RAM #MemoryRegion
  * regions are currently populated to be used/accessed by the VM, notifying
  * after parts were discarded (freeing up memory) and before parts will be
- * populated (consuming memory), to be used/acessed by the VM.
+ * populated (consuming memory), to be used/accessed by the VM.
  *
  * A #RamDiscardManager can only be set for a RAM #MemoryRegion while the
  * #MemoryRegion isn't mapped yet; it cannot change while the #MemoryRegion is
@@ -582,7 +582,7 @@ typedef void (*ReplayRamDiscard)(MemoryRegionSection *section, void *opaque);
  * Listeners are called in multiples of the minimum granularity (unless it
  * would exceed the registered range) and changes are aligned to the minimum
  * granularity within the #MemoryRegion. Listeners have to prepare for memory
- * becomming discarded in a different granularity than it was populated and the
+ * becoming discarded in a different granularity than it was populated and the
  * other way around.
  */
 struct RamDiscardManagerClass {
@@ -1966,7 +1966,7 @@ void memory_region_clear_dirty_bitmap(MemoryRegion *mr, hwaddr start,
  * querying the same page multiple times, which is especially useful for
  * display updates where the scanlines often are not page aligned.
  *
- * The dirty bitmap region which gets copyed into the snapshot (and
+ * The dirty bitmap region which gets copied into the snapshot (and
  * cleared afterwards) can be larger than requested.  The boundaries
  * are rounded up/down so complete bitmap longs (covering 64 pages on
  * 64bit hosts) can be copied over into the bitmap snapshot.  Which
@@ -2100,7 +2100,7 @@ void memory_region_add_coalescing(MemoryRegion *mr,
  * memory_region_clear_coalescing: Disable MMIO coalescing for the region.
  *
  * Disables any coalescing caused by memory_region_set_coalescing() or
- * memory_region_add_coalescing().  Roughly equivalent to uncacheble memory
+ * memory_region_add_coalescing().  Roughly equivalent to uncacheable memory
  * hardware.
  *
  * @mr: the memory region to be updated.
@@ -2933,7 +2933,7 @@ static inline MemOp devend_memop(enum device_endian end)
  * This *must* be set if:
  * - Discarding parts of a RAM blocks does not result in the change being
  *   reflected in the VM and the pages getting freed.
- * - All memory in RAM blocks is pinned or duplicated, invaldiating any previous
+ * - All memory in RAM blocks is pinned or duplicated, invalidating any previous
  *   discards blindly.
  * - Discarding parts of a RAM blocks will result in integrity issues (e.g.,
  *   encrypted VMs).
@@ -2965,7 +2965,7 @@ int ram_block_discard_require(bool state);
 
 /*
  * See ram_block_discard_require(): only inhibit technologies that disable
- * uncoordinated discarding of pages in RAM blocks, allowing co-existance with
+ * uncoordinated discarding of pages in RAM blocks, allowing co-existence with
  * technologies that only inhibit uncoordinated discards (via the
  * RamDiscardManager).
  */

@@ -162,7 +162,7 @@ static const uint32_t KSL_TABLE[8*16]=
 };
 #undef DV
 
-/* sustain lebel table (3db per step) */
+/* sustain level table (3db per step) */
 /* 0 - 15: 0, 3, 6, 9,12,15,18,21,24,27,30,33,36,39,42,93 (dB)*/
 #define SC(db) (db*((3/EG_STEP)*(1<<ENV_BITS)))+EG_DST
 static const int32_t SL_TABLE[16]={
@@ -208,7 +208,7 @@ static int num_lock = 0;
 
 /* work table */
 static void *cur_chip = NULL;	/* current chip point */
-/* currenct chip state */
+/* current chip state */
 /* static OPLSAMPLE  *bufL,*bufR; */
 static OPL_CH *S_CH;
 static OPL_CH *E_CH;
@@ -298,7 +298,7 @@ static inline void OPL_KEYOFF(OPL_SLOT *SLOT)
 {
 	if( SLOT->evm > ENV_MOD_RR)
 	{
-		/* set envelope counter from envleope output */
+		/* set envelope counter from envelope output */
 		SLOT->evm = ENV_MOD_RR;
 		if( !(SLOT->evc&EG_DST) )
 			//SLOT->evc = (ENV_CURVE[SLOT->evc>>ENV_BITS]<<ENV_BITS) + EG_DST;
@@ -355,7 +355,7 @@ static void set_algorithm( OPL_CH *CH)
 	CH->connect2 = carrier;
 }
 
-/* ---------- frequency counter for operater update ---------- */
+/* ---------- frequency counter for operator update ---------- */
 static inline void CALC_FCSLOT(OPL_CH *CH,OPL_SLOT *SLOT)
 {
 	int ksr;
@@ -367,7 +367,7 @@ static inline void CALC_FCSLOT(OPL_CH *CH,OPL_SLOT *SLOT)
 	if( SLOT->ksr != ksr )
 	{
 		SLOT->ksr = ksr;
-		/* attack , decay rate recalcration */
+		/* attack , decay rate recalculation */
 		SLOT->evsa = SLOT->AR[ksr];
 		SLOT->evsd = SLOT->DR[ksr];
 		SLOT->evsr = SLOT->RR[ksr];
@@ -437,7 +437,7 @@ static inline void set_sl_rr(FM_OPL *OPL,int slot,int v)
 	if( SLOT->evm == ENV_MOD_RR ) SLOT->evs = SLOT->evsr;
 }
 
-/* operator output calcrator */
+/* operator output calculator */
 #define OP_OUT(slot,env,con)   slot->wavetable[((slot->Cnt+con)/(0x1000000/SIN_ENT))&(SIN_ENT-1)][env]
 /* ---------- calcrate one of channel ---------- */
 static inline void OPL_CALC_CH( OPL_CH *CH )
@@ -454,7 +454,7 @@ static inline void OPL_CALC_CH( OPL_CH *CH )
 		/* PG */
 		if(SLOT->vib) SLOT->Cnt += (SLOT->Incr*vib/VIB_RATE);
 		else          SLOT->Cnt += SLOT->Incr;
-		/* connectoion */
+		/* connection */
 		if(CH->FB)
 		{
 			int feedback1 = (CH->op1_out[0]+CH->op1_out[1])>>CH->FB;
@@ -478,7 +478,7 @@ static inline void OPL_CALC_CH( OPL_CH *CH )
 		/* PG */
 		if(SLOT->vib) SLOT->Cnt += (SLOT->Incr*vib/VIB_RATE);
 		else          SLOT->Cnt += SLOT->Incr;
-		/* connectoion */
+		/* connection */
 		outd[0] += OP_OUT(SLOT,env_out, feedback2);
 	}
 }
@@ -504,7 +504,7 @@ static inline void OPL_CALC_RH( OPL_CH *CH )
 		/* PG */
 		if(SLOT->vib) SLOT->Cnt += (SLOT->Incr*vib/VIB_RATE);
 		else          SLOT->Cnt += SLOT->Incr;
-		/* connectoion */
+		/* connection */
 		if(CH[6].FB)
 		{
 			int feedback1 = (CH[6].op1_out[0]+CH[6].op1_out[1])>>CH[6].FB;
@@ -529,7 +529,7 @@ static inline void OPL_CALC_RH( OPL_CH *CH )
 		/* PG */
 		if(SLOT->vib) SLOT->Cnt += (SLOT->Incr*vib/VIB_RATE);
 		else          SLOT->Cnt += SLOT->Incr;
-		/* connectoion */
+		/* connection */
 		outd[0] += OP_OUT(SLOT,env_out, feedback2)*2;
 	}
 
@@ -640,7 +640,7 @@ static int OPLOpenTable( void )
 		TL_TABLE[t] = TL_TABLE[TL_MAX+t] = 0;
 	}
 
-	/* make sinwave table (total level offet) */
+	/* make sinwave table (total level offset) */
 	/* degree 0 = degree 180                   = off */
 	SIN_TABLE[0] = SIN_TABLE[SIN_ENT/2]         = &TL_TABLE[EG_ENT-1];
 	for (s = 1;s <= SIN_ENT/4;s++){
@@ -1015,7 +1015,7 @@ void YM3812UpdateOne(FM_OPL *OPL, int16_t *buffer, int length)
 		/* FM part */
 		for(CH=S_CH ; CH < R_CH ; CH++)
 			OPL_CALC_CH(CH);
-		/* Rythn part */
+		/* Rhythm part */
 		if(rhythm)
 			OPL_CALC_RH(S_CH);
 		/* limit check */
@@ -1075,7 +1075,7 @@ FM_OPL *OPLCreate(int clock, int rate)
 	char *ptr;
 	FM_OPL *OPL;
 	int state_size;
-	int max_ch = 9; /* normaly 9 channels */
+	int max_ch = 9; /* normally 9 channels */
 
 	if( OPL_LockTable() ==-1) return NULL;
 	/* allocate OPL state space */
@@ -1092,7 +1092,7 @@ FM_OPL *OPLCreate(int clock, int rate)
 	OPL->clock = clock;
 	OPL->rate  = rate;
 	OPL->max_ch = max_ch;
-	/* init grobal tables */
+	/* init global tables */
 	OPL_initialize(OPL);
 	/* reset chip */
 	OPLResetChip(OPL);

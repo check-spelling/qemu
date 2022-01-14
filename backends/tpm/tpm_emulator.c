@@ -57,8 +57,8 @@ typedef struct TPMBlobBuffers {
     uint32_t permanent_flags;
     TPMSizedBuffer permanent;
 
-    uint32_t volatil_flags;
-    TPMSizedBuffer volatil;
+    uint32_t volatile_flags;
+    TPMSizedBuffer volatile;
 
     uint32_t savestate_flags;
     TPMSizedBuffer savestate;
@@ -720,8 +720,8 @@ static int tpm_emulator_get_state_blobs(TPMEmulator *tpm_emu)
                                     &state_blobs->permanent,
                                     &state_blobs->permanent_flags) < 0 ||
         tpm_emulator_get_state_blob(tpm_emu, PTM_BLOB_TYPE_VOLATILE,
-                                    &state_blobs->volatil,
-                                    &state_blobs->volatil_flags) < 0 ||
+                                    &state_blobs->volatile,
+                                    &state_blobs->volatile_flags) < 0 ||
         tpm_emulator_get_state_blob(tpm_emu, PTM_BLOB_TYPE_SAVESTATE,
                                     &state_blobs->savestate,
                                     &state_blobs->savestate_flags) < 0) {
@@ -731,7 +731,7 @@ static int tpm_emulator_get_state_blobs(TPMEmulator *tpm_emu)
     return 0;
 
  err_exit:
-    tpm_sized_buffer_reset(&state_blobs->volatil);
+    tpm_sized_buffer_reset(&state_blobs->volatile);
     tpm_sized_buffer_reset(&state_blobs->permanent);
     tpm_sized_buffer_reset(&state_blobs->savestate);
 
@@ -826,8 +826,8 @@ static int tpm_emulator_set_state_blobs(TPMBackend *tb)
                                     &state_blobs->permanent,
                                     state_blobs->permanent_flags) < 0 ||
         tpm_emulator_set_state_blob(tpm_emu, PTM_BLOB_TYPE_VOLATILE,
-                                    &state_blobs->volatil,
-                                    state_blobs->volatil_flags) < 0 ||
+                                    &state_blobs->volatile,
+                                    state_blobs->volatile_flags) < 0 ||
         tpm_emulator_set_state_blob(tpm_emu, PTM_BLOB_TYPE_SAVESTATE,
                                     &state_blobs->savestate,
                                     state_blobs->savestate_flags) < 0) {
@@ -886,11 +886,11 @@ static const VMStateDescription vmstate_tpm_emulator = {
                                      TPMEmulator, 0, 0,
                                      state_blobs.permanent.size),
 
-        VMSTATE_UINT32(state_blobs.volatil_flags, TPMEmulator),
-        VMSTATE_UINT32(state_blobs.volatil.size, TPMEmulator),
-        VMSTATE_VBUFFER_ALLOC_UINT32(state_blobs.volatil.buffer,
+        VMSTATE_UINT32(state_blobs.volatile_flags, TPMEmulator),
+        VMSTATE_UINT32(state_blobs.volatile.size, TPMEmulator),
+        VMSTATE_VBUFFER_ALLOC_UINT32(state_blobs.volatile.buffer,
                                      TPMEmulator, 0, 0,
-                                     state_blobs.volatil.size),
+                                     state_blobs.volatile.size),
 
         VMSTATE_UINT32(state_blobs.savestate_flags, TPMEmulator),
         VMSTATE_UINT32(state_blobs.savestate.size, TPMEmulator),
@@ -955,7 +955,7 @@ static void tpm_emulator_inst_finalize(Object *obj)
         error_free(tpm_emu->migration_blocker);
     }
 
-    tpm_sized_buffer_reset(&state_blobs->volatil);
+    tpm_sized_buffer_reset(&state_blobs->volatile);
     tpm_sized_buffer_reset(&state_blobs->permanent);
     tpm_sized_buffer_reset(&state_blobs->savestate);
 

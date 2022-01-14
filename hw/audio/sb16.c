@@ -272,7 +272,7 @@ static void dma_cmd8 (SB16State *s, int mask, int dma_len)
 
            Act1 sets block size via command 0x48 and it's an odd number
            SR does the same with even number
-           Both use stereo, and Creatives own documentation states that
+           Both use stereo, and Creative's own documentation states that
            0x48 sets block size in bytes less one.. go figure */
         s->block_size &= ~s->fmt_stereo;
     }

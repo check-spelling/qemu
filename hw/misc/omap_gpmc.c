@@ -514,7 +514,7 @@ static uint64_t omap_gpmc_read(void *opaque, hwaddr addr,
     struct omap_gpmc_cs_file_s *f;
 
     if (size != 4 && gpmc_wordaccess_only(addr)) {
-        return omap_badwidth_read32(opaque, addr);
+        return omap_bandwidth_read32(opaque, addr);
     }
 
     switch (addr) {
@@ -626,7 +626,7 @@ static void omap_gpmc_write(void *opaque, hwaddr addr,
     struct omap_gpmc_cs_file_s *f;
 
     if (size != 4 && gpmc_wordaccess_only(addr)) {
-        omap_badwidth_write32(opaque, addr, value);
+        omap_bandwidth_write32(opaque, addr, value);
         return;
     }
 

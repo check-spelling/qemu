@@ -1109,7 +1109,7 @@ cris_opcodes[] =
    cris_scc_op},
 
   /* The insn "swapn" is the same as "not" and will be disassembled as
-     such, but the swap* family of mnmonics are generally v8-and-higher
+     such, but the swap* family of mnemonics are generally v8-and-higher
      only, so count it in.  */
   {"swapn",   0x8770, 0x7880,		  "r",	     0, SIZE_NONE,
    cris_ver_v8p,
@@ -2625,7 +2625,7 @@ print_insn_cris_generic (bfd_vma memaddr,
 	{
 	  /* We're often called to disassemble zeroes.  While this is a
 	     valid "bcc .+2" insn, it is also useless enough and enough
-	     of a nuiscance that we will just output "bcc .+2" for it
+	     of a nuisance that we will just output "bcc .+2" for it
 	     and signal it as a noninsn.  */
 	  (*info->fprintf_func) (info->stream,
 				 disdata->distype == cris_dis_v32

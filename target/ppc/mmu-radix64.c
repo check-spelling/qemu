@@ -1,5 +1,5 @@
 /*
- *  PowerPC Radix MMU mulation helpers for QEMU.
+ *  PowerPC Radix MMU emulation helpers for QEMU.
  *
  *  Copyright (c) 2016 Suraj Jitindar Singh, IBM Corporation
  *

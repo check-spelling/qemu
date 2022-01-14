@@ -125,7 +125,7 @@ static void pl080_run(PL080State *s)
         for (c = 0; c < s->nchannels; c++) {
             ch = &s->chan[c];
 again:
-            /* Test if thiws channel has any pending DMA requests.  */
+            /* Test if this channel has any pending DMA requests.  */
             if ((ch->conf & (PL080_CCONF_H | PL080_CCONF_E))
                     != PL080_CCONF_E)
                 continue;

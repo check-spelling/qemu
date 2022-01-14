@@ -434,7 +434,7 @@ static void s390_machine_reset(MachineState *machine)
         break;
     case S390_RESET_MODIFIED_CLEAR:
         /*
-         * Susbsystem reset needs to be done before we unshare memory
+         * Subsystem reset needs to be done before we unshare memory
          * and lose access to VIRTIO structures in guest memory.
          */
         subsystem_reset();
@@ -447,7 +447,7 @@ static void s390_machine_reset(MachineState *machine)
         break;
     case S390_RESET_LOAD_NORMAL:
         /*
-         * Susbsystem reset needs to be done before we unshare memory
+         * Subsystem reset needs to be done before we unshare memory
          * and lose access to VIRTIO structures in guest memory.
          */
         subsystem_reset();

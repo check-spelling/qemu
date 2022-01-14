@@ -830,7 +830,7 @@ static void vfio_register_ram_discard_listener(VFIOContainer *container,
         if (vrdl_mappings + max_memslots - vrdl_count >
             container->dma_max_mappings) {
             warn_report("%s: possibly running out of DMA mappings. E.g., try"
-                        " increasing the 'block-size' of virtio-mem devies."
+                        " increasing the 'block-size' of virtio-mem devices."
                         " Maximum possible DMA mappings: %d, Maximum possible"
                         " memslots: %d", __func__, container->dma_max_mappings,
                         max_memslots);

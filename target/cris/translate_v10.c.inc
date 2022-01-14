@@ -1256,7 +1256,7 @@ static unsigned int crisv10_decoder(CPUCRISState *env, DisasContext *dc)
 
     dc->clear_prefix = 1;
 
-    /* FIXME: What if this insn insn't 2 in length??  */
+    /* FIXME: What if this insn isn't 2 in length??  */
     if (dc->src == 15 || dc->dst == 15)
         tcg_gen_movi_tl(cpu_R[15], dc->pc + 2);
 

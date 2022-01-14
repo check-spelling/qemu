@@ -239,7 +239,7 @@ void cryptodev_backend_free_client(
  * @backend: the cryptodev backend object
  * @errp: pointer to a NULL-initialized error object
  *
- * Clean the resouce associated with @backend that realizaed
+ * Clean the resource associated with @backend that realized
  * by the specific backend's init() callback
  */
 void cryptodev_backend_cleanup(
@@ -323,7 +323,7 @@ bool cryptodev_backend_is_used(CryptoDevBackend *backend);
  * @ready: ture or false
  *
  * Set the cryptodev backend is ready or not, which is called
- * by the children of the cryptodev banckend interface.
+ * by the children of the cryptodev backend interface.
  */
 void cryptodev_backend_set_ready(CryptoDevBackend *backend, bool ready);
 

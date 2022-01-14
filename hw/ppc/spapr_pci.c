@@ -1008,7 +1008,7 @@ static const PCISubClass mem_subclass[] = {
     { 0xFF, NULL, NULL },
 };
 
-static const PCISubClass bridg_subclass[] = {
+static const PCISubClass bridge_subclass[] = {
     { PCI_CLASS_BRIDGE_HOST, "host", NULL },
     { PCI_CLASS_BRIDGE_ISA, "isa", NULL },
     { PCI_CLASS_BRIDGE_EISA, "eisa", NULL },
@@ -1134,7 +1134,7 @@ static const PCIClass pci_classes[] = {
     { "display", displ_subclass, },
     { "multimedia-device", media_subclass },
     { "memory-controller", mem_subclass },
-    { "unknown-bridge", bridg_subclass },
+    { "unknown-bridge", bridge_subclass },
     { "communication-controller", comm_subclass},
     { "system-peripheral", sys_subclass },
     { "input-controller", inp_subclass },

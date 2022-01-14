@@ -127,10 +127,10 @@ static void s390_cpu_reset(CPUState *s, cpu_reset_type type)
                offsetof(CPUS390XState, start_normal_reset_fields) -
                offsetof(CPUS390XState, start_initial_reset_fields));
 
-        /* architectured initial value for Breaking-Event-Address register */
+        /* architected initial value for Breaking-Event-Address register */
         env->gbea = 1;
 
-        /* architectured initial values for CR 0 and 14 */
+        /* architected initial values for CR 0 and 14 */
         env->cregs[0] = CR0_RESET;
         env->cregs[14] = CR14_RESET;
 

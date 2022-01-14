@@ -235,7 +235,7 @@ static void imx_eth_update(IMXFECState *s);
 
 /*
  * The MII phy could raise a GPIO to the processor which in turn
- * could be handled as an interrpt by the OS.
+ * could be handled as an interrupt by the OS.
  * For now we don't handle any GPIO/interrupt line, so the OS will
  * have to poll for the PHY status.
  */
@@ -434,7 +434,7 @@ static void imx_eth_update(IMXFECState *s)
      *   assignment fail.
      *
      * To ensure that all versions of Linux work, generate ENET_INT_MAC
-     * interrrupts on both interrupt lines. This should be changed if and when
+     * interrupts on both interrupt lines. This should be changed if and when
      * qemu supports IOMUX.
      */
     if (s->regs[ENET_EIR] & s->regs[ENET_EIMR] &

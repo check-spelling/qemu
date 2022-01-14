@@ -2313,7 +2313,7 @@ if test "$rdma" = "yes" ; then
     esac
 else
     if test "$pvrdma" = "yes" ; then
-        error_exit "PVRDMA requires rdma suppport"
+        error_exit "PVRDMA requires rdma support"
     fi
     pvrdma="no"
 fi
@@ -3171,7 +3171,7 @@ fi
 # Thread sanitizer is, for now, much noisier than the other sanitizers;
 # keep it separate until that is not the case.
 if test "$tsan" = "yes" && test "$sanitizers" = "yes"; then
-  error_exit "TSAN is not supported with other sanitiziers."
+  error_exit "TSAN is not supported with other sanitizers."
 fi
 have_tsan=no
 have_tsan_iface_fiber=no

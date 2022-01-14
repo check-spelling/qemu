@@ -15,7 +15,7 @@ exit_and_skip()
 # fakeroot is needed to run the bootstrap stage
 #
 if [ -z $FAKEROOT ]; then
-    echo "Please install fakeroot to enable bootstraping" >&2
+    echo "Please install fakeroot to enable bootstrapping" >&2
     exit_and_skip
 
 fi

@@ -1942,7 +1942,7 @@ struct kvm_dirty_gfn {
  * @id_offset: The offset of the vm/vcpu stats' id string in the file pointed
  *             by vm/vcpu stats fd.
  * @desc_offset: The offset of the vm/vcpu stats' descriptor block in the file
- *               pointd by vm/vcpu stats fd.
+ *               pointed by vm/vcpu stats fd.
  * @data_offset: The offset of the vm/vcpu stats' data block in the file
  *               pointed by vm/vcpu stats fd.
  *
@@ -1988,7 +1988,7 @@ struct kvm_stats_header {
  * @size: The number of data items for this stats.
  *        Every data item is of type __u64.
  * @offset: The offset of the stats to the start of stat structure in
- *          struture kvm or kvm_vcpu.
+ *          structure kvm or kvm_vcpu.
  * @unused: Unused field for future usage. Always 0 for now.
  * @name: The name string for the stats. Its size is indicated by the
  *        &kvm_stats_header->name_size.

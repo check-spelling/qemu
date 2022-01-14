@@ -4,7 +4,7 @@
  * Copyright (c) 2005 Fabrice Bellard
  *
  * Copyright (c) 2008 Max Krasnyansky
- *     Magor rewrite of the UHCI data structures parser and frame processor
+ *     Major rewrite of the UHCI data structures parser and frame processor
  *     Support for fully async operation and multiple outstanding transactions
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy

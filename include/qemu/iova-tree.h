@@ -111,7 +111,7 @@ const DMAMap *iova_tree_find_address(const IOVATree *tree, hwaddr iova);
  * iova_tree_foreach:
  *
  * @tree: the iova tree to iterate on
- * @iterator: the interator for the mappings, return true to stop
+ * @iterator: the iterator for the mappings, return true to stop
  *
  * Iterate over the iova tree.
  *

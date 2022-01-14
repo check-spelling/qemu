@@ -469,7 +469,7 @@ eth_write(void *opaque, hwaddr addr,
 
 /* The ETRAX FS has a groupt address table (GAT) which works like a k=1 bloom
    filter dropping group addresses we have not joined.    The filter has 64
-   bits (m). The has function is a simple nible xor of the group addr.    */
+   bits (m). The has function is a simple nibble xor of the group addr.    */
 static int eth_match_groupaddr(ETRAXFSEthState *eth, const unsigned char *sa)
 {
     unsigned int hsh;

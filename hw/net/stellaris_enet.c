@@ -446,7 +446,7 @@ static void stellaris_enet_write(void *opaque, hwaddr offset,
     case 0x30: /* MRXD */
     case 0x34: /* NP */
         /* Ignored.  */
-    case 0x3c: /* Undocuented: Timestamp? */
+    case 0x3c: /* Undocumented: Timestamp? */
         /* Ignored.  */
         break;
     default:

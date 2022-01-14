@@ -604,7 +604,7 @@ static unsigned int event_status_media(IDEState *s,
  */
 static bool validate_bcl(IDEState *s)
 {
-    /* TODO: Check IDENTIFY data word 125 for defacult BCL (currently 0) */
+    /* TODO: Check IDENTIFY data word 125 for default BCL (currently 0) */
     if (s->atapi_dma || atapi_byte_count_limit(s)) {
         return true;
     }

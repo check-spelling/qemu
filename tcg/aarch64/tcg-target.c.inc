@@ -71,7 +71,7 @@ static const int tcg_target_call_oarg_regs[1] = {
 
 #ifndef CONFIG_SOFTMMU
 /* Note that XZR cannot be encoded in the address base register slot,
-   as that actaully encodes SP.  So if we need to zero-extend the guest
+   as that actually encodes SP.  So if we need to zero-extend the guest
    address, via the address index register slot, we need to load even
    a zero guest base into a register.  */
 #define USE_GUEST_BASE     (guest_base != 0 || TARGET_LONG_BITS == 32)
@@ -715,7 +715,7 @@ static inline void tcg_out_insn_3502S(TCGContext *s, AArch64Insn insn,
 }
 
 /* This function is for 3.5.2 (Add/subtract shifted register),
-   and 3.5.10 (Logical shifted register), for the vast majorty of cases
+   and 3.5.10 (Logical shifted register), for the vast majority of cases
    when we don't want to apply a shift.  Thus it can also be used for
    3.5.3 (Add/subtract with carry) and 3.5.8 (Data processing 2 source).  */
 static void tcg_out_insn_3502(TCGContext *s, AArch64Insn insn, TCGType ext,

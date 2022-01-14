@@ -1,5 +1,5 @@
 /*
- * QEMU TCG support -- s390x vector utilitites
+ * QEMU TCG support -- s390x vector utilities
  *
  * Copyright (C) 2019 Red Hat Inc
  *

@@ -65,7 +65,7 @@ enum {
 };
 
 enum {
-    APPLESMC_ST_1E_CMD_INTRUPTED     = 0x80,
+    APPLESMC_ST_1E_CMD_INTERRUPTED   = 0x80,
     APPLESMC_ST_1E_STILL_BAD_CMD     = 0x81,
     APPLESMC_ST_1E_BAD_CMD           = 0x82,
     APPLESMC_ST_1E_NOEXIST           = 0x84,
@@ -128,7 +128,7 @@ static void applesmc_io_cmd_write(void *opaque, hwaddr addr, uint64_t val,
         } else {
             smc_debug("ERROR: previous command interrupted!\n");
             s->status = APPLESMC_ST_NEW_CMD;
-            s->status_1e = APPLESMC_ST_1E_CMD_INTRUPTED;
+            s->status_1e = APPLESMC_ST_1E_CMD_INTERRUPTED;
         }
         break;
     default:

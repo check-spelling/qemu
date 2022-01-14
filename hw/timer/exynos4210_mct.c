@@ -127,9 +127,9 @@
 #define G_COMP_ADD_INCR(x)  (G_COMP0_ADD_INCR + (x) * 0x10)
 
 /* MCT bits */
-#define G_TCON_COMP_ENABLE(x)   (1 << 2 * (x))
-#define G_TCON_AUTO_ICREMENT(x) (1 << (2 * (x) + 1))
-#define G_TCON_TIMER_ENABLE     (1 << 8)
+#define G_TCON_COMP_ENABLE(x)    (1 << 2 * (x))
+#define G_TCON_AUTO_INCREMENT(x) (1 << (2 * (x) + 1))
+#define G_TCON_TIMER_ENABLE      (1 << 8)
 
 #define G_INT_ENABLE(x)         (1 << (x))
 #define G_INT_CSTAT_COMP(x)     (1 << (x))
@@ -575,7 +575,7 @@ static void exynos4210_gfrc_event(void *opaque)
             s->g_timer.reg.int_cstat |= G_INT_CSTAT_COMP(i);
 
             /* Auto increment */
-            if (s->g_timer.reg.tcon & G_TCON_AUTO_ICREMENT(i)) {
+            if (s->g_timer.reg.tcon & G_TCON_AUTO_INCREMENT(i)) {
                 s->g_timer.reg.comp[i] += s->g_timer.reg.comp_add_incr[i];
             }
 

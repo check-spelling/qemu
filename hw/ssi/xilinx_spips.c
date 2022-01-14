@@ -184,7 +184,7 @@
 #define R_GQSPI_GF_SNAPSHOT (0x160 / 4)
     FIELD(GQSPI_GF_SNAPSHOT, POLL, 19, 1)
     FIELD(GQSPI_GF_SNAPSHOT, STRIPE, 18, 1)
-    FIELD(GQSPI_GF_SNAPSHOT, RECIEVE, 17, 1)
+    FIELD(GQSPI_GF_SNAPSHOT, RECEIVE, 17, 1)
     FIELD(GQSPI_GF_SNAPSHOT, TRANSMIT, 16, 1)
     FIELD(GQSPI_GF_SNAPSHOT, DATA_BUS_SELECT, 14, 2)
     FIELD(GQSPI_GF_SNAPSHOT, CHIP_SELECT, 12, 2)
@@ -469,9 +469,9 @@ static void xlnx_zynqmp_qspips_flush_fifo_g(XlnxZynqMPQSPIPS *s)
 
             imm = ARRAY_FIELD_EX32(s->regs, GQSPI_GF_SNAPSHOT, IMMEDIATE_DATA);
             if (!ARRAY_FIELD_EX32(s->regs, GQSPI_GF_SNAPSHOT, DATA_XFER)) {
-                /* immedate transfer */
+                /* immediate transfer */
                 if (ARRAY_FIELD_EX32(s->regs, GQSPI_GF_SNAPSHOT, TRANSMIT) ||
-                    ARRAY_FIELD_EX32(s->regs, GQSPI_GF_SNAPSHOT, RECIEVE)) {
+                    ARRAY_FIELD_EX32(s->regs, GQSPI_GF_SNAPSHOT, RECEIVE)) {
                     s->regs[R_GQSPI_DATA_STS] = 1;
                 /* CS setup/hold - do nothing */
                 } else {
@@ -491,14 +491,14 @@ static void xlnx_zynqmp_qspips_flush_fifo_g(XlnxZynqMPQSPIPS *s)
         if (!s->regs[R_GQSPI_DATA_STS]) {
             continue;
         }
-        if (ARRAY_FIELD_EX32(s->regs, GQSPI_GF_SNAPSHOT, RECIEVE) &&
+        if (ARRAY_FIELD_EX32(s->regs, GQSPI_GF_SNAPSHOT, RECEIVE) &&
             fifo8_is_full(&s->rx_fifo_g)) {
             /* No space in RX fifo for transfer - try again later */
             return;
         }
         if (ARRAY_FIELD_EX32(s->regs, GQSPI_GF_SNAPSHOT, STRIPE) &&
             (ARRAY_FIELD_EX32(s->regs, GQSPI_GF_SNAPSHOT, TRANSMIT) ||
-             ARRAY_FIELD_EX32(s->regs, GQSPI_GF_SNAPSHOT, RECIEVE))) {
+             ARRAY_FIELD_EX32(s->regs, GQSPI_GF_SNAPSHOT, RECEIVE))) {
             num_stripes = 2;
         }
         if (!ARRAY_FIELD_EX32(s->regs, GQSPI_GF_SNAPSHOT, DATA_XFER)) {
@@ -530,7 +530,7 @@ static void xlnx_zynqmp_qspips_flush_fifo_g(XlnxZynqMPQSPIPS *s)
         } else if (s->regs[R_GQSPI_DATA_STS] > 0) {
             s->regs[R_GQSPI_DATA_STS]--;
         }
-        if (ARRAY_FIELD_EX32(s->regs, GQSPI_GF_SNAPSHOT, RECIEVE)) {
+        if (ARRAY_FIELD_EX32(s->regs, GQSPI_GF_SNAPSHOT, RECEIVE)) {
             for (i = 0; i < 2; ++i) {
                 if (busses & (1 << i)) {
                     DB_PRINT_L(1, "bus %d push_byte = %02x\n", i, tx_rx[i]);
@@ -768,7 +768,7 @@ static void xilinx_spips_check_zero_pump(XilinxSPIPS *s)
      */
     while (s->regs[R_TRANSFER_SIZE] &&
            s->rx_fifo.num + s->tx_fifo.num < RXFF_A_Q - 3) {
-        /* endianess just doesn't matter when zero pumping */
+        /* endianness just doesn't matter when zero pumping */
         tx_data_bytes(&s->tx_fifo, 0, 4, false);
         s->regs[R_TRANSFER_SIZE] &= ~0x03ull;
         s->regs[R_TRANSFER_SIZE] -= 4;

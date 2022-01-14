@@ -55,7 +55,7 @@ struct HostMemoryBackendClass {
  * @parent: opaque parent object container
  * @size: amount of memory backend provides
  * @mr: MemoryRegion representing host memory belonging to backend
- * @prealloc_threads: number of threads to be used for preallocatining RAM
+ * @prealloc_threads: number of threads to be used for preallocating RAM
  */
 struct HostMemoryBackend {
     /* private */

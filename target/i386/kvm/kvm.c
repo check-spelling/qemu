@@ -813,7 +813,7 @@ static struct {
     [HYPERV_FEAT_RELAXED] = {
         .desc = "relaxed timing (hv-relaxed)",
         .flags = {
-            {.func = HV_CPUID_ENLIGHTMENT_INFO, .reg = R_EAX,
+            {.func = HV_CPUID_ENLIGHTENMENT_INFO, .reg = R_EAX,
              .bits = HV_RELAXED_TIMING_RECOMMENDED}
         }
     },
@@ -893,7 +893,7 @@ static struct {
     [HYPERV_FEAT_TLBFLUSH] = {
         .desc = "paravirtualized TLB flush (hv-tlbflush)",
         .flags = {
-            {.func = HV_CPUID_ENLIGHTMENT_INFO, .reg = R_EAX,
+            {.func = HV_CPUID_ENLIGHTENMENT_INFO, .reg = R_EAX,
              .bits = HV_REMOTE_TLB_FLUSH_RECOMMENDED |
              HV_EX_PROCESSOR_MASKS_RECOMMENDED}
         },
@@ -902,7 +902,7 @@ static struct {
     [HYPERV_FEAT_EVMCS] = {
         .desc = "enlightened VMCS (hv-evmcs)",
         .flags = {
-            {.func = HV_CPUID_ENLIGHTMENT_INFO, .reg = R_EAX,
+            {.func = HV_CPUID_ENLIGHTENMENT_INFO, .reg = R_EAX,
              .bits = HV_ENLIGHTENED_VMCS_RECOMMENDED}
         },
         .dependencies = BIT(HYPERV_FEAT_VAPIC)
@@ -910,7 +910,7 @@ static struct {
     [HYPERV_FEAT_IPI] = {
         .desc = "paravirtualized IPI (hv-ipi)",
         .flags = {
-            {.func = HV_CPUID_ENLIGHTMENT_INFO, .reg = R_EAX,
+            {.func = HV_CPUID_ENLIGHTENMENT_INFO, .reg = R_EAX,
              .bits = HV_CLUSTER_IPI_RECOMMENDED |
              HV_EX_PROCESSOR_MASKS_RECOMMENDED}
         },
@@ -927,7 +927,7 @@ static struct {
     [HYPERV_FEAT_AVIC] = {
         .desc = "AVIC/APICv support (hv-avic/hv-apicv)",
         .flags = {
-            {.func = HV_CPUID_ENLIGHTMENT_INFO, .reg = R_EAX,
+            {.func = HV_CPUID_ENLIGHTENMENT_INFO, .reg = R_EAX,
              .bits = HV_DEPRECATING_AEOI_RECOMMENDED}
         }
     },
@@ -1003,7 +1003,7 @@ static struct kvm_cpuid2 *get_supported_hv_cpuid(CPUState *cs)
     if (!do_sys_ioctl && kvm_check_extension(cs->kvm_state,
                             KVM_CAP_HYPERV_ENLIGHTENED_VMCS) > 0) {
         for (i = 0; i < cpuid->nent; i++) {
-            if (cpuid->entries[i].function == HV_CPUID_ENLIGHTMENT_INFO) {
+            if (cpuid->entries[i].function == HV_CPUID_ENLIGHTENMENT_INFO) {
                 cpuid->entries[i].eax |= HV_ENLIGHTENED_VMCS_RECOMMENDED;
             }
         }
@@ -1022,7 +1022,7 @@ static struct kvm_cpuid2 *get_supported_hv_cpuid_legacy(CPUState *cs)
     struct kvm_cpuid2 *cpuid;
     struct kvm_cpuid_entry2 *entry_feat, *entry_recomm;
 
-    /* HV_CPUID_FEATURES, HV_CPUID_ENLIGHTMENT_INFO */
+    /* HV_CPUID_FEATURES, HV_CPUID_ENLIGHTENMENT_INFO */
     cpuid = g_malloc0(sizeof(*cpuid) + 2 * sizeof(*cpuid->entries));
     cpuid->nent = 2;
 
@@ -1031,7 +1031,7 @@ static struct kvm_cpuid2 *get_supported_hv_cpuid_legacy(CPUState *cs)
     entry_feat->function = HV_CPUID_FEATURES;
 
     entry_recomm = &cpuid->entries[1];
-    entry_recomm->function = HV_CPUID_ENLIGHTMENT_INFO;
+    entry_recomm->function = HV_CPUID_ENLIGHTENMENT_INFO;
     entry_recomm->ebx = cpu->hyperv_spinlock_attempts;
 
     if (kvm_check_extension(cs->kvm_state, KVM_CAP_HYPERV) > 0) {
@@ -1212,7 +1212,7 @@ static uint32_t hv_build_cpuid_leaf(CPUState *cs, uint32_t func, int reg)
 }
 
 /*
- * Expand Hyper-V CPU features. In partucular, check that all the requested
+ * Expand Hyper-V CPU features. In particular, check that all the requested
  * features are supported by the host and the sanity of the configuration
  * (that all the required dependencies are included). Also, this takes care
  * of 'hv_passthrough' mode and fills the environment with all supported
@@ -1281,7 +1281,7 @@ bool kvm_hyperv_expand_features(X86CPU *cpu, Error **errp)
             hv_cpuid_get_host(cs, HV_CPUID_IMPLEMENT_LIMITS, R_EDX);
 
         cpu->hyperv_spinlock_attempts =
-            hv_cpuid_get_host(cs, HV_CPUID_ENLIGHTMENT_INFO, R_EBX);
+            hv_cpuid_get_host(cs, HV_CPUID_ENLIGHTENMENT_INFO, R_EBX);
 
         /*
          * Mark feature as enabled in 'cpu->hyperv_features' as
@@ -1382,8 +1382,8 @@ static int hyperv_fill_cpuids(CPUState *cs,
     c->edx |= HV_CPU_DYNAMIC_PARTITIONING_AVAILABLE;
 
     c = &cpuid_ent[cpuid_i++];
-    c->function = HV_CPUID_ENLIGHTMENT_INFO;
-    c->eax = hv_build_cpuid_leaf(cs, HV_CPUID_ENLIGHTMENT_INFO, R_EAX);
+    c->function = HV_CPUID_ENLIGHTENMENT_INFO;
+    c->eax = hv_build_cpuid_leaf(cs, HV_CPUID_ENLIGHTENMENT_INFO, R_EAX);
     c->ebx = cpu->hyperv_spinlock_attempts;
 
     if (hyperv_feat_enabled(cpu, HYPERV_FEAT_VAPIC) &&
@@ -1394,7 +1394,7 @@ static int hyperv_fill_cpuids(CPUState *cs,
     if (cpu->hyperv_no_nonarch_cs == ON_OFF_AUTO_ON) {
         c->eax |= HV_NO_NONARCH_CORESHARING;
     } else if (cpu->hyperv_no_nonarch_cs == ON_OFF_AUTO_AUTO) {
-        c->eax |= hv_cpuid_get_host(cs, HV_CPUID_ENLIGHTMENT_INFO, R_EAX) &
+        c->eax |= hv_cpuid_get_host(cs, HV_CPUID_ENLIGHTENMENT_INFO, R_EAX) &
             HV_NO_NONARCH_CORESHARING;
     }
 
@@ -1714,7 +1714,7 @@ int kvm_arch_init_vcpu(CPUState *cs)
                 }
 
                 c->function = i;
-                c->flags = KVM_CPUID_FLAG_SIGNIFCANT_INDEX;
+                c->flags = KVM_CPUID_FLAG_SIGNIFICANT_INDEX;
                 c->index = j;
                 cpu_x86_cpuid(env, i, j, &c->eax, &c->ebx, &c->ecx, &c->edx);
 
@@ -1742,7 +1742,7 @@ int kvm_arch_init_vcpu(CPUState *cs)
         case 0x12:
             for (j = 0; ; j++) {
                 c->function = i;
-                c->flags = KVM_CPUID_FLAG_SIGNIFCANT_INDEX;
+                c->flags = KVM_CPUID_FLAG_SIGNIFICANT_INDEX;
                 c->index = j;
                 cpu_x86_cpuid(env, i, j, &c->eax, &c->ebx, &c->ecx, &c->edx);
 
@@ -1763,7 +1763,7 @@ int kvm_arch_init_vcpu(CPUState *cs)
 
             c->function = i;
             c->index = 0;
-            c->flags = KVM_CPUID_FLAG_SIGNIFCANT_INDEX;
+            c->flags = KVM_CPUID_FLAG_SIGNIFICANT_INDEX;
             cpu_x86_cpuid(env, i, 0, &c->eax, &c->ebx, &c->ecx, &c->edx);
             times = c->eax;
 
@@ -1776,7 +1776,7 @@ int kvm_arch_init_vcpu(CPUState *cs)
                 c = &cpuid_data.entries[cpuid_i++];
                 c->function = i;
                 c->index = j;
-                c->flags = KVM_CPUID_FLAG_SIGNIFCANT_INDEX;
+                c->flags = KVM_CPUID_FLAG_SIGNIFICANT_INDEX;
                 cpu_x86_cpuid(env, i, j, &c->eax, &c->ebx, &c->ecx, &c->edx);
             }
             break;
@@ -1837,7 +1837,7 @@ int kvm_arch_init_vcpu(CPUState *cs)
             /* Query for all AMD cache information leaves */
             for (j = 0; ; j++) {
                 c->function = i;
-                c->flags = KVM_CPUID_FLAG_SIGNIFCANT_INDEX;
+                c->flags = KVM_CPUID_FLAG_SIGNIFICANT_INDEX;
                 c->index = j;
                 cpu_x86_cpuid(env, i, j, &c->eax, &c->ebx, &c->ecx, &c->edx);
 
@@ -3559,7 +3559,7 @@ static int kvm_get_msrs(X86CPU *cpu)
      * apparently always <= 52.   We know our 'n' but don't know what
      * the destinations 'n' is; it might be smaller, in which case
      * it masks (c) on loading. It might be larger, in which case
-     * we fill 'd' so that d..c is consistent irrespetive of the 'n'
+     * we fill 'd' so that d..c is consistent irrespective of the 'n'
      * we're migrating to.
      */
 
@@ -4927,7 +4927,7 @@ int kvm_arch_fixup_msi_route(struct kvm_irq_routing_entry *route,
             }
 
             /*
-             * Handled untranslated compatibilty format interrupt with
+             * Handled untranslated compatibility format interrupt with
              * extended destination ID in the low bits 11-5. */
             dst.address = kvm_swizzle_msi_ext_dest_id(dst.address);
 

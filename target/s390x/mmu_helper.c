@@ -49,7 +49,7 @@ static void trigger_access_exception(CPUS390XState *env, uint32_t type,
     }
 }
 
-/* check whether the address would be proteted by Low-Address Protection */
+/* check whether the address would be protected by Low-Address Protection */
 static bool is_low_address(uint64_t addr)
 {
     return addr <= 511 || (addr >= 4096 && addr <= 4607);

@@ -20,8 +20,8 @@ allwinner_sid_read(uint64_t offset, uint64_t data, unsigned size) "offset 0x%" P
 allwinner_sid_write(uint64_t offset, uint64_t data, unsigned size) "offset 0x%" PRIx64 " data 0x%" PRIx64 " size %" PRIu32
 
 # avr_power.c
-avr_power_read(uint8_t value) "power_reduc read value:%u"
-avr_power_write(uint8_t value) "power_reduc write value:%u"
+avr_power_read(uint8_t value) "power_reduction read value:%u"
+avr_power_write(uint8_t value) "power_reduction write value:%u"
 
 # eccmemctl.c
 ecc_mem_writel_mer(uint32_t val) "Write memory enable 0x%08x"

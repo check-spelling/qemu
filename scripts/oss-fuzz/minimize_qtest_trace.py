@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-This takes a crashing qtest trace and tries to remove superflous operations
+This takes a crashing qtest trace and tries to remove superfluous operations
 """
 
 import sys
@@ -32,7 +32,7 @@ Usage:
 QEMU_PATH="/path/to/qemu" QEMU_ARGS="args" {} [Options] input_trace output_trace
 
 By default, will try to use the second-to-last line in the output to identify
-whether the crash occred. Optionally, manually set a string that idenitifes the
+whether the crash occurred. Optionally, manually set a string that identifies the
 crash by setting CRASH_TOKEN=
 
 Options:
@@ -177,7 +177,7 @@ def remove_lines(newtrace, outpath):
         # it into two separate write commands. If splitting the data operand
         # from length/2^n bytes to the left does not work, try to move the pivot
         # to the right side, then add one to n, until length/2^n == 0. The idea
-        # is to prune unneccessary bytes from long writes, while accommodating
+        # is to prune unnecessary bytes from long writes, while accommodating
         # arbitrary MemoryRegion access sizes and alignments.
 
         # This algorithm will fail under some rare situations.

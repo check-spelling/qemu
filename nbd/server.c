@@ -2648,7 +2648,7 @@ static coroutine_fn void nbd_trip(void *opaque)
     }
 
     if (ret < 0) {
-        /* It wans't -EIO, so, according to nbd_co_receive_request()
+        /* It wasn't -EIO, so, according to nbd_co_receive_request()
          * semantics, we should return the error to the client. */
         Error *export_err = local_err;
 

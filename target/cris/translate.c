@@ -3041,12 +3041,12 @@ static unsigned int crisv32_decoder(CPUCRISState *env, DisasContext *dc)
  * On QEMU care needs to be taken when a branch+delayslot sequence is broken
  * and the branch and delayslot don't share pages.
  *
- * The TB contaning the branch insn will set up env->btarget and evaluate 
+ * The TB containing the branch insn will set up env->btarget and evaluate 
  * env->btaken. When the translation loop exits we will note that the branch 
  * sequence is broken and let env->dslot be the size of the branch insn (those
  * vary in length).
  *
- * The TB contaning the delayslot will have the PC of its real insn (i.e no lsb
+ * The TB containing the delayslot will have the PC of its real insn (i.e no lsb
  * set). It will also expect to have env->dslot setup with the size of the 
  * delay slot so that env->pc - env->dslot point to the branch insn. This TB 
  * will execute the dslot and take the branch, either to btarget or just one 
@@ -3260,7 +3260,7 @@ static void cris_tr_tb_stop(DisasContextBase *dcbase, CPUState *cpu)
         tcg_gen_lookup_and_goto_ptr();
         break;
     case DISAS_UPDATE:
-        /* Indicate that interupts must be re-evaluated before the next TB. */
+        /* Indicate that interrupts must be re-evaluated before the next TB. */
         tcg_gen_exit_tb(NULL, 0);
         break;
     default:

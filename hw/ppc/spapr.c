@@ -1849,7 +1849,7 @@ static bool spapr_ov5_cas_needed(void *opaque)
      * Both of these options encode machine topology into the device-tree
      * in such a way that the now-booted OS should still be able to interact
      * appropriately with QEMU regardless of what options were actually
-     * negotiatied on the source side.
+     * negotiated on the source side.
      *
      * As such, we can avoid migrating the CAS-negotiated options if these
      * are the only options available on the current machine/platform.
@@ -1857,14 +1857,14 @@ static bool spapr_ov5_cas_needed(void *opaque)
      * earlier, this allows us to maintain old->new/new->old migration
      * compatibility.
      *
-     * For QEMU 2.8+, there are additional CAS-negotiatable options available
+     * For QEMU 2.8+, there are additional CAS-negotiable options available
      * via default pseries-2.8 machines and explicit command-line parameters.
      * Some of these options, like OV5_HP_EVT, *do* require QEMU to be aware
      * of the actual CAS-negotiated values to continue working properly. For
      * example, availability of memory unplug depends on knowing whether
      * OV5_HP_EVT was negotiated via CAS.
      *
-     * Thus, for any cases where the set of available CAS-negotiatable
+     * Thus, for any cases where the set of available CAS-negotiable
      * options extends beyond OV5_FORM1_AFFINITY and OV5_DRCONF_MEMORY, we
      * include the CAS-negotiated options in the migration stream, unless
      * if they affect boot time behaviour only.
@@ -2488,7 +2488,7 @@ static void spapr_set_vsmt_mode(SpaprMachineState *spapr, Error **errp)
         return;
     }
 
-    /* Detemine the VSMT mode to use: */
+    /* Determine the VSMT mode to use: */
     if (vsmt_user) {
         if (spapr->vsmt < smp_threads) {
             error_setg(errp, "Cannot support VSMT mode %d"
@@ -2768,7 +2768,7 @@ static void spapr_machine_init(MachineState *machine)
         spapr_ovec_set(spapr->ov5, OV5_HPT_RESIZE);
     }
 
-    /* advertise support for ibm,dyamic-memory-v2 */
+    /* advertise support for ibm,dynamic-memory-v2 */
     spapr_ovec_set(spapr->ov5, OV5_DRMEM_V2);
 
     /* advertise XIVE on POWER9 machines */
@@ -4250,7 +4250,7 @@ spapr_cpu_index_to_props(MachineState *machine, unsigned cpu_index)
     CPUArchId *core_slot;
     MachineClass *mc = MACHINE_GET_CLASS(machine);
 
-    /* make sure possible_cpu are intialized */
+    /* make sure possible_cpu are initialized */
     mc->possible_cpu_arch_ids(machine);
     /* get CPU core slot containing thread that matches cpu_index */
     core_slot = spapr_find_cpu_slot(machine, cpu_index, NULL);
@@ -4870,7 +4870,7 @@ static void spapr_machine_2_12_class_options(MachineClass *mc)
 
     /* We depend on kvm_enabled() to choose a default value for the
      * hpt-max-page-size capability. Of course we can't do it here
-     * because this is too early and the HW accelerator isn't initialzed
+     * because this is too early and the HW accelerator isn't initialized
      * yet. Postpone this to machine init (see default_caps_with_cpu()).
      */
     smc->default_caps.caps[SPAPR_CAP_HPT_MAXPAGESIZE] = 0;

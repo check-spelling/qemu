@@ -53,7 +53,7 @@ enum EvictionPolicy policy;
  * The tag is compared against all the tags of a set to search for a match. If a
  * match is found, then the access is a hit.
  *
- * The CacheSet also contains bookkeaping information about eviction details.
+ * The CacheSet also contains bookkeeping information about eviction details.
  */
 
 typedef struct {
@@ -350,7 +350,7 @@ static int in_cache(Cache *cache, uint64_t addr)
  * @cache: The cache under simulation
  * @addr: The address of the requested memory location
  *
- * Returns true if the requsted data is hit in the cache and false when missed.
+ * Returns true if the requested data is hit in the cache and false when missed.
  * The cache is updated on miss for the next access.
  */
 static bool access_cache(Cache *cache, uint64_t addr)

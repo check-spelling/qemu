@@ -165,7 +165,7 @@ static void generic_loader_realize(DeviceState *dev, Error **errp)
         }
     }
 
-    /* Convert the data endiannes */
+    /* Convert the data endianness */
     if (s->data_be) {
         s->data = cpu_to_be64(s->data);
     } else {

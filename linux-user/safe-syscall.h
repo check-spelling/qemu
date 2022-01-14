@@ -91,7 +91,7 @@
  *
  * The basic setup is that we make the host syscall via a known
  * section of host native assembly. If a signal occurs, our signal
- * handler checks the interrupted host PC against the addresse of that
+ * handler checks the interrupted host PC against the addresses of that
  * known section. If the PC is before or at the address of the syscall
  * instruction then we change the PC to point at a "return
  * -TARGET_ERESTARTSYS" code path instead, and then exit the signal handler

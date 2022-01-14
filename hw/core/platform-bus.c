@@ -99,7 +99,7 @@ static void platform_bus_count_irqs(SysBusDevice *sbdev, void *opaque)
  * Loop through all sysbus devices and look for unassigned IRQ lines as well as
  * unassociated MMIO regions. Connect them to the platform bus if available.
  */
-static void plaform_bus_refresh_irqs(PlatformBusDevice *pbus)
+static void platform_bus_refresh_irqs(PlatformBusDevice *pbus)
 {
     bitmap_zero(pbus->used_irqs, pbus->num_irqs);
     foreach_dynamic_sysbus_device(platform_bus_count_irqs, pbus);
@@ -198,7 +198,7 @@ static void platform_bus_realize(DeviceState *dev, Error **errp)
     }
 
     /* some devices might be initialized before so update used IRQs map */
-    plaform_bus_refresh_irqs(pbus);
+    platform_bus_refresh_irqs(pbus);
 }
 
 static Property platform_bus_properties[] = {

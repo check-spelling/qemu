@@ -148,7 +148,7 @@ static void tosa_gpio_setup(PXA2xxState *cpu,
     qemu_irq_raise(qdev_get_gpio_in(cpu->gpio, TOSA_GPIO_USB_IN));
 }
 
-static uint32_t tosa_ssp_tansfer(SSIPeripheral *dev, uint32_t value)
+static uint32_t tosa_ssp_transfer(SSIPeripheral *dev, uint32_t value)
 {
     fprintf(stderr, "TG: %u %02x\n", value >> 5, value & 0x1f);
     return 0;
@@ -295,7 +295,7 @@ static void tosa_ssp_class_init(ObjectClass *klass, void *data)
     SSIPeripheralClass *k = SSI_PERIPHERAL_CLASS(klass);
 
     k->realize = tosa_ssp_realize;
-    k->transfer = tosa_ssp_tansfer;
+    k->transfer = tosa_ssp_transfer;
 }
 
 static const TypeInfo tosa_ssp_info = {

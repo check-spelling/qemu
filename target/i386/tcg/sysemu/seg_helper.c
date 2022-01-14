@@ -92,7 +92,7 @@ void handle_even_inj(CPUX86State *env, int intno, int is_int,
         if (is_int) {
             type = SVM_EVTINJ_TYPE_SOFT;
         } else {
-            type = SVM_EVTINJ_TYPE_EXEPT;
+            type = SVM_EVTINJ_TYPE_EXCEPT;
         }
         event_inj = intno | type | SVM_EVTINJ_VALID;
         if (!rm && exception_has_error_code(intno)) {

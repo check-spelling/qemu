@@ -43,7 +43,7 @@ static void transfer_fifo2mem(struct soc_dma_ch_s *ch)
 
 /* This is further optimisable but isn't very important because often
  * DMA peripherals forbid this kind of transfers and even when they don't,
- * oprating systems may not need to use them.  */
+ * operating systems may not need to use them.  */
 static void *fifo_buf;
 static int fifo_size;
 static void transfer_fifo2fifo(struct soc_dma_ch_s *ch)

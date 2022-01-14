@@ -432,7 +432,7 @@ struct ethtool_modinfo {
  *	before an RX interrupt, when the packet rate is below @pkt_rate_low.
  * @tx_coalesce_usecs_low: How many usecs to delay a TX interrupt after
  *	a packet is sent, when the packet rate is below @pkt_rate_low.
- * @tx_max_coalesced_frames_low: Maximum nuumber of packets to be sent before
+ * @tx_max_coalesced_frames_low: Maximum number of packets to be sent before
  *	a TX interrupt, when the packet rate is below @pkt_rate_low.
  * @pkt_rate_high: Threshold for high packet rate (packets per second).
  * @rx_coalesce_usecs_high: How many usecs to delay an RX interrupt after
@@ -570,7 +570,7 @@ struct ethtool_channels {
  * @tx_pause: Flag to enable transmission of pause frames
  *
  * Drivers should reject a non-zero setting of @autoneg when
- * autoneogotiation is disabled (or not supported) for the link.
+ * autonegotiation is disabled (or not supported) for the link.
  *
  * If the link is autonegotiated, drivers should use
  * mii_advertise_flowctrl() or similar code to set the advertised
@@ -1708,7 +1708,7 @@ enum ethtool_link_mode_bit_indices {
 /*
  * DEPRECATED macros. Please migrate to
  * ETHTOOL_GLINKSETTINGS/ETHTOOL_SLINKSETTINGS API. Please do NOT
- * define any new ADERTISE_* macro for bits > 31.
+ * define any new ADVERTISED_* macro for bits > 31.
  */
 #define ADVERTISED_10baseT_Half		__ETHTOOL_LINK_MODE_LEGACY_MASK(10baseT_Half)
 #define ADVERTISED_10baseT_Full		__ETHTOOL_LINK_MODE_LEGACY_MASK(10baseT_Full)

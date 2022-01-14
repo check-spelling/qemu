@@ -57,7 +57,7 @@ static void e500plat_machine_device_plug_cb(HotplugHandler *hotplug_dev,
 }
 
 static
-HotplugHandler *e500plat_machine_get_hotpug_handler(MachineState *machine,
+HotplugHandler *e500plat_machine_get_hotplug_handler(MachineState *machine,
                                                     DeviceState *dev)
 {
     MachineClass *mc = MACHINE_GET_CLASS(machine);
@@ -78,7 +78,7 @@ static void e500plat_machine_class_init(ObjectClass *oc, void *data)
     MachineClass *mc = MACHINE_CLASS(oc);
 
     assert(!mc->get_hotplug_handler);
-    mc->get_hotplug_handler = e500plat_machine_get_hotpug_handler;
+    mc->get_hotplug_handler = e500plat_machine_get_hotplug_handler;
     hc->plug = e500plat_machine_device_plug_cb;
 
     pmc->pci_first_slot = 0x1;

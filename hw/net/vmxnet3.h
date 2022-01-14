@@ -104,7 +104,7 @@ struct UPT1_RxStats {
 enum {
     UPT1_IML_NONE        = 0, /* no interrupt moderation */
     UPT1_IML_HIGHEST    = 7, /* least intr generated */
-    UPT1_IML_ADAPTIVE    = 8, /* adpative intr moderation */
+    UPT1_IML_ADAPTIVE    = 8, /* adaptive intr moderation */
 };
 /* values for UPT1_RSSConf.hashFunc */
 enum {
@@ -733,7 +733,7 @@ struct Vmxnet3_TxQueueDesc {
 struct Vmxnet3_RxQueueDesc {
     struct Vmxnet3_RxQueueCtrl        ctrl;
     struct Vmxnet3_RxQueueConf        conf;
-    /* Driver read after a GET commad */
+    /* Driver read after a GET command */
     struct Vmxnet3_QueueStatus        status;
     struct UPT1_RxStats            stats;
     u8                      __pad[88]; /* 128 aligned */

@@ -1329,7 +1329,7 @@ static TCGCond tcg_out_cmp2(TCGContext *s, const TCGArg *args,
     case TCG_COND_LEU:
     case TCG_COND_GTU:
     case TCG_COND_GEU:
-        /* We perform a conditional comparision.  If the high half is
+        /* We perform a conditional comparison.  If the high half is
            equal, then overwrite the flags with the comparison of the
            low half.  The resulting flags cover the whole.  */
         tcg_out_dat_rI(s, COND_AL, ARITH_CMP, 0, ah, bh, const_bh);
@@ -1549,7 +1549,7 @@ static TCGReg tcg_out_tlb_read(TCGContext *s, TCGReg addrlo, TCGReg addrhi,
     unsigned a_bits = get_alignment_bits(opc);
 
     /*
-     * We don't support inline unaligned acceses, but we can easily
+     * We don't support inline unaligned accesses, but we can easily
      * support overalignment checks.
      */
     if (a_bits < s_bits) {

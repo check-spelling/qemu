@@ -168,7 +168,7 @@ for the ``id`` parameter, which should now be used instead.
 The parameter ``mem`` of ``-numa node`` was used to assign a part of guest RAM
 to a NUMA node. But when using it, it's impossible to manage a specified RAM
 chunk on the host side (like bind it to a host node, setting bind policy, ...),
-so the guest ends up with the fake NUMA configuration with suboptiomal
+so the guest ends up with the fake NUMA configuration with suboptimal
 performance.
 However since 2014 there is an alternative way to assign RAM to a NUMA node
 using parameter ``memdev``, which does the same as ``mem`` and adds

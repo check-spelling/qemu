@@ -1907,7 +1907,7 @@ static int iscsi_open(BlockDriverState *bs, QDict *options, int flags,
         ret = -EINVAL;
         goto out;
     }
-    iscsilun->type = inq->periperal_device_type;
+    iscsilun->type = inq->peripheral_device_type;
     scsi_free_scsi_task(task);
     task = NULL;
 

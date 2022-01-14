@@ -54,7 +54,7 @@ typedef struct ExtendedOps {
  */
 #define V9FS_SM_NONE                0x00000010
 /*
- * uid/gid part of .virtfs_meatadata namespace
+ * uid/gid part of .virtfs_metadata namespace
  */
 #define V9FS_SM_MAPPED_FILE         0x00000020
 #define V9FS_RDONLY                 0x00000040

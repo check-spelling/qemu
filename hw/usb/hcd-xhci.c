@@ -146,7 +146,7 @@ enum {
     PLS_POLLING         =  7,
     PLS_RECOVERY        =  8,
     PLS_HOT_RESET       =  9,
-    PLS_COMPILANCE_MODE = 10,
+    PLS_COMPLIANCE_MODE = 10,
     PLS_TEST_MODE       = 11,
     PLS_RESUME          = 15,
 };

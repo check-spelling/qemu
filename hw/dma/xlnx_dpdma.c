@@ -128,7 +128,7 @@ enum DPDMABurstType {
 };
 
 enum DPDMAMode {
-    DPDMA_CONTIGOUS = 0,
+    DPDMA_CONTIGUOUS = 0,
     DPDMA_FRAGMENTED = 1
 };
 

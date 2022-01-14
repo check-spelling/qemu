@@ -1340,7 +1340,7 @@ static int of_dpa_cmd_add_bridging(OfDpaFlow *flow, RockerTlv **flow_tlvs)
         action->goto_tbl =
             rocker_tlv_get_le16(flow_tlvs[ROCKER_TLV_OF_DPA_GOTO_TABLE_ID]);
         if (action->goto_tbl != ROCKER_OF_DPA_TABLE_ID_ACL_POLICY) {
-            DPRINTF("Briding goto tbl must be ACL policy\n");
+            DPRINTF("Bridging goto tbl must be ACL policy\n");
             return -ROCKER_EINVAL;
         }
     }

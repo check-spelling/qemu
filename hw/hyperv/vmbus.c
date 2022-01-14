@@ -38,7 +38,7 @@ struct VMBusGpadl {
     uint32_t num_gfns;
     /*
      * Due to limited message size, GPADL may not fit fully in a single
-     * GPADL_HEADER message, and is further popluated using GPADL_BODY
+     * GPADL_HEADER message, and is further populated using GPADL_BODY
      * messages.  @seen_gfns is the number of pages seen so far; once it
      * reaches @num_gfns, the GPADL is ready to use.
      */
@@ -422,7 +422,7 @@ static inline void gpadl_iter_start_io(GpadlIter *iter)
 }
 
 /*
- * End the eariler started series of i/o on the GPADL and release the cached
+ * End the earlier started series of i/o on the GPADL and release the cached
  * mapping if any.
  */
 static inline void gpadl_iter_end_io(GpadlIter *iter)
@@ -2651,7 +2651,7 @@ static const VMStateDescription vmstate_post_message_input = {
     .fields = (VMStateField[]) {
         /*
          * skip connection_id and message_type as they are validated before
-         * queueing and ignored on dequeueing
+         * queueing and ignored on dequeuing
          */
         VMSTATE_UINT32(payload_size, struct hyperv_post_message_input),
         VMSTATE_UINT8_ARRAY(payload, struct hyperv_post_message_input,

@@ -534,7 +534,7 @@ load_elf_sections(const struct elfhdr *hdr, struct elf_phdr *phdr, int fd,
     bool first;
 
     /*
-     * Now we do a little grungy work by mmaping the ELF image into
+     * Now we do a little grungy work by mmapping the ELF image into
      * the correct location in memory.  At this point, we assume that
      * the image should be loaded at fixed address, not at a variable
      * address.

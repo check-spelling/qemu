@@ -48,8 +48,8 @@ typedef struct CryptoDevBackendBuiltinSession {
 /* Max number of symmetric sessions */
 #define MAX_NUM_SESSIONS 256
 
-#define CRYPTODEV_BUITLIN_MAX_AUTH_KEY_LEN    512
-#define CRYPTODEV_BUITLIN_MAX_CIPHER_KEY_LEN  64
+#define CRYPTODEV_BUILTIN_MAX_AUTH_KEY_LEN    512
+#define CRYPTODEV_BUILTIN_MAX_CIPHER_KEY_LEN  64
 
 struct CryptoDevBackendBuiltin {
     CryptoDevBackend parent_obj;
@@ -89,8 +89,8 @@ static void cryptodev_builtin_init(
      * memory allocation for each crypto request.
      */
     backend->conf.max_size = LONG_MAX - sizeof(CryptoDevBackendSymOpInfo);
-    backend->conf.max_cipher_key_len = CRYPTODEV_BUITLIN_MAX_CIPHER_KEY_LEN;
-    backend->conf.max_auth_key_len = CRYPTODEV_BUITLIN_MAX_AUTH_KEY_LEN;
+    backend->conf.max_cipher_key_len = CRYPTODEV_BUILTIN_MAX_CIPHER_KEY_LEN;
+    backend->conf.max_auth_key_len = CRYPTODEV_BUILTIN_MAX_AUTH_KEY_LEN;
 
     cryptodev_backend_set_ready(backend, true);
 }

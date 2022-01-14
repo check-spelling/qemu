@@ -44,7 +44,7 @@ def bench_one(test_func, test_env, test_case, count=5, initial_run=True,
     test_case   -- test case - opaque second argument for test_func
     count       -- how many times to call test_func, to calculate average
     initial_run -- do initial run of test_func, which don't get into result
-    slow_limit  -- stop at slow run (that exceedes the slow_limit by seconds).
+    slow_limit  -- stop at slow run (that exceeds the slow_limit by seconds).
                    (initial run is not measured)
     drop_caches -- drop caches before each run
 

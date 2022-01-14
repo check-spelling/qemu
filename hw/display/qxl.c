@@ -862,7 +862,7 @@ static void interface_notify_update(QXLInstance *sin, uint32_t update_id)
      * Called by spice-server as a result of a QXL_CMD_UPDATE which is not in
      * use by xf86-video-qxl and is defined out in the qxl windows driver.
      * Probably was at some earlier version that is prior to git start (2009),
-     * and is still guest trigerrable.
+     * and is still guest triggerable.
      */
     fprintf(stderr, "%s: deprecated\n", __func__);
 }
@@ -1530,7 +1530,7 @@ static void qxl_create_guest_primary(PCIQXLDevice *qxl, int loadvm,
     }
 }
 
-/* return 1 if surface destoy was initiated (in QXL_ASYNC case) or
+/* return 1 if surface destroy was initiated (in QXL_ASYNC case) or
  * done (in QXL_SYNC case), 0 otherwise. */
 static int qxl_destroy_primary(PCIQXLDevice *d, qxl_async_io async)
 {

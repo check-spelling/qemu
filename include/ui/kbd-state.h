@@ -49,7 +49,7 @@ void qkbd_state_free(QKbdState *kbd);
  *
  * Update keyboard state, send event to the guest.
  *
- * This function takes care to not send suspious events (keyup event
+ * This function takes care to not send suspicious events (keyup event
  * for a key not pressed for example).
  *
  * @kbd: state tracker state.
@@ -65,7 +65,7 @@ void qkbd_state_key_event(QKbdState *kbd, QKeyCode qcode, bool down);
  * using qemu_input_event_send_key_delay().
  *
  * @kbd: state tracker state.
- * @delay_ms: the delay in miliseconds.
+ * @delay_ms: the delay in milliseconds.
  */
 void qkbd_state_set_delay(QKbdState *kbd, int delay_ms);
 

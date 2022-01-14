@@ -3322,12 +3322,12 @@ int load_elf_binary(struct linux_binprm *bprm, struct image_info *info)
  *
  * typedef <target_regtype> target_elf_greg_t;
  * #define ELF_NREG <number of registers>
- * typedef taret_elf_greg_t target_elf_gregset_t[ELF_NREG];
+ * typedef target_elf_greg_t target_elf_gregset_t[ELF_NREG];
  *
  * Last step is to implement target specific function that copies registers
  * from given cpu into just specified register set.  Prototype is:
  *
- * static void elf_core_copy_regs(taret_elf_gregset_t *regs,
+ * static void elf_core_copy_regs(target_elf_gregset_t *regs,
  *                                const CPUArchState *env);
  *
  * Parameters:

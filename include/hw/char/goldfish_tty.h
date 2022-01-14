@@ -16,7 +16,7 @@
 #define TYPE_GOLDFISH_TTY "goldfish_tty"
 OBJECT_DECLARE_SIMPLE_TYPE(GoldfishTTYState, GOLDFISH_TTY)
 
-#define GOLFISH_TTY_BUFFER_SIZE 128
+#define GOLDFISH_TTY_BUFFER_SIZE 128
 
 struct GoldfishTTYState {
     SysBusDevice parent_obj;

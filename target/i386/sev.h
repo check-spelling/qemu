@@ -1,5 +1,5 @@
 /*
- * QEMU Secure Encrypted Virutualization (SEV) support
+ * QEMU Secure Encrypted Virtualization (SEV) support
  *
  * Copyright: Advanced Micro Devices, 2016-2018
  *

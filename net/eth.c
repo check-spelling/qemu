@@ -391,7 +391,7 @@ eth_is_ip6_extension_header_type(uint8_t hdr_type)
     case IP6_FRAGMENT:
     case IP6_ESP:
     case IP6_AUTHENTICATION:
-    case IP6_DESTINATON:
+    case IP6_DESTINATION:
     case IP6_MOBILITY:
         return true;
     default:
@@ -532,7 +532,7 @@ bool eth_parse_ipv6_hdr(const struct iovec *pkt, int pkt_frags,
                                              ip6hdr_off + info->full_hdr_len,
                                              &ext_hdr, &info->rss_ex_dst);
             }
-        } else if (curr_ext_hdr_type == IP6_DESTINATON) {
+        } else if (curr_ext_hdr_type == IP6_DESTINATION) {
             info->rss_ex_src_valid =
                 _eth_get_rss_ex_src_addr(pkt, pkt_frags,
                                          ip6hdr_off + info->full_hdr_len,

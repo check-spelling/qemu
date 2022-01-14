@@ -72,7 +72,7 @@ static uint64_t omap_synctimer_readfn(void *opaque, hwaddr addr,
 {
     switch (size) {
     case 1:
-        return omap_badwidth_read32(opaque, addr);
+        return omap_bandwidth_read32(opaque, addr);
     case 2:
         return omap_synctimer_readh(opaque, addr);
     case 4:

@@ -233,7 +233,7 @@
 #define E1000_TDLEN_A  0x00428  /* Alias to TDLEN */
 #define E1000_TDH      0x03810  /* TX Descriptor Head - RW */
 #define E1000_TDH_A    0x00430  /* Alias to TDH */
-#define E1000_TDT      0x03818  /* TX Descripotr Tail - RW */
+#define E1000_TDT      0x03818  /* TX Descriptor Tail - RW */
 #define E1000_TDT_A    0x00438  /* Alias to TDT */
 #define E1000_TIDV     0x03820  /* TX Interrupt Delay Value - RW */
 #define E1000_TIDV_A   0x00440  /* Alias to TIDV */
@@ -366,7 +366,7 @@
 #define E1000_FWSM      0x05B54 /* FW Semaphore */
 #define E1000_PBACLR    0x05B68 /* MSI-X PBA Clear */
 #define E1000_FFLT_DBG  0x05F04 /* Debug Register */
-#define E1000_HICR      0x08F00 /* Host Inteface Control */
+#define E1000_HICR      0x08F00 /* Host Interface Control */
 
 #define E1000_TSYNCRXCTL 0x0B620 /* Rx Time Sync Control register - RW */
 #define E1000_TSYNCTXCTL 0x0B614 /* Tx Time Sync Control register - RW */
@@ -476,7 +476,7 @@
 /* PHY 1000 MII Register/Bit Definitions */
 /* PHY Registers defined by IEEE */
 #define PHY_CTRL         0x00 /* Control Register */
-#define PHY_STATUS       0x01 /* Status Regiser */
+#define PHY_STATUS       0x01 /* Status Register */
 #define PHY_ID1          0x02 /* Phy Id Reg (word 1) */
 #define PHY_ID2          0x03 /* Phy Id Reg (word 2) */
 #define PHY_AUTONEG_ADV  0x04 /* Autoneg Advertisement */
@@ -1106,7 +1106,7 @@ union e1000_rx_desc_packet_split {
 #define E1000_RXD_STAT_EOP      0x02    /* End of Packet */
 #define E1000_RXD_STAT_IXSM     0x04    /* Ignore checksum */
 #define E1000_RXD_STAT_VP       0x08    /* IEEE VLAN Packet */
-#define E1000_RXD_STAT_UDPCS    0x10    /* UDP xsum caculated */
+#define E1000_RXD_STAT_UDPCS    0x10    /* UDP xsum calculated */
 #define E1000_RXD_STAT_TCPCS    0x20    /* TCP xsum calculated */
 #define E1000_RXD_STAT_IPCS     0x40    /* IP xsum calculated */
 #define E1000_RXD_STAT_PIF      0x80    /* passed in-exact filter */

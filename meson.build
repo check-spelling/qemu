@@ -2655,7 +2655,7 @@ foreach d, list : modules
         # FIXME: Should use sl.extract_all_objects(recursive: true) as
         # input. Sources can be used multiple times but objects are
         # unique when it comes to lookup in compile_commands.json.
-        # Depnds on a mesion version with
+        # Depends on a mesion version with
         # https://github.com/mesonbuild/meson/pull/8900
         modinfo_files += custom_target(d + '-' + m + '.modinfo',
                                        output: d + '-' + m + '.modinfo',

@@ -335,7 +335,7 @@ static void hppa_machine_reset(MachineState *ms)
 
     /* Start all CPUs at the firmware entry point.
      *  Monarch CPU will initialize firmware, secondary CPUs
-     *  will enter a small idle look and wait for rendevouz. */
+     *  will enter a small idle look and wait for rendezvous. */
     for (i = 0; i < smp_cpus; i++) {
         cpu_set_pc(CPU(cpu[i]), firmware_entry);
         cpu[i]->env.gr[5] = CPU_HPA + i * 0x1000;

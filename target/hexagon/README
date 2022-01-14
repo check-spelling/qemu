@@ -10,7 +10,7 @@ The following versions of the Hexagon core are supported
     https://developer.qualcomm.com/downloads/qualcomm-hexagon-v66-hvx-programmer-s-reference-manual
 
 We presented an overview of the project at the 2019 KVM Forum.
-    https://kvmforum2019.sched.com/event/Tmwc/qemu-hexagon-automatic-translation-of-the-isa-manual-pseudcode-to-tiny-code-instructions-of-a-vliw-architecture-niccolo-izzo-revng-taylor-simpson-qualcomm-innovation-center
+    https://kvmforum2019.sched.com/event/Tmwc/qemu-hexagon-automatic-translation-of-the-isa-manual-pseudocode-to-tiny-code-instructions-of-a-vliw-architecture-niccolo-izzo-revng-taylor-simpson-qualcomm-innovation-center
 
 *** Tour of the code ***
 
@@ -131,7 +131,7 @@ handling because qemu helpers can only return a single value.
 For HVX vectors, the generator behaves slightly differently.  The wide vectors
 won't fit in a TCGv or TCGv_i64, so we pass TCGv_ptr variables to pass the
 address to helper functions.  Here's an example for an HVX vector-add-word
-istruction.
+instruction.
     static void generate_V6_vaddw(
                     CPUHexagonState *env,
                     DisasContext *ctx,
@@ -244,7 +244,7 @@ helper_funcs_generated.c.inc.  There are also several helpers used for debugging
 
 VLIW packet semantics differ from serial semantics in that all input operands
 are read, then the operations are performed, then all the results are written.
-For exmaple, this packet performs a swap of registers r0 and r1
+For example, this packet performs a swap of registers r0 and r1
     { r0 = r1; r1 = r0 }
 Note that the result is different if the instructions are executed serially.
 

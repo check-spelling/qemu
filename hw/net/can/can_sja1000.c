@@ -786,7 +786,7 @@ ssize_t can_sja_receive(CanBusClientState *client, const qemu_can_frame *frames,
     }
     if (frame->flags & QEMU_CAN_FRMF_TYPE_FD) {
         if (DEBUG_FILTER) {
-            can_display_msg("[cansja]: ignor fd frame ", frame);
+            can_display_msg("[cansja]: ignore fd frame ", frame);
         }
         return 1;
     }

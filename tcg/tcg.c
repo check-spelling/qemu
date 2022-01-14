@@ -3560,7 +3560,7 @@ static void tcg_reg_alloc_dup(TCGContext *s, const TCGOp *op)
     switch (its->val_type) {
     case TEMP_VAL_REG:
         /*
-         * The dup constriaints must be broad, covering all possible VECE.
+         * The dup constraints must be broad, covering all possible VECE.
          * However, tcg_op_dup_vec() gets to see the VECE and we allow it
          * to fail, indicating that extra moves are required for that case.
          */

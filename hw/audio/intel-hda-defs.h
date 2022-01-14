@@ -418,7 +418,7 @@ enum {
 #define AC_UNSOL_RES_CP_STATE		(1<<1)	/* content protection */
 #define AC_UNSOL_RES_CP_READY		(1<<0)	/* content protection */
 
-/* Pin widget capabilies */
+/* Pin widget capabilities */
 #define AC_PINCAP_IMP_SENSE		(1<<0)	/* impedance sense capable */
 #define AC_PINCAP_TRIG_REQ		(1<<1)	/* trigger required */
 #define AC_PINCAP_PRES_DETECT		(1<<2)	/* presence detect capable */
@@ -483,7 +483,7 @@ enum {
 #define AC_PWRST_D2			0x02
 #define AC_PWRST_D3			0x03
 
-/* Processing capabilies */
+/* Processing capabilities */
 #define AC_PCAP_BENIGN			(1<<0)
 #define AC_PCAP_NUM_COEF		(0xff<<8)
 #define AC_PCAP_NUM_COEF_SHIFT		8
@@ -575,7 +575,7 @@ enum {
 #define AC_DIPSIZE_PACK_IDX		(0x07<<0) /* packet index */
 
 /* HDMI DIP index */
-#define AC_DIPIDX_PACK_IDX		(0x07<<5) /* packet idnex */
+#define AC_DIPIDX_PACK_IDX		(0x07<<5) /* packet index */
 #define AC_DIPIDX_BYTE_IDX		(0x1f<<0) /* byte index */
 
 /* HDMI DIP xmit (transmit) control */
@@ -683,7 +683,7 @@ enum {
 	AC_JACK_LOC_OTHER    = 0x30,
 };
 enum {
-	/* external on primary chasis */
+	/* external on primary chassis */
 	AC_JACK_LOC_REAR_PANEL = 0x07,
 	AC_JACK_LOC_DRIVE_BAY,
 	/* internal */
@@ -709,7 +709,7 @@ enum {
 /* max. codec address */
 #define HDA_MAX_CODEC_ADDRESS	0x0f
 
-/* max number of PCM devics per card */
+/* max number of PCM devices per card */
 #define HDA_MAX_PCMS		10
 
 /* --------------------------------------------------------------------- */

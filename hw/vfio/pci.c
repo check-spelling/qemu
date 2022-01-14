@@ -49,7 +49,7 @@ static void vfio_disable_interrupts(VFIOPCIDevice *vdev);
 static void vfio_mmap_set_enabled(VFIOPCIDevice *vdev, bool enabled);
 
 /*
- * Disabling BAR mmaping can be slow, but toggling it around INTx can
+ * Disabling BAR mmapping can be slow, but toggling it around INTx can
  * also be a huge overhead.  We try to get the best of both worlds by
  * waiting until an interrupt to disable mmaps (subsequent transitions
  * to the same state are effectively no overhead).  If the interrupt has
@@ -1887,7 +1887,7 @@ static int vfio_setup_pcie_cap(VFIOPCIDevice *vdev, int pos, uint8_t size,
 
     /*
      * Intel 82599 SR-IOV VFs report an invalid PCIe capability version 0
-     * (Niantic errate #35) causing Windows to error with a Code 10 for the
+     * (Niantic errata #35) causing Windows to error with a Code 10 for the
      * device on Q35.  Fixup any such devices to report version 1.  If we
      * were to remove the capability entirely the guest would lose extended
      * config space.

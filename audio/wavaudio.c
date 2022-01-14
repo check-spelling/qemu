@@ -160,7 +160,7 @@ static void wav_fini_out (HWVoiceOut *hw)
         goto doclose;
     }
     if (fwrite (dlen, 4, 1, wav->f) != 1) {
-        dolog ("wav_fini_out: failed to write dlen\nReaons: %s\n",
+        dolog ("wav_fini_out: failed to write dlen\nReason: %s\n",
                strerror (errno));
         goto doclose;
     }

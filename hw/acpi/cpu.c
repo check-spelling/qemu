@@ -501,7 +501,7 @@ void build_cpus_aml(Aml *table, MachineState *machine, CPUHotplugFeatures opts,
 
             /*
              * Windows versions newer than XP (including Windows 10/Windows
-             * Server 2019), do support* VarPackageOp but, it is cripled to hold
+             * Server 2019), do support* VarPackageOp but, it is crippled to hold
              * the same elements number as old PackageOp.
              * For compatibility with Windows XP (so it won't crash) use ACPI1.0
              * PackageOp which can hold max 255 elements.

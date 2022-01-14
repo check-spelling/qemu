@@ -113,9 +113,9 @@ uint32_t aspeed_scu_get_apb_freq(AspeedSCUState *s);
  *  16     Turn off H-PLL
  *  10:5   H-PLL Numerator
  *  4      H-PLL Output Divider
- *  3:0    H-PLL Denumerator
+ *  3:0    H-PLL Denominator
  *
- *  (Output frequency) = 24MHz * (2-OD) * [(Numerator+2) / (Denumerator+1)]
+ *  (Output frequency) = 24MHz * (2-OD) * [(Numerator+2) / (Denominator+1)]
  */
 
 #define SCU_AST2400_H_PLL_PROGRAMMED               (0x1 << 18)
@@ -129,7 +129,7 @@ uint32_t aspeed_scu_get_apb_freq(AspeedSCUState *s);
  *  19     Turn off H-PLL
  *  18:13  H-PLL Post Divider
  *  12:5   H-PLL Numerator (M)
- *  4:0    H-PLL Denumerator (N)
+ *  4:0    H-PLL Denominator (N)
  *
  *  (Output frequency) = CLKIN(24MHz) * [(M+1) / (N+1)] / (P+1)
  *

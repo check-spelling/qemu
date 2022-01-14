@@ -49,7 +49,7 @@ class TimersCommand(gdb.Command):
         'Run the command'
         main_timers = gdb.parse_and_eval("main_loop_tlg")
 
-        # This will break if QEMUClockType in timer.h is redfined
+        # This will break if QEMUClockType in timer.h is redefined
         self.process_timerlist(main_timers['tl'][0], "Realtime")
         self.process_timerlist(main_timers['tl'][1], "Virtual")
         self.process_timerlist(main_timers['tl'][2], "Host")

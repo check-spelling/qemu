@@ -40,62 +40,62 @@
 #include "qemu/cutils.h"
 #include "qemu/bcd.h"
 
-static inline void omap_log_badwidth(const char *funcname, hwaddr addr, int sz)
+static inline void omap_log_bandwidth(const char *funcname, hwaddr addr, int sz)
 {
     qemu_log_mask(LOG_GUEST_ERROR, "%s: %d-bit register %#08" HWADDR_PRIx "\n",
                   funcname, 8 * sz, addr);
 }
 
 /* Should signal the TCMI/GPMC */
-uint32_t omap_badwidth_read8(void *opaque, hwaddr addr)
+uint32_t omap_bandwidth_read8(void *opaque, hwaddr addr)
 {
     uint8_t ret;
 
-    omap_log_badwidth(__func__, addr, 1);
+    omap_log_bandwidth(__func__, addr, 1);
     cpu_physical_memory_read(addr, &ret, 1);
     return ret;
 }
 
-void omap_badwidth_write8(void *opaque, hwaddr addr,
+void omap_bandwidth_write8(void *opaque, hwaddr addr,
                 uint32_t value)
 {
     uint8_t val8 = value;
 
-    omap_log_badwidth(__func__, addr, 1);
+    omap_log_bandwidth(__func__, addr, 1);
     cpu_physical_memory_write(addr, &val8, 1);
 }
 
-uint32_t omap_badwidth_read16(void *opaque, hwaddr addr)
+uint32_t omap_bandwidth_read16(void *opaque, hwaddr addr)
 {
     uint16_t ret;
 
-    omap_log_badwidth(__func__, addr, 2);
+    omap_log_bandwidth(__func__, addr, 2);
     cpu_physical_memory_read(addr, &ret, 2);
     return ret;
 }
 
-void omap_badwidth_write16(void *opaque, hwaddr addr,
+void omap_bandwidth_write16(void *opaque, hwaddr addr,
                 uint32_t value)
 {
     uint16_t val16 = value;
 
-    omap_log_badwidth(__func__, addr, 2);
+    omap_log_bandwidth(__func__, addr, 2);
     cpu_physical_memory_write(addr, &val16, 2);
 }
 
-uint32_t omap_badwidth_read32(void *opaque, hwaddr addr)
+uint32_t omap_bandwidth_read32(void *opaque, hwaddr addr)
 {
     uint32_t ret;
 
-    omap_log_badwidth(__func__, addr, 4);
+    omap_log_bandwidth(__func__, addr, 4);
     cpu_physical_memory_read(addr, &ret, 4);
     return ret;
 }
 
-void omap_badwidth_write32(void *opaque, hwaddr addr,
+void omap_bandwidth_write32(void *opaque, hwaddr addr,
                 uint32_t value)
 {
-    omap_log_badwidth(__func__, addr, 4);
+    omap_log_bandwidth(__func__, addr, 4);
     cpu_physical_memory_write(addr, &value, 4);
 }
 
@@ -204,7 +204,7 @@ static uint64_t omap_mpu_timer_read(void *opaque, hwaddr addr,
     struct omap_mpu_timer_s *s = (struct omap_mpu_timer_s *) opaque;
 
     if (size != 4) {
-        return omap_badwidth_read32(opaque, addr);
+        return omap_bandwidth_read32(opaque, addr);
     }
 
     switch (addr) {
@@ -228,7 +228,7 @@ static void omap_mpu_timer_write(void *opaque, hwaddr addr,
     struct omap_mpu_timer_s *s = (struct omap_mpu_timer_s *) opaque;
 
     if (size != 4) {
-        omap_badwidth_write32(opaque, addr, value);
+        omap_bandwidth_write32(opaque, addr, value);
         return;
     }
 
@@ -310,7 +310,7 @@ static uint64_t omap_wd_timer_read(void *opaque, hwaddr addr,
     struct omap_watchdog_timer_s *s = (struct omap_watchdog_timer_s *) opaque;
 
     if (size != 2) {
-        return omap_badwidth_read16(opaque, addr);
+        return omap_bandwidth_read16(opaque, addr);
     }
 
     switch (addr) {
@@ -335,7 +335,7 @@ static void omap_wd_timer_write(void *opaque, hwaddr addr,
     struct omap_watchdog_timer_s *s = (struct omap_watchdog_timer_s *) opaque;
 
     if (size != 2) {
-        omap_badwidth_write16(opaque, addr, value);
+        omap_bandwidth_write16(opaque, addr, value);
         return;
     }
 
@@ -434,7 +434,7 @@ static uint64_t omap_os_timer_read(void *opaque, hwaddr addr,
     int offset = addr & OMAP_MPUI_REG_MASK;
 
     if (size != 4) {
-        return omap_badwidth_read32(opaque, addr);
+        return omap_bandwidth_read32(opaque, addr);
     }
 
     switch (offset) {
@@ -461,7 +461,7 @@ static void omap_os_timer_write(void *opaque, hwaddr addr,
     int offset = addr & OMAP_MPUI_REG_MASK;
 
     if (size != 4) {
-        omap_badwidth_write32(opaque, addr, value);
+        omap_bandwidth_write32(opaque, addr, value);
         return;
     }
 
@@ -535,7 +535,7 @@ static uint64_t omap_ulpd_pm_read(void *opaque, hwaddr addr,
     uint16_t ret;
 
     if (size != 2) {
-        return omap_badwidth_read16(opaque, addr);
+        return omap_bandwidth_read16(opaque, addr);
     }
 
     switch (addr) {
@@ -606,7 +606,7 @@ static void omap_ulpd_pm_write(void *opaque, hwaddr addr,
     uint16_t diff;
 
     if (size != 2) {
-        omap_badwidth_write16(opaque, addr, value);
+        omap_bandwidth_write16(opaque, addr, value);
         return;
     }
 
@@ -767,7 +767,7 @@ static uint64_t omap_pin_cfg_read(void *opaque, hwaddr addr,
     struct omap_mpu_state_s *s = (struct omap_mpu_state_s *) opaque;
 
     if (size != 4) {
-        return omap_badwidth_read32(opaque, addr);
+        return omap_bandwidth_read32(opaque, addr);
     }
 
     switch (addr) {
@@ -879,7 +879,7 @@ static void omap_pin_cfg_write(void *opaque, hwaddr addr,
     uint32_t diff;
 
     if (size != 4) {
-        omap_badwidth_write32(opaque, addr, value);
+        omap_bandwidth_write32(opaque, addr, value);
         return;
     }
 
@@ -990,7 +990,7 @@ static uint64_t omap_id_read(void *opaque, hwaddr addr,
     struct omap_mpu_state_s *s = (struct omap_mpu_state_s *) opaque;
 
     if (size != 4) {
-        return omap_badwidth_read32(opaque, addr);
+        return omap_bandwidth_read32(opaque, addr);
     }
 
     switch (addr) {
@@ -1035,7 +1035,7 @@ static void omap_id_write(void *opaque, hwaddr addr,
                           uint64_t value, unsigned size)
 {
     if (size != 4) {
-        omap_badwidth_write32(opaque, addr, value);
+        omap_bandwidth_write32(opaque, addr, value);
         return;
     }
 
@@ -1072,7 +1072,7 @@ static uint64_t omap_mpui_read(void *opaque, hwaddr addr,
     struct omap_mpu_state_s *s = (struct omap_mpu_state_s *) opaque;
 
     if (size != 4) {
-        return omap_badwidth_read32(opaque, addr);
+        return omap_bandwidth_read32(opaque, addr);
     }
 
     switch (addr) {
@@ -1105,7 +1105,7 @@ static void omap_mpui_write(void *opaque, hwaddr addr,
     struct omap_mpu_state_s *s = (struct omap_mpu_state_s *) opaque;
 
     if (size != 4) {
-        omap_badwidth_write32(opaque, addr, value);
+        omap_bandwidth_write32(opaque, addr, value);
         return;
     }
 
@@ -1170,7 +1170,7 @@ static uint64_t omap_tipb_bridge_read(void *opaque, hwaddr addr,
     struct omap_tipb_bridge_s *s = (struct omap_tipb_bridge_s *) opaque;
 
     if (size < 2) {
-        return omap_badwidth_read16(opaque, addr);
+        return omap_bandwidth_read16(opaque, addr);
     }
 
     switch (addr) {
@@ -1200,7 +1200,7 @@ static void omap_tipb_bridge_write(void *opaque, hwaddr addr,
     struct omap_tipb_bridge_s *s = (struct omap_tipb_bridge_s *) opaque;
 
     if (size < 2) {
-        omap_badwidth_write16(opaque, addr, value);
+        omap_bandwidth_write16(opaque, addr, value);
         return;
     }
 
@@ -1272,7 +1272,7 @@ static uint64_t omap_tcmi_read(void *opaque, hwaddr addr,
     uint32_t ret;
 
     if (size != 4) {
-        return omap_badwidth_read32(opaque, addr);
+        return omap_bandwidth_read32(opaque, addr);
     }
 
     switch (addr) {
@@ -1309,7 +1309,7 @@ static void omap_tcmi_write(void *opaque, hwaddr addr,
     struct omap_mpu_state_s *s = (struct omap_mpu_state_s *) opaque;
 
     if (size != 4) {
-        omap_badwidth_write32(opaque, addr, value);
+        omap_bandwidth_write32(opaque, addr, value);
         return;
     }
 
@@ -1386,7 +1386,7 @@ static uint64_t omap_dpll_read(void *opaque, hwaddr addr,
     struct dpll_ctl_s *s = (struct dpll_ctl_s *) opaque;
 
     if (size != 2) {
-        return omap_badwidth_read16(opaque, addr);
+        return omap_bandwidth_read16(opaque, addr);
     }
 
     if (addr == 0x00)	/* CTL_REG */
@@ -1405,7 +1405,7 @@ static void omap_dpll_write(void *opaque, hwaddr addr,
     int div, mult;
 
     if (size != 2) {
-        omap_badwidth_write16(opaque, addr, value);
+        omap_bandwidth_write16(opaque, addr, value);
         return;
     }
 
@@ -1466,7 +1466,7 @@ static uint64_t omap_clkm_read(void *opaque, hwaddr addr,
     struct omap_mpu_state_s *s = (struct omap_mpu_state_s *) opaque;
 
     if (size != 2) {
-        return omap_badwidth_read16(opaque, addr);
+        return omap_bandwidth_read16(opaque, addr);
     }
 
     switch (addr) {
@@ -1676,7 +1676,7 @@ static void omap_clkm_write(void *opaque, hwaddr addr,
     };
 
     if (size != 2) {
-        omap_badwidth_write16(opaque, addr, value);
+        omap_bandwidth_write16(opaque, addr, value);
         return;
     }
 
@@ -1759,7 +1759,7 @@ static uint64_t omap_clkdsp_read(void *opaque, hwaddr addr,
     CPUState *cpu = CPU(s->cpu);
 
     if (size != 2) {
-        return omap_badwidth_read16(opaque, addr);
+        return omap_bandwidth_read16(opaque, addr);
     }
 
     switch (addr) {
@@ -1804,7 +1804,7 @@ static void omap_clkdsp_write(void *opaque, hwaddr addr,
     uint16_t diff;
 
     if (size != 2) {
-        omap_badwidth_write16(opaque, addr, value);
+        omap_bandwidth_write16(opaque, addr, value);
         return;
     }
 
@@ -1951,7 +1951,7 @@ static uint64_t omap_mpuio_read(void *opaque, hwaddr addr,
     uint16_t ret;
 
     if (size != 2) {
-        return omap_badwidth_read16(opaque, addr);
+        return omap_bandwidth_read16(opaque, addr);
     }
 
     switch (offset) {
@@ -2012,7 +2012,7 @@ static void omap_mpuio_write(void *opaque, hwaddr addr,
     int ln;
 
     if (size != 2) {
-        omap_badwidth_write16(opaque, addr, value);
+        omap_bandwidth_write16(opaque, addr, value);
         return;
     }
 
@@ -2204,7 +2204,7 @@ static uint64_t omap_uwire_read(void *opaque, hwaddr addr,
     int offset = addr & OMAP_MPUI_REG_MASK;
 
     if (size != 2) {
-        return omap_badwidth_read16(opaque, addr);
+        return omap_bandwidth_read16(opaque, addr);
     }
 
     switch (offset) {
@@ -2238,7 +2238,7 @@ static void omap_uwire_write(void *opaque, hwaddr addr,
     int offset = addr & OMAP_MPUI_REG_MASK;
 
     if (size != 2) {
-        omap_badwidth_write16(opaque, addr, value);
+        omap_bandwidth_write16(opaque, addr, value);
         return;
     }
 
@@ -2357,7 +2357,7 @@ static uint64_t omap_pwl_read(void *opaque, hwaddr addr,
     int offset = addr & OMAP_MPUI_REG_MASK;
 
     if (size != 1) {
-        return omap_badwidth_read8(opaque, addr);
+        return omap_bandwidth_read8(opaque, addr);
     }
 
     switch (offset) {
@@ -2377,7 +2377,7 @@ static void omap_pwl_write(void *opaque, hwaddr addr,
     int offset = addr & OMAP_MPUI_REG_MASK;
 
     if (size != 1) {
-        omap_badwidth_write8(opaque, addr, value);
+        omap_bandwidth_write8(opaque, addr, value);
         return;
     }
 
@@ -2451,7 +2451,7 @@ static uint64_t omap_pwt_read(void *opaque, hwaddr addr,
     int offset = addr & OMAP_MPUI_REG_MASK;
 
     if (size != 1) {
-        return omap_badwidth_read8(opaque, addr);
+        return omap_bandwidth_read8(opaque, addr);
     }
 
     switch (offset) {
@@ -2473,7 +2473,7 @@ static void omap_pwt_write(void *opaque, hwaddr addr,
     int offset = addr & OMAP_MPUI_REG_MASK;
 
     if (size != 1) {
-        omap_badwidth_write8(opaque, addr, value);
+        omap_bandwidth_write8(opaque, addr, value);
         return;
     }
 
@@ -2584,7 +2584,7 @@ static uint64_t omap_rtc_read(void *opaque, hwaddr addr,
     uint8_t i;
 
     if (size != 1) {
-        return omap_badwidth_read8(opaque, addr);
+        return omap_bandwidth_read8(opaque, addr);
     }
 
     switch (offset) {
@@ -2667,7 +2667,7 @@ static void omap_rtc_write(void *opaque, hwaddr addr,
     time_t ti[2];
 
     if (size != 1) {
-        omap_badwidth_write8(opaque, addr, value);
+        omap_bandwidth_write8(opaque, addr, value);
         return;
     }
 
@@ -3177,7 +3177,7 @@ static uint64_t omap_mcbsp_read(void *opaque, hwaddr addr,
     uint16_t ret;
 
     if (size != 2) {
-        return omap_badwidth_read16(opaque, addr);
+        return omap_bandwidth_read16(opaque, addr);
     }
 
     switch (offset) {
@@ -3431,7 +3431,7 @@ static void omap_mcbsp_writew(void *opaque, hwaddr addr,
         return;
     }
 
-    omap_badwidth_write16(opaque, addr, value);
+    omap_bandwidth_write16(opaque, addr, value);
 }
 
 static void omap_mcbsp_write(void *opaque, hwaddr addr,
@@ -3445,7 +3445,7 @@ static void omap_mcbsp_write(void *opaque, hwaddr addr,
         omap_mcbsp_writew(opaque, addr, value);
         break;
     default:
-        omap_badwidth_write16(opaque, addr, value);
+        omap_bandwidth_write16(opaque, addr, value);
     }
 }
 
@@ -3596,7 +3596,7 @@ static uint64_t omap_lpg_read(void *opaque, hwaddr addr,
     int offset = addr & OMAP_MPUI_REG_MASK;
 
     if (size != 1) {
-        return omap_badwidth_read8(opaque, addr);
+        return omap_bandwidth_read8(opaque, addr);
     }
 
     switch (offset) {
@@ -3618,7 +3618,7 @@ static void omap_lpg_write(void *opaque, hwaddr addr,
     int offset = addr & OMAP_MPUI_REG_MASK;
 
     if (size != 1) {
-        omap_badwidth_write8(opaque, addr, value);
+        omap_bandwidth_write8(opaque, addr, value);
         return;
     }
 
@@ -3677,7 +3677,7 @@ static uint64_t omap_mpui_io_read(void *opaque, hwaddr addr,
                                   unsigned size)
 {
     if (size != 2) {
-        return omap_badwidth_read16(opaque, addr);
+        return omap_bandwidth_read16(opaque, addr);
     }
 
     if (addr == OMAP_MPUI_BASE)	/* CMR */
@@ -3691,7 +3691,7 @@ static void omap_mpui_io_write(void *opaque, hwaddr addr,
                                uint64_t value, unsigned size)
 {
     /* FIXME: infinite loop */
-    omap_badwidth_write16(opaque, addr, value);
+    omap_bandwidth_write16(opaque, addr, value);
 }
 
 static const MemoryRegionOps omap_mpui_io_ops = {
@@ -4061,7 +4061,7 @@ struct omap_mpu_state_s *omap310_mpu_init(MemoryRegion *dram,
     s->led[1] = omap_lpg_init(system_memory,
                               0xfffbd800, omap_findclk(s, "clk32-kHz"));
 
-    /* Register mappings not currenlty implemented:
+    /* Register mappings not currently implemented:
      * MCSI2 Comm	fffb2000 - fffb27ff (not mapped on OMAP310)
      * MCSI1 Bluetooth	fffb2800 - fffb2fff (not mapped on OMAP310)
      * USB W2FC		fffb4000 - fffb47ff

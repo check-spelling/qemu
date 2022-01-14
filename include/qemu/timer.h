@@ -201,7 +201,7 @@ int64_t qemu_clock_deadline_ns_all(QEMUClockType type, int attr_mask);
 QEMUTimerList *qemu_clock_get_main_loop_timerlist(QEMUClockType type);
 
 /**
- * qemu_clock_nofify:
+ * qemu_clock_notify:
  * @type: the clock type
  *
  * Call the notifier callback connected with the default timer
@@ -602,7 +602,7 @@ static inline QEMUTimer *timer_new_ms(QEMUClockType type, QEMUTimerCB *cb,
  * timer_deinit:
  * @ts: the timer to be de-initialised
  *
- * Deassociate the timer from any timerlist.  You should
+ * Disassociate the timer from any timerlist.  You should
  * call timer_del before.  After this call, any further
  * timer_del call cannot cause dangling pointer accesses
  * even if the previously used timerlist is freed.

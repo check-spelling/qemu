@@ -5,7 +5,7 @@
  *  H. Peter Anvin <hpa@linux.intel.com>
  *  Gerd Hoffmann <kraxel@redhat.com>
  *
- * lousely based on usb net device code which is:
+ * loosely based on usb net device code which is:
  *
  * Copyright (c) 2006 Thomas Sailer
  * Copyright (c) 2008 Andrzej Zaborowski

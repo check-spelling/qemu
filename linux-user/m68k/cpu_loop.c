@@ -39,7 +39,7 @@ void cpu_loop(CPUM68KState *env)
 
         switch(trapnr) {
         case EXCP_HALT_INSN:
-            /* Semihosing syscall.  */
+            /* Semihosting syscall.  */
             env->pc += 4;
             do_m68k_semihosting(env, env->dregs[0]);
             break;

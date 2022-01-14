@@ -570,7 +570,7 @@ static inline bool arm_excp_unmasked(CPUState *cs, unsigned int excp_idx,
     }
 
     /*
-     * The PSTATE bits only mask the interrupt if we have not overriden the
+     * The PSTATE bits only mask the interrupt if we have not overridden the
      * ability above.
      */
     return unmasked || pstate_unmasked;
@@ -1941,7 +1941,7 @@ static void arm_cpu_realizefn(DeviceState *dev, Error **errp)
         /*
          * We only support DCZ blocklen that fits on one page.
          *
-         * Architectually this is always true.  However TARGET_PAGE_SIZE
+         * Architecturally this is always true.  However TARGET_PAGE_SIZE
          * is variable and, for compatibility with -machine virt-2.7,
          * is only 1KiB, as an artifact of legacy ARMv5 subpage support.
          * But even then, while the largest architectural DCZ blocklen

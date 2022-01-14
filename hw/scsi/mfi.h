@@ -65,7 +65,7 @@
 #define MFI_IQPH        0xc4            /* Inbound queue port (high bytes)  */
 #define MFI_DIAG        0xf8            /* Host diag */
 #define MFI_SEQ         0xfc            /* Sequencer offset */
-#define MFI_1078_EIM    0x80000004      /* 1078 enable intrrupt mask  */
+#define MFI_1078_EIM    0x80000004      /* 1078 enable interrupt mask  */
 #define MFI_RMI         0x2             /* reply message interrupt  */
 #define MFI_1078_RM     0x80000000      /* reply 1078 message interrupt  */
 #define MFI_ODC         0x4             /* outbound doorbell change interrupt */
@@ -428,7 +428,7 @@ typedef enum {
 } mfi_ld_query_type;
 
 /*
- * Other propertities and definitions
+ * Other properties and definitions
  */
 #define MFI_MAX_PD_CHANNELS     2
 #define MFI_MAX_LD_CHANNELS     2
@@ -1180,7 +1180,7 @@ struct mfi_ld_progress {
 #define MFI_LD_PROGRESS_CC      (1<<0)
 #define MFI_LD_PROGRESS_BGI     (1<<1)
 #define MFI_LD_PROGRESS_FGI     (1<<2)
-#define MFI_LD_PORGRESS_RECON   (1<<3)
+#define MFI_LD_PROGRESS_RECON   (1<<3)
     struct mfi_progress cc;
     struct mfi_progress bgi;
     struct mfi_progress fgi;

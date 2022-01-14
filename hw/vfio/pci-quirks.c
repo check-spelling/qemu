@@ -1327,8 +1327,8 @@ void vfio_quirk_reset(VFIOPCIDevice *vdev)
  *
  * Bonaire and Hawaii GPUs do not respond to a bus reset.  This is a bug in the
  * hardware that should be fixed on future ASICs.  The symptom of this is that
- * once the accerlated driver loads, Windows guests will bsod on subsequent
- * attmpts to load the driver, such as after VM reset or shutdown/restart.  To
+ * once the accelerated driver loads, Windows guests will bsod on subsequent
+ * attempts to load the driver, such as after VM reset or shutdown/restart.  To
  * work around this, we do an AMD specific PCI config reset, followed by an SMC
  * reset.  The PCI config reset only works if SMC firmware is running, so we
  * have a dependency on the state of the device as to whether this reset will

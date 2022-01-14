@@ -301,7 +301,7 @@ void *page_alloc_target_data(target_ulong address, size_t size);
  * page_get_target_data(address)
  * @address: guest virtual address
  *
- * Return any out-of-bound memory assocated with the guest page
+ * Return any out-of-bound memory associated with the guest page
  * at @address, as per page_alloc_target_data.
  */
 void *page_get_target_data(target_ulong address);

@@ -554,7 +554,7 @@ out:
     return ret;
 }
 
-static void virtio_ballloon_get_free_page_hints(void *opaque)
+static void virtio_balloon_get_free_page_hints(void *opaque)
 {
     VirtIOBalloon *dev = opaque;
     VirtIODevice *vdev = VIRTIO_DEVICE(dev);
@@ -609,7 +609,7 @@ static void virtio_balloon_free_page_stop(VirtIOBalloon *s)
     if (s->free_page_hint_status != FREE_PAGE_HINT_S_STOP) {
         /*
          * The lock also guarantees us that the
-         * virtio_ballloon_get_free_page_hints exits after the
+         * virtio_balloon_get_free_page_hints exits after the
          * free_page_hint_status is set to S_STOP.
          */
         qemu_mutex_lock(&s->free_page_lock);
@@ -915,7 +915,7 @@ static void virtio_balloon_device_realize(DeviceState *dev, Error **errp)
 
         object_ref(OBJECT(s->iothread));
         s->free_page_bh = aio_bh_new(iothread_get_aio_context(s->iothread),
-                                     virtio_ballloon_get_free_page_hints, s);
+                                     virtio_balloon_get_free_page_hints, s);
     }
 
     if (virtio_has_feature(s->host_features, VIRTIO_BALLOON_F_REPORTING)) {

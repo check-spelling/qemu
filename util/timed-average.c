@@ -59,7 +59,7 @@ static void update_expiration(TimedAverageWindow *w, int64_t now,
 {
     /* time elapsed since the last theoretical expiration */
     int64_t elapsed = (now - w->expiration) % period;
-    /* time remaininging until the next expiration */
+    /* time remaining until the next expiration */
     int64_t remaining = period - elapsed;
     /* compute expiration */
     w->expiration = now + remaining;

@@ -44,7 +44,7 @@ REG16(CMSTR, 0)
   FIELD(CMSTR, STR0, 0, 1)
   FIELD(CMSTR, STR1, 1, 1)
   FIELD(CMSTR, STR,  0, 2)
-/* This addeess is channel offset */
+/* This address is channel offset */
 REG16(CMCR, 0)
   FIELD(CMCR, CKS,  0, 2)
   FIELD(CMCR, CMIE, 6, 1)

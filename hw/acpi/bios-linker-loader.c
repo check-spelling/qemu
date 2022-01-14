@@ -117,7 +117,7 @@ enum {
  */
 typedef struct BiosLinkerFileEntry {
     char *name; /* file name */
-    GArray *blob; /* data accosiated with @name */
+    GArray *blob; /* data associated with @name */
 } BiosLinkerFileEntry;
 
 /*

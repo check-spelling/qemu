@@ -297,7 +297,7 @@ static void r2d_init(MachineState *machine)
      * According to the old board user document in Japanese (under
      * NDA) what is referred to as FROM (Area0) is connected via a
      * 32-bit bus and CS0 to CN8. The docs mention a Cypress
-     * S29PL127J60TFI130 chipsset.  Per the 'S29PL-J 002-00615
+     * S29PL127J60TFI130 chipset.  Per the 'S29PL-J 002-00615
      * Rev. *E' datasheet, it is a 128Mbit NOR parallel flash
      * addressable in words of 16bit.
      */

@@ -47,9 +47,9 @@ static inline uint32_t iclass_bits(uint32_t encoding)
     return iclass;
 }
 
-static inline bool is_packet_end(uint32_t endocing)
+static inline bool is_packet_end(uint32_t encoding)
 {
-    uint32_t bits = parse_bits(endocing);
+    uint32_t bits = parse_bits(encoding);
     return ((bits == 0x3) || (bits == 0x0));
 }
 

@@ -1848,7 +1848,7 @@ static void vtd_context_global_invalidate(IntelIOMMUState *s)
     /*
      * From VT-d spec 6.5.2.1, a global context entry invalidation
      * should be followed by a IOTLB global invalidation, so we should
-     * be safe even without this. Hoewever, let's replay the region as
+     * be safe even without this. However, let's replay the region as
      * well to be safer, and go back here when we need finer tunes for
      * VT-d emulation codes.
      */
@@ -3691,7 +3691,7 @@ static void vtd_init(IntelIOMMUState *s)
     vtd_define_long(s, DMAR_IECTL_REG, 0x80000000UL, 0x80000000UL, 0);
     vtd_define_long(s, DMAR_IEDATA_REG, 0, 0xffffffffUL, 0);
     vtd_define_long(s, DMAR_IEADDR_REG, 0, 0xfffffffcUL, 0);
-    /* Treadted as RsvdZ when EIM in ECAP_REG is not supported */
+    /* Treated as RsvdZ when EIM in ECAP_REG is not supported */
     vtd_define_long(s, DMAR_IEUADDR_REG, 0, 0, 0);
 
     /* IOTLB registers */

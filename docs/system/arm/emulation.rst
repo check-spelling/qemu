@@ -78,7 +78,7 @@ M-profile CPU architecture support
 ==================================
 
 QEMU's TCG emulation includes support for Armv6-M, Armv7-M, Armv8-M, and
-Armv8.1-M versions of the M-profile architucture.  It also has support
+Armv8.1-M versions of the M-profile architecture.  It also has support
 for the following architecture extensions:
 
 - FP (Floating-point Extension)

@@ -655,7 +655,7 @@ void HELPER(access_check_cp_reg)(CPUARMState *env, void *rip, uint32_t syndrome,
 
         if (env->cp15.hstr_el2 & mask) {
             target_el = 2;
-            goto exept;
+            goto except;
         }
     }
 
@@ -708,7 +708,7 @@ void HELPER(access_check_cp_reg)(CPUARMState *env, void *rip, uint32_t syndrome,
         g_assert_not_reached();
     }
 
-exept:
+except:
     raise_exception(env, EXCP_UDEF, syndrome, target_el);
 }
 

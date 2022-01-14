@@ -1,5 +1,5 @@
 /*
- * Rasperry Pi 2 emulation and refactoring Copyright (c) 2015, Microsoft
+ * Raspberry Pi 2 emulation and refactoring Copyright (c) 2015, Microsoft
  * Written by Andrew Baumann
  *
  * This work is licensed under the terms of the GNU GPL, version 2 or later.

@@ -1,5 +1,5 @@
 /*
- * This is splited from hw/i386/kvm/pci-assign.c
+ * This is split from hw/i386/kvm/pci-assign.c
  */
 #include "qemu/osdep.h"
 #include "qapi/error.h"

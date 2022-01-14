@@ -23,6 +23,6 @@ int ga_install_vss_provider(void);
 void ga_uninstall_vss_provider(void);
 
 void qga_vss_fsfreeze(int *nr_volume, bool freeze,
-                      strList *mountpints, Error **errp);
+                      strList *mountpoints, Error **errp);
 
 #endif

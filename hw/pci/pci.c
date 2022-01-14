@@ -821,7 +821,7 @@ static void pci_init_w1cmask(PCIDevice *dev)
 static void pci_init_mask_bridge(PCIDevice *d)
 {
     /* PCI_PRIMARY_BUS, PCI_SECONDARY_BUS, PCI_SUBORDINATE_BUS and
-       PCI_SEC_LETENCY_TIMER */
+       PCI_SEC_LATENCY_TIMER */
     memset(d->wmask + PCI_PRIMARY_BUS, 0xff, 4);
 
     /* base and limit */
@@ -1648,7 +1648,7 @@ static const pci_class_desc pci_class_descriptions[] =
     { 0x0902, "Mouse", "mouse"},
     { 0x0A00, "Dock station", "dock", 0x00ff},
     { 0x0B00, "i386 cpu", "cpu", 0x00ff},
-    { 0x0c00, "Fireware contorller", "fireware"},
+    { 0x0c00, "Fireware controller", "fireware"},
     { 0x0c01, "Access bus controller", "access-bus"},
     { 0x0c02, "SSA controller", "ssa"},
     { 0x0c03, "USB controller", "usb"},
@@ -2722,7 +2722,7 @@ AddressSpace *pci_device_iommu_address_space(PCIDevice *dev)
          * depends on the format of the bridge devices.  Proper PCIe-to-PCI
          * bridges, with a PCIe capability indicating such, follow the
          * guidelines of chapter 2.3 of the PCIe-to-PCI/X bridge specification,
-         * where the bridge uses the seconary bus as the bridge portion of the
+         * where the bridge uses the secondary bus as the bridge portion of the
          * requester ID and devfn of 00.0.  For other bridges, typically those
          * found on the root complex such as the dmi-to-pci-bridge, we follow
          * the convention of typical bare-metal hardware, which uses the

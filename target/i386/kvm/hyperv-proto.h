@@ -16,7 +16,7 @@
 #define HV_CPUID_INTERFACE                    0x40000001
 #define HV_CPUID_VERSION                      0x40000002
 #define HV_CPUID_FEATURES                     0x40000003
-#define HV_CPUID_ENLIGHTMENT_INFO             0x40000004
+#define HV_CPUID_ENLIGHTENMENT_INFO           0x40000004
 #define HV_CPUID_IMPLEMENT_LIMITS             0x40000005
 #define HV_CPUID_NESTED_FEATURES              0x4000000A
 #define HV_CPUID_MIN                          0x40000005
@@ -58,7 +58,7 @@
 #define HV_STIMER_DIRECT_MODE_AVAILABLE         (1u << 19)
 
 /*
- * HV_CPUID_ENLIGHTMENT_INFO.EAX bits
+ * HV_CPUID_ENLIGHTENMENT_INFO.EAX bits
  */
 #define HV_AS_SWITCH_RECOMMENDED            (1u << 0)
 #define HV_LOCAL_TLB_FLUSH_RECOMMENDED      (1u << 1)

@@ -135,7 +135,7 @@ struct mad_common {
  * client to the server.  There is no way for the server to send
  * an asynchronous message back to the client.  The Empty IU is used
  * to hang out a meaningless request to the server so that it can respond
- * asynchrouously with something like a SCSI AER
+ * asynchronously with something like a SCSI AER
  */
 struct viosrp_empty_iu {
     struct mad_common common;

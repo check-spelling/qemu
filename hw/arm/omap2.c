@@ -340,7 +340,7 @@ static uint64_t omap_eac_read(void *opaque, hwaddr addr,
     uint32_t ret;
 
     if (size != 2) {
-        return omap_badwidth_read16(opaque, addr);
+        return omap_bandwidth_read16(opaque, addr);
     }
 
     switch (addr) {
@@ -455,7 +455,7 @@ static void omap_eac_write(void *opaque, hwaddr addr,
     struct omap_eac_s *s = (struct omap_eac_s *) opaque;
 
     if (size != 2) {
-        omap_badwidth_write16(opaque, addr, value);
+        omap_bandwidth_write16(opaque, addr, value);
         return;
     }
 
@@ -659,7 +659,7 @@ static uint64_t omap_sti_read(void *opaque, hwaddr addr,
     struct omap_sti_s *s = (struct omap_sti_s *) opaque;
 
     if (size != 4) {
-        return omap_badwidth_read32(opaque, addr);
+        return omap_bandwidth_read32(opaque, addr);
     }
 
     switch (addr) {
@@ -700,7 +700,7 @@ static void omap_sti_write(void *opaque, hwaddr addr,
     struct omap_sti_s *s = (struct omap_sti_s *) opaque;
 
     if (size != 4) {
-        omap_badwidth_write32(opaque, addr, value);
+        omap_bandwidth_write32(opaque, addr, value);
         return;
     }
 
@@ -766,7 +766,7 @@ static void omap_sti_fifo_write(void *opaque, hwaddr addr,
     uint8_t byte = value;
 
     if (size != 1) {
-        omap_badwidth_write8(opaque, addr, size);
+        omap_bandwidth_write8(opaque, addr, size);
         return;
     }
 
@@ -949,7 +949,7 @@ static const struct omap_l4_region_s omap_l4_region[125] = {
 };
 
 static const struct omap_l4_agent_info_s omap_l4_agent_info[54] = {
-    { 0,           0, 3, 2 }, /* L4IA initiatior agent */
+    { 0,           0, 3, 2 }, /* L4IA initiator agent */
     { L4TAO(1),    3, 2, 1 }, /* Control and pinout module */
     { L4TAO(2),    5, 2, 1 }, /* 32K timer */
     { L4TAO(3),    7, 3, 2 }, /* PRCM */
@@ -1061,7 +1061,7 @@ static uint64_t omap_prcm_read(void *opaque, hwaddr addr,
     uint32_t ret;
 
     if (size != 4) {
-        return omap_badwidth_read32(opaque, addr);
+        return omap_bandwidth_read32(opaque, addr);
     }
 
     switch (addr) {
@@ -1372,7 +1372,7 @@ static void omap_prcm_write(void *opaque, hwaddr addr,
     struct omap_prcm_s *s = (struct omap_prcm_s *) opaque;
 
     if (size != 4) {
-        omap_badwidth_write32(opaque, addr, value);
+        omap_bandwidth_write32(opaque, addr, value);
         return;
     }
 
@@ -1922,7 +1922,7 @@ static uint32_t omap_sysctl_read(void *opaque, hwaddr addr)
     case 0x2b4:	/* CONTROL_SEC_TEST */
     case 0x2f0:	/* CONTROL_SEC_STATUS */
     case 0x2f4:	/* CONTROL_SEC_ERR_STATUS */
-        /* Secure mode is not present on general-pusrpose device.  Outside
+        /* Secure mode is not present on general-purpose device.  Outside
          * secure mode these values cannot be read or written.  */
         return 0;
 
@@ -2097,7 +2097,7 @@ static uint64_t omap_sysctl_readfn(void *opaque, hwaddr addr,
     case 1:
         return omap_sysctl_read8(opaque, addr);
     case 2:
-        return omap_badwidth_read32(opaque, addr); /* TODO */
+        return omap_bandwidth_read32(opaque, addr); /* TODO */
     case 4:
         return omap_sysctl_read(opaque, addr);
     default:
@@ -2113,7 +2113,7 @@ static void omap_sysctl_writefn(void *opaque, hwaddr addr,
         omap_sysctl_write8(opaque, addr, value);
         break;
     case 2:
-        omap_badwidth_write32(opaque, addr, value); /* TODO */
+        omap_bandwidth_write32(opaque, addr, value); /* TODO */
         break;
     case 4:
         omap_sysctl_write(opaque, addr, value);
@@ -2527,7 +2527,7 @@ struct omap_mpu_state_s *omap2420_mpu_init(MemoryRegion *sdram,
                     omap_findclk(s, "func_96m_clk"),
                     omap_findclk(s, "core_l4_iclk"));
 
-    /* All register mappings (includin those not currenlty implemented):
+    /* All register mappings (including those not currently implemented):
      * SystemControlMod	48000000 - 48000fff
      * SystemControlL4	48001000 - 48001fff
      * 32kHz Timer Mod	48004000 - 48004fff

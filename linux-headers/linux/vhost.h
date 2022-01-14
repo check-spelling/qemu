@@ -76,7 +76,7 @@
 
 /* Set eventfd to poll for added buffers */
 #define VHOST_SET_VRING_KICK _IOW(VHOST_VIRTIO, 0x20, struct vhost_vring_file)
-/* Set eventfd to signal when buffers have beed used */
+/* Set eventfd to signal when buffers have been used */
 #define VHOST_SET_VRING_CALL _IOW(VHOST_VIRTIO, 0x21, struct vhost_vring_file)
 /* Set eventfd to signal an error */
 #define VHOST_SET_VRING_ERR _IOW(VHOST_VIRTIO, 0x22, struct vhost_vring_file)

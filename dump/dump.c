@@ -1047,7 +1047,7 @@ static size_t dump_bitmap_get_bufsize(DumpState *s)
 }
 
 /*
- * set dump_bitmap sequencely. the bit before last_pfn is not allowed to be
+ * set dump_bitmap sequentially. the bit before last_pfn is not allowed to be
  * rewritten, so if need to set the first bit, set last_pfn and pfn to 0.
  * set_dump_bitmap will always leave the recently set bit un-sync. And setting
  * (last bit + sizeof(buf) * 8) to 0 will do flushing the content in buf into
@@ -1123,7 +1123,7 @@ static uint64_t dump_pfn_to_paddr(DumpState *s, uint64_t pfn)
 /*
  * exam every page and return the page frame number and the address of the page.
  * bufptr can be NULL. note: the blocks here is supposed to reflect guest-phys
- * blocks, so block->target_start and block->target_end should be interal
+ * blocks, so block->target_start and block->target_end should be integral
  * multiples of the target page size.
  */
 static bool get_next_page(GuestPhysBlock **blockptr, uint64_t *pfnptr,
@@ -1579,7 +1579,7 @@ bool dump_in_progress(void)
 }
 
 /* calculate total size of memory to be dumped (taking filter into
- * acoount.) */
+ * account.) */
 static int64_t dump_calculate_size(DumpState *s)
 {
     GuestPhysBlock *block;

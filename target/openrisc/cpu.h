@@ -68,7 +68,7 @@ enum {
 /* Interrupt */
 #define NR_IRQS  32
 
-/* Unit presece register */
+/* Unit presence register */
 enum {
     UPR_UP = (1 << 0),
     UPR_DCP = (1 << 1),
@@ -291,7 +291,7 @@ typedef struct CPUOpenRISCState {
     int is_counting;
 
     uint32_t picmr;         /* Interrupt mask register */
-    uint32_t picsr;         /* Interrupt contrl register*/
+    uint32_t picsr;         /* Interrupt control register*/
 #endif
 } CPUOpenRISCState;
 

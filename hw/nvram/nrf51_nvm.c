@@ -52,7 +52,7 @@
  * DEVICEADDRTYPE    0x0A0
  * DEVICEADDR[0]     0x0A4
  * DEVICEADDR[1]     0x0A8
- * OVERRIDEEN        0x0AC
+ * OVERRIDDEN        0x0AC
  * NRF_1MBIT[0]      0x0B0
  * NRF_1MBIT[1]      0x0B4
  * NRF_1MBIT[2]      0x0B8

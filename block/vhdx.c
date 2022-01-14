@@ -287,7 +287,7 @@ static void vhdx_set_shift_bits(BDRVVHDXState *s)
  *      - The header section is always the first "object"
  *      - The first 64KB of the header is the File Identifier
  *      - The first uint64 (8 bytes) is the VHDX Signature ("vhdxfile")
- *      - The following 512 bytes constitute a UTF-16 string identifiying the
+ *      - The following 512 bytes constitute a UTF-16 string identifying the
  *        software that created the file, and is optional and diagnostic only.
  *
  *  Therefore, we probe by looking for the vhdxfile signature "vhdxfile"

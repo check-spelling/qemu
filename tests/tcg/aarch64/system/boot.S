@@ -9,7 +9,7 @@
 
 /*
  * Semihosting interface on ARM AArch64
- * See "Semihosting for AArch32 and AArch64 Relase 2.0" by ARM
+ * See "Semihosting for AArch32 and AArch64 Release 2.0" by ARM
  * w0 - semihosting call number
  * x1 - semihosting parameter
  */
@@ -141,13 +141,13 @@ __start:
 	 * TCR_EL1 - Translation Control Registers
 	 *
 	 * IPS[34:32] = 40-bit PA, 1TB
-	 * TG0[14:15] = b00 => 4kb granuale
+	 * TG0[14:15] = b00 => 4kb granule
 	 * ORGN0[11:10] = Outer: Normal, WB Read-Alloc No Write-Alloc Cacheable
 	 * IRGN0[9:8] = Inner: Normal, WB Read-Alloc No Write-Alloc Cacheable
 	 * T0SZ[5:0]  = 2^(64 - 25)
 	 *
 	 * The size of T0SZ controls what the initial lookup level. It
-	 * would be nice to start at level 2 but unfortunatly for a
+	 * would be nice to start at level 2 but unfortunately for a
 	 * flat-mapping on the virt machine we need to handle IA's
 	 * with at least 1gb range to see RAM. So we start with a
 	 * level 1 lookup.
@@ -163,9 +163,9 @@ __start:
 	 * SCTLR_EL1 - System Control Register
 	 *
 	 * WXN[19] = 0 = no effect, Write does not imply XN (execute never)
-	 * I[12] = Instruction cachability control
+	 * I[12] = Instruction cacheability control
 	 * SA[3] = SP alignment check
-	 * C[2] = Data cachability control
+	 * C[2] = Data cacheability control
 	 * M[0] = 1, enable stage 1 address translation for EL0/1
 	 */
 	mrs	x0, sctlr_el1
@@ -188,7 +188,7 @@ __start:
 	msr	cpacr_el1, x0
 
 	/* Setup some stack space and enter the test code.
-	 * Assume everthing except the return value is garbage when we
+	 * Assume everything except the return value is garbage when we
 	 * return, we won't need it.
 	 */
 	adrp	x0, stack_end
@@ -225,7 +225,7 @@ __sys_outc:
 	.align	12
 
 	/* Translation table
-	 * @4k granuale: 9 bit lookup, 512 entries
+	 * @4k granule: 9 bit lookup, 512 entries
 	*/
 ttb:
 	.space	4096, 0

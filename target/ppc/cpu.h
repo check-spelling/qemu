@@ -1148,7 +1148,7 @@ struct CPUPPCState {
     hwaddr mpic_iack;
     bool mpic_proxy;  /* true if the external proxy facility mode is enabled */
     bool has_hv_mode; /* set when the processor has an HV mode, thus HV priv */
-                      /* instructions and SPRs are diallowed if MSR:HV is 0 */
+                      /* instructions and SPRs are disallowed if MSR:HV is 0 */
     /*
      * On P7/P8/P9, set when in PM state so we need to handle resume in a
      * special way (such as routing some resume causes to 0x100, i.e. sreset).
@@ -2173,7 +2173,7 @@ enum {
     PPC_RFDI           = 0x0800000000000000ULL,
     /* DCR accesses                                                          */
     PPC_DCR            = 0x1000000000000000ULL,
-    /* DCR extended accesse                                                  */
+    /* DCR extended access                                                   */
     PPC_DCRX           = 0x2000000000000000ULL,
     /* user-mode DCR access, implemented in PowerPC 460                      */
     PPC_DCRUX          = 0x4000000000000000ULL,
@@ -2242,7 +2242,7 @@ enum {
     PPC2_FP_CVT_S64    = 0x0000000000010000ULL,
     /* Transactional Memory (ISA 2.07, Book II)                              */
     PPC2_TM            = 0x0000000000020000ULL,
-    /* Server PM instructgions (ISA 2.06, Book III)                          */
+    /* Server PM instructions (ISA 2.06, Book III)                           */
     PPC2_PM_ISA206     = 0x0000000000040000ULL,
     /* POWER ISA 3.0                                                         */
     PPC2_ISA300        = 0x0000000000080000ULL,
@@ -2276,7 +2276,7 @@ enum {
 
 /*
  * Hardware interrupt sources:
- *   all those exception can be raised simulteaneously
+ *   all those exception can be raised simultaneously
  */
 /* Input pins definitions */
 enum {

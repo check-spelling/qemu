@@ -295,7 +295,7 @@ struct hax_qemu_version {
     uint32_t min_version;
 } __attribute__ ((__packed__));
 
-/* The mac specfic interface to qemu, mostly is ioctl related */
+/* The mac specific interface to qemu, mostly is ioctl related */
 struct hax_tunnel_info {
     uint64_t va;
     uint64_t io_va;
@@ -344,7 +344,7 @@ struct hax_capabilityinfo {
      */
     uint16_t wstatus;
     /* valid when not working
-     * bit 0: VT not enabeld
+     * bit 0: VT not enabled
      * bit 1: NX not enabled*/
     uint16_t winfo;
     uint32_t pad;

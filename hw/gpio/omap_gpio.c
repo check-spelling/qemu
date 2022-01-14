@@ -74,7 +74,7 @@ static uint64_t omap_gpio_read(void *opaque, hwaddr addr,
     int offset = addr & OMAP_MPUI_REG_MASK;
 
     if (size != 2) {
-        return omap_badwidth_read16(opaque, addr);
+        return omap_bandwidth_read16(opaque, addr);
     }
 
     switch (offset) {
@@ -114,7 +114,7 @@ static void omap_gpio_write(void *opaque, hwaddr addr,
     int ln;
 
     if (size != 2) {
-        omap_badwidth_write16(opaque, addr, value);
+        omap_bandwidth_write16(opaque, addr, value);
         return;
     }
 

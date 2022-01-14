@@ -83,7 +83,7 @@ class TypeDefinition(FileMatch):
 
     @property
     def initializers(self) -> Optional[TypeInfoInitializers]:
-        if getattr(self, '_inititalizers', None):
+        if getattr(self, '_initializers', None):
             self._initializers: TypeInfoInitializers
             return self._initializers
         fields = self.group('fields')
@@ -161,7 +161,7 @@ class TypeInfoVar(TypeDefinition):
 
     #def extract_identifiers(self) -> Optional[TypeIdentifiers]:
     #    """Try to extract identifiers from names being used"""
-    #    DBG("extracting idenfiers from %s", self.name)
+    #    DBG("extracting identifiers from %s", self.name)
         #uppercase = None
         #if typename and re.fullmatch(RE_IDENTIFIER, typename) and typename.startswith("TYPE_"):
         #    uppercase = typename[len('TYPE_'):]

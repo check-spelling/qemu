@@ -847,7 +847,7 @@ enum ctu_can_fd_err_capt_err_type {
 	ERC_CRC_ERR        = 0x1,
 	ERC_FRM_ERR        = 0x2,
 	ERC_ACK_ERR        = 0x3,
-	ERC_STUF_ERR       = 0x4,
+	ERC_STUFF_ERR      = 0x4,
 };
 
 enum ctu_can_fd_alc_alc_id_field {

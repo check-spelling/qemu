@@ -990,14 +990,14 @@ struct omap_mpu_state_s *omap310_mpu_init(MemoryRegion *sdram,
 struct omap_mpu_state_s *omap2420_mpu_init(MemoryRegion *sdram,
                 const char *core);
 
-uint32_t omap_badwidth_read8(void *opaque, hwaddr addr);
-void omap_badwidth_write8(void *opaque, hwaddr addr,
+uint32_t omap_bandwidth_read8(void *opaque, hwaddr addr);
+void omap_bandwidth_write8(void *opaque, hwaddr addr,
                 uint32_t value);
-uint32_t omap_badwidth_read16(void *opaque, hwaddr addr);
-void omap_badwidth_write16(void *opaque, hwaddr addr,
+uint32_t omap_bandwidth_read16(void *opaque, hwaddr addr);
+void omap_bandwidth_write16(void *opaque, hwaddr addr,
                 uint32_t value);
-uint32_t omap_badwidth_read32(void *opaque, hwaddr addr);
-void omap_badwidth_write32(void *opaque, hwaddr addr,
+uint32_t omap_bandwidth_read32(void *opaque, hwaddr addr);
+void omap_bandwidth_write32(void *opaque, hwaddr addr,
                 uint32_t value);
 
 void omap_mpu_wakeup(void *opaque, int irq, int req);
@@ -1011,7 +1011,7 @@ void omap_mpu_wakeup(void *opaque, int irq, int req);
                       __func__, paddr)
 
 /* OMAP-specific Linux bootloader tags for the ATAG_BOARD area
-   (Board-specifc tags are not here)  */
+   (Board-specific tags are not here)  */
 #define OMAP_TAG_CLOCK		0x4f01
 #define OMAP_TAG_MMC		0x4f02
 #define OMAP_TAG_SERIAL_CONSOLE	0x4f03

@@ -129,7 +129,7 @@ struct irq_source_routing_table {
 } QEMU_PACKED;
 
 struct interface_info {
-    uint16_t vers;               /* version of the specificition */
+    uint16_t vers;               /* version of the specification */
     uint16_t size;
     uint8_t  flag;
     char description[64];
@@ -156,7 +156,7 @@ struct board_devices {
 
 struct loongson_special_attribute {
     uint16_t vers;               /* version of this special */
-    char special_name[64];       /* special_atribute_name */
+    char special_name[64];       /* special_attribute_name */
     uint32_t loongson_special_type; /* type of special device */
     /* for each device's resource */
     struct resource_loongson resource[MAX_RESOURCE_NUMBER];

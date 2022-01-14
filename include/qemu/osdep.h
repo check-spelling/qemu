@@ -756,7 +756,7 @@ char *qemu_get_host_name(Error **errp);
  * Operating system agnostic way of querying host memory.
  *
  * Returns amount of physical memory on the system. This is purely
- * advisery and may return 0 if we can't work it out. At the other
+ * advisory and may return 0 if we can't work it out. At the other
  * end we saturate to SIZE_MAX if you are lucky enough to have that
  * much memory.
  */

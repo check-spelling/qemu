@@ -1303,7 +1303,7 @@ static void gen_mxu_S32ALNI(DisasContext *ctx)
         /* both operands zero registers -> just set destination to all 0s */
         tcg_gen_movi_i32(mxu_gpr[XRa - 1], 0);
     } else if (unlikely(XRb == 0)) {
-        /* XRb zero register -> just appropriatelly shift XRc into XRa */
+        /* XRb zero register -> just appropriately shift XRc into XRa */
         switch (optn3) {
         case MXU_OPTN3_PTN0:
             tcg_gen_movi_i32(mxu_gpr[XRa - 1], 0);
@@ -1319,7 +1319,7 @@ static void gen_mxu_S32ALNI(DisasContext *ctx)
             break;
         }
     } else if (unlikely(XRc == 0)) {
-        /* XRc zero register -> just appropriatelly shift XRb into XRa */
+        /* XRc zero register -> just appropriately shift XRb into XRa */
         switch (optn3) {
         case MXU_OPTN3_PTN0:
             tcg_gen_mov_i32(mxu_gpr[XRa - 1], mxu_gpr[XRb - 1]);

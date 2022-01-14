@@ -124,7 +124,7 @@ struct target_sigevent {
 #define TARGET_SEGV_ACCERR  (2) /* invalid permissions for mapped object */
 
 /* SIGTRAP si_codes */
-#define TARGET_TRAP_BRKPT   (1) /* process beakpoint */
+#define TARGET_TRAP_BRKPT   (1) /* process breakpoint */
 #define TARGET_TRAP_TRACE   (2) /* process trace trap */
 
 /* SIGBUS si_codes */

@@ -448,14 +448,14 @@ Contributions.txt: TianoCore Contribution Agreement 1.0
 
     === Definitions for sample patch email ===
 
-    * "CodeModule" is a short idenfier for the affected code.  For
+    * "CodeModule" is a short identifier for the affected code.  For
       example MdePkg, or MdeModulePkg UsbBusDxe.
     * "Brief-single-line-summary" is a short summary of the change.
     * The entire first line should be less than ~70 characters.
     * "Full-commit-message" a verbose multiple line comment describing
       the change.  Each line should be less than ~70 characters.
-    * "Contributed-under" explicitely states that the contribution is
-      made under the terms of the contribtion agreement.  This
+    * "Contributed-under" explicitly states that the contribution is
+      made under the terms of the contribution agreement.  This
       agreement is included below in this document.
     * "Signed-off-by" is the contributor's signature identifying them
       by their real/legal name and their email address.
@@ -792,7 +792,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  * The implementation was written so as to conform with Netscapes SSL.
  *
  * This library is free for commercial and non-commercial use as long as
- * the following conditions are aheared to.  The following conditions
+ * the following conditions are adhered to.  The following conditions
  * apply to all code found in this distribution, be it the RC4, RSA,
  * lhash, DES, etc., code; not just the SSL code.  The SSL documentation
  * included with this distribution is covered by the same copyright terms
@@ -817,7 +817,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *    must display the following acknowledgement:
  *    "This product includes cryptographic software written by
  *     Eric Young (eay@cryptsoft.com)"
- *    The word 'cryptographic' can be left out if the rouines from the library
+ *    The word 'cryptographic' can be left out if the routines from the library
  *    being used are not cryptographic related :-).
  * 4. If you include any Windows specific code (or a derivative thereof) from
  *    the apps directory (application code) you must include an acknowledgement:
